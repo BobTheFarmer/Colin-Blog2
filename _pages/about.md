@@ -4,7 +4,7 @@ title: About Me
 permalink: /about/
 ---
 
-This is a blog for APCSP made by Colin Weis **([BobTheFarner](https://github.com/fastai/fastpages)** [^1])
+This is a blog for APCSP made by Colin Weis **([BobTheFarmer](https://github.com/fastai/fastpages)** [^1])
 
 
 
