@@ -132,7 +132,7 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello World&quot;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello World&quot;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -155,14 +155,30 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="n">wallet</span> <span class="o">=</span> <span class="mf">7.17</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;How much money do you have? (Numbers only please)&quot;</span><span class="p">)</span>
+<span class="n">wallet</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
 <span class="n">priceOfMcflurry</span> <span class="o">=</span> <span class="mf">2.39</span>
 <span class="n">amountOfMcflurrys</span> <span class="o">=</span> <span class="n">wallet</span><span class="o">/</span><span class="n">priceOfMcflurry</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;You have $&quot;</span> <span class="o">+</span> <span class="n">wallet</span> <span class="o">+</span> <span class="s2">&quot; and each mcflurry costs &quot;</span> <span class="o">+</span> <span class="n">priceOfMcflurry</span> <span class="o">+</span> <span class="s2">&quot;, so you can afford&quot;</span> <span class="o">+</span> <span class="n">amountOfMcflurrys</span> <span class="o">+</span> <span class="s2">&quot; mcflurrys.&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;You have $&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">wallet</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; and each mcflurry costs $&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">priceOfMcflurry</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;, so you can afford &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">amountOfMcflurrys</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; mcflurrys!&quot;</span><span class="p">)</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>How much money do you have? (Numbers only please)
+You have $8321903829.0 and each mcflurry costs 2.39, so you can afford 3481968129.288703 mcflurrys.
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
