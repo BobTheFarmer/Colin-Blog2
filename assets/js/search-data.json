@@ -3,10 +3,10 @@
     
         "post0": {
             "title": "Title",
-            "content": "Using Bash! . Using bash to help organize your computer by making folders .",
-            "url": "https://bobthefarmer.github.io/Colin-Blog2/2022/08/24/Blog2.html",
-            "relUrl": "/2022/08/24/Blog2.html",
-            "date": " • Aug 24, 2022"
+            "content": "toc: true | badges: true | comments: true | categories: [jupyter, bash, python] | . Using Bash! . Using bash to help organize your computer by making folders . !export project_dir=$HOME/school !cd ~ !mkdir -p $project_dir . usage: mkdir [-pv] [-m mode] directory_name ... .",
+            "url": "https://bobthefarmer.github.io/Colin-Blog2/2022/08/26/Blog2.html",
+            "relUrl": "/2022/08/26/Blog2.html",
+            "date": " • Aug 26, 2022"
         }
         
     
@@ -60,7 +60,9 @@
   
 
   
-      ,"page1": {
+
+  
+      ,"page2": {
           "title": "About Me",
           "content": "This is a blog for APCSP made by Colin Weis (BobTheFarmer) .",
           "url": "https://bobthefarmer.github.io/Colin-Blog2/about/",
@@ -71,15 +73,24 @@
   
 
   
+      ,"page3": {
+          "title": "Vocab",
+          "content": "Vocab . A collection of vocabulary from throughout the trimester . Basic Terms . Variable: A value that changes based off of conditions . File Types . .html: used for webpages. Cannot be used with markdown .md: used for basic webpage design. Can be used with python .ipynb: Uses a combination of python and .md .",
+          "url": "https://bobthefarmer.github.io/Colin-Blog2/vocab/",
+          "relUrl": "/vocab/",
+          "date": ""
+      }
+      
+  
+
+  
+
+  
 
   
   
 
   
-
-  
-  
-
   
 
   
@@ -92,7 +103,7 @@
   
 
   
-      ,"page10": {
+      ,"page11": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://bobthefarmer.github.io/Colin-Blog2/robots.txt",
