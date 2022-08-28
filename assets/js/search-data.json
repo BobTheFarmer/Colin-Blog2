@@ -70,8 +70,8 @@
         ,"post6": {
             "title": "Python using Jupyter Notebooks",
             "content": "print(&quot;Hello World&quot;) . Hello World . Calculator for how many mcflurrys you can afford: . print(&quot;How much money do you have? (Numbers only please)&quot;) wallet = float(input()) priceOfMcflurry = 2.39 amountOfMcflurrys = wallet/priceOfMcflurry print(&quot;You have $&quot; + str(wallet) + &quot; and each mcflurry costs $&quot; + str(priceOfMcflurry) + &quot;, so you can afford &quot; + str(amountOfMcflurrys) + &quot; mcflurrys!&quot;) . How much money do you have? (Numbers only please) You have $7.17 and each mcflurry costs $2.39, so you can afford 3.0 mcflurrys! .",
-            "url": "https://bobthefarmer.github.io/Colin-Blog2/2022/08/22/Blog1.html",
-            "relUrl": "/2022/08/22/Blog1.html",
+            "url": "https://bobthefarmer.github.io/Colin-Blog2/techtalk/bash_checks",
+            "relUrl": "/techtalk/bash_checks",
             "date": " • Aug 22, 2022"
         }
         
