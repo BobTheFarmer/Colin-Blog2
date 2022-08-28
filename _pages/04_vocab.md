@@ -12,9 +12,7 @@ toc: true
 Variable: A value that changes based off of conditions
 
 # File Types
-.html: used for webpages.  
-Cannot be used with markdown
-.md: used for basic webpage design.  
-Can be used with python  
-.ipynb: Uses a combination of python and .md
+.html: Used for designing webpages <br>
+.md: Also used for basic webpage design and can be used with python <br>
+.ipynb: Uses a combination of python and .md <br>
 
