@@ -1,5 +1,5 @@
 ---
-categories: [markdown, week2, spanish, notes]
+categories: [Markdown, Week2, Spanish, Notes]
 ---
 # Conjugation page for Spanish class
 > Instructions for how to Conjugate AR, ER, and IR verbs
