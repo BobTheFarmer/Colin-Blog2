@@ -132,16 +132,16 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="c1">#Define Anaconda&#39;s location</span>
-<span class="n">anaconda</span><span class="o">=</span><span class="err">$</span><span class="n">HOME</span><span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">anaconda3</span><span class="o">/</span><span class="n">Anaconda</span><span class="o">-</span><span class="n">Navigator</span><span class="o">.</span><span class="n">app</span>
+<div class=" highlight hl-bash"><pre><span></span><span class="c1">#Define Anaconda&#39;s location</span>
+<span class="nv">anaconda</span><span class="o">=</span><span class="nv">$HOME</span>/opt/anaconda3/Anaconda-Navigator.app
 
 <span class="c1">#Check if it&#39;s installed</span>
-<span class="n">cd</span>
-<span class="k">if</span> <span class="p">[</span> <span class="err">!</span> <span class="o">-</span><span class="n">d</span> <span class="err">$</span><span class="n">anaconda</span> <span class="p">]</span>
-<span class="n">then</span> 
-    <span class="n">echo</span> <span class="s2">&quot;Sadly, you do not have anaconda installed, or it is in the wrong location :(&quot;</span>
-<span class="n">fi</span>
-    <span class="n">echo</span> <span class="s2">&quot;You have anaconda! :)&quot;</span>
+<span class="nb">cd</span>
+<span class="k">if</span> <span class="o">[</span> ! -d <span class="nv">$anaconda</span> <span class="o">]</span>
+<span class="k">then</span> 
+    <span class="nb">echo</span> <span class="s2">&quot;Sadly, you do not have anaconda installed, or it is in the wrong location :(&quot;</span>
+<span class="k">fi</span>
+    <span class="nb">echo</span> <span class="s2">&quot;You have anaconda! :)&quot;</span>
 </pre></div>
 
     </div>
@@ -178,63 +178,63 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="n">school</span><span class="o">=</span><span class="err">$</span><span class="n">HOME</span><span class="o">/</span><span class="n">school</span>
+<div class=" highlight hl-bash"><pre><span></span><span class="nv">school</span><span class="o">=</span><span class="nv">$HOME</span>/school
 
-<span class="n">cd</span>
-<span class="k">if</span> <span class="p">[</span> <span class="err">!</span> <span class="o">-</span><span class="n">d</span> <span class="err">$</span><span class="n">school</span> <span class="p">]</span>
-<span class="n">then</span> 
-    <span class="n">echo</span> <span class="s2">&quot;Directory $school does not exist, making directory $school&quot;</span>
-    <span class="n">mkdir</span> <span class="o">-</span><span class="n">p</span> <span class="err">$</span><span class="n">school</span>
-<span class="n">fi</span>
-    <span class="n">echo</span> <span class="s2">&quot;Directory $school exists&quot;</span>
+<span class="nb">cd</span>
+<span class="k">if</span> <span class="o">[</span> ! -d <span class="nv">$school</span> <span class="o">]</span>
+<span class="k">then</span> 
+    <span class="nb">echo</span> <span class="s2">&quot;Directory </span><span class="nv">$school</span><span class="s2"> does not exist, making directory </span><span class="nv">$school</span><span class="s2">&quot;</span>
+    mkdir -p <span class="nv">$school</span>
+<span class="k">fi</span>
+    <span class="nb">echo</span> <span class="s2">&quot;Directory </span><span class="nv">$school</span><span class="s2"> exists&quot;</span>
 
 <span class="c1">#Define and make subfolders</span>
 
 <span class="c1">#Define them all</span>
-<span class="n">cs</span><span class="o">=</span><span class="err">$</span><span class="n">HOME</span><span class="o">/</span><span class="n">school</span><span class="o">/</span><span class="n">computer_science</span>
-<span class="n">math</span><span class="o">=</span><span class="err">$</span><span class="n">HOME</span><span class="o">/</span><span class="n">school</span><span class="o">/</span><span class="n">math</span>
-<span class="n">chem</span><span class="o">=</span><span class="err">$</span><span class="n">HOME</span><span class="o">/</span><span class="n">school</span><span class="o">/</span><span class="n">chemistry</span>
-<span class="n">ss</span><span class="o">=</span><span class="err">$</span><span class="n">HOME</span><span class="o">/</span><span class="n">school</span><span class="o">/</span><span class="n">social_studies</span>
-<span class="n">spanish</span><span class="o">=</span><span class="err">$</span><span class="n">HOME</span><span class="o">/</span><span class="n">school</span><span class="o">/</span><span class="n">spanish</span>
+<span class="nv">cs</span><span class="o">=</span><span class="nv">$HOME</span>/school/computer_science
+<span class="nv">math</span><span class="o">=</span><span class="nv">$HOME</span>/school/math
+<span class="nv">chem</span><span class="o">=</span><span class="nv">$HOME</span>/school/chemistry
+<span class="nv">ss</span><span class="o">=</span><span class="nv">$HOME</span>/school/social_studies
+<span class="nv">spanish</span><span class="o">=</span><span class="nv">$HOME</span>/school/spanish
 
 
 <span class="c1">#Make cs</span>
-<span class="k">if</span> <span class="p">[</span> <span class="err">!</span> <span class="o">-</span><span class="n">d</span> <span class="err">$</span><span class="n">cs</span> <span class="p">]</span>
-<span class="n">then</span> 
-    <span class="n">echo</span> <span class="s2">&quot;Directory $cs does not exist, making directory $cs&quot;</span>
-    <span class="n">mkdir</span> <span class="o">-</span><span class="n">p</span> <span class="err">$</span><span class="n">cs</span>
-<span class="n">fi</span>
-    <span class="n">echo</span> <span class="s2">&quot;Directory $cs exists&quot;</span>
+<span class="k">if</span> <span class="o">[</span> ! -d <span class="nv">$cs</span> <span class="o">]</span>
+<span class="k">then</span> 
+    <span class="nb">echo</span> <span class="s2">&quot;Directory </span><span class="nv">$cs</span><span class="s2"> does not exist, making directory </span><span class="nv">$cs</span><span class="s2">&quot;</span>
+    mkdir -p <span class="nv">$cs</span>
+<span class="k">fi</span>
+    <span class="nb">echo</span> <span class="s2">&quot;Directory </span><span class="nv">$cs</span><span class="s2"> exists&quot;</span>
 
 <span class="c1">#Make math</span>
-<span class="k">if</span> <span class="p">[</span> <span class="err">!</span> <span class="o">-</span><span class="n">d</span> <span class="err">$</span><span class="n">math</span> <span class="p">]</span>
-<span class="n">then</span> 
-    <span class="n">echo</span> <span class="s2">&quot;Directory $cs does not exist, making directory $math&quot;</span>
-    <span class="n">mkdir</span> <span class="o">-</span><span class="n">p</span> <span class="err">$</span><span class="n">math</span>
-<span class="n">fi</span>
-    <span class="n">echo</span> <span class="s2">&quot;Directory $math exists&quot;</span>
+<span class="k">if</span> <span class="o">[</span> ! -d <span class="nv">$math</span> <span class="o">]</span>
+<span class="k">then</span> 
+    <span class="nb">echo</span> <span class="s2">&quot;Directory </span><span class="nv">$cs</span><span class="s2"> does not exist, making directory </span><span class="nv">$math</span><span class="s2">&quot;</span>
+    mkdir -p <span class="nv">$math</span>
+<span class="k">fi</span>
+    <span class="nb">echo</span> <span class="s2">&quot;Directory </span><span class="nv">$math</span><span class="s2"> exists&quot;</span>
 
 <span class="c1">#Make chem</span>
-<span class="k">if</span> <span class="p">[</span> <span class="err">!</span> <span class="o">-</span><span class="n">d</span> <span class="err">$</span><span class="n">chem</span> <span class="p">]</span>
-<span class="n">then</span> 
-    <span class="n">echo</span> <span class="s2">&quot;Directory $chem does not exist, making directory $chem&quot;</span>
-    <span class="n">mkdir</span> <span class="o">-</span><span class="n">p</span> <span class="err">$</span><span class="n">chem</span>
-<span class="n">fi</span>
-    <span class="n">echo</span> <span class="s2">&quot;Directory $chem exists&quot;</span>
+<span class="k">if</span> <span class="o">[</span> ! -d <span class="nv">$chem</span> <span class="o">]</span>
+<span class="k">then</span> 
+    <span class="nb">echo</span> <span class="s2">&quot;Directory </span><span class="nv">$chem</span><span class="s2"> does not exist, making directory </span><span class="nv">$chem</span><span class="s2">&quot;</span>
+    mkdir -p <span class="nv">$chem</span>
+<span class="k">fi</span>
+    <span class="nb">echo</span> <span class="s2">&quot;Directory </span><span class="nv">$chem</span><span class="s2"> exists&quot;</span>
 <span class="c1">#Make ss</span>
-<span class="k">if</span> <span class="p">[</span> <span class="err">!</span> <span class="o">-</span><span class="n">d</span> <span class="err">$</span><span class="n">ss</span> <span class="p">]</span>
-<span class="n">then</span> 
-    <span class="n">echo</span> <span class="s2">&quot;Directory $ss does not exist, making directory $ss&quot;</span>
-    <span class="n">mkdir</span> <span class="o">-</span><span class="n">p</span> <span class="err">$</span><span class="n">ss</span>
-<span class="n">fi</span>
-    <span class="n">echo</span> <span class="s2">&quot;Directory $ss exists&quot;</span>
+<span class="k">if</span> <span class="o">[</span> ! -d <span class="nv">$ss</span> <span class="o">]</span>
+<span class="k">then</span> 
+    <span class="nb">echo</span> <span class="s2">&quot;Directory </span><span class="nv">$ss</span><span class="s2"> does not exist, making directory </span><span class="nv">$ss</span><span class="s2">&quot;</span>
+    mkdir -p <span class="nv">$ss</span>
+<span class="k">fi</span>
+    <span class="nb">echo</span> <span class="s2">&quot;Directory </span><span class="nv">$ss</span><span class="s2"> exists&quot;</span>
 <span class="c1">#Make spanish</span>
-<span class="k">if</span> <span class="p">[</span> <span class="err">!</span> <span class="o">-</span><span class="n">d</span> <span class="err">$</span><span class="n">spanish</span> <span class="p">]</span>
-<span class="n">then</span> 
-    <span class="n">echo</span> <span class="s2">&quot;Directory $spanish does not exist, making directory $spanish&quot;</span>
-    <span class="n">mkdir</span> <span class="o">-</span><span class="n">p</span> <span class="err">$</span><span class="n">spanish</span>
-<span class="n">fi</span>
-    <span class="n">echo</span> <span class="s2">&quot;Directory $spanish exists&quot;</span>
+<span class="k">if</span> <span class="o">[</span> ! -d <span class="nv">$spanish</span> <span class="o">]</span>
+<span class="k">then</span> 
+    <span class="nb">echo</span> <span class="s2">&quot;Directory </span><span class="nv">$spanish</span><span class="s2"> does not exist, making directory </span><span class="nv">$spanish</span><span class="s2">&quot;</span>
+    mkdir -p <span class="nv">$spanish</span>
+<span class="k">fi</span>
+    <span class="nb">echo</span> <span class="s2">&quot;Directory </span><span class="nv">$spanish</span><span class="s2"> exists&quot;</span>
 </pre></div>
 
     </div>

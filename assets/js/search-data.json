@@ -26,8 +26,8 @@
         ,"post2": {
             "title": "This is my first time using markdown!",
             "content": "This is my first time using markdown! . This is a markdown change to verify that my VsCode is synced with my github. (Which it is because you are seeing this) .",
-            "url": "https://bobthefarmer.github.io/Colin-Blog2/markdown/2022/08/22/Markdown.html",
-            "relUrl": "/markdown/2022/08/22/Markdown.html",
+            "url": "https://bobthefarmer.github.io/Colin-Blog2/markdown/week1/2022/08/22/Markdown.html",
+            "relUrl": "/markdown/week1/2022/08/22/Markdown.html",
             "date": " • Aug 22, 2022"
         }
         
@@ -86,7 +86,7 @@
   
       ,"page3": {
           "title": "Vocab",
-          "content": "Vocab . A collection of vocabulary from throughout the trimester . Basic Terms . Variable: A value that changes based off of conditions . File Types . .html: used for webpages. Cannot be used with markdown n .md: used for basic webpage design. Can be used with python n .ipynb: Uses a combination of python and .md .",
+          "content": "Vocab . A collection of vocabulary from throughout the trimester . Basic Terms . Variable: A value that changes based off of conditions . File Types . .html: Used for designing webpages .md: Also used for basic webpage design and can be used with python .ipynb: Uses a combination of python and .md .",
           "url": "https://bobthefarmer.github.io/Colin-Blog2/vocab/",
           "relUrl": "/vocab/",
           "date": ""
