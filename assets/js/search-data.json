@@ -24,10 +24,10 @@
   
     
         ,"post2": {
-            "title": "Markdown",
+            "title": "This is my first time using markdown!",
             "content": "This is my first time using markdown! . This is a markdown change to verify that my VsCode is synced with my github. (Which it is because you are seeing this) .",
-            "url": "https://bobthefarmer.github.io/Colin-Blog2/2022/08/22/Markdown.html",
-            "relUrl": "/2022/08/22/Markdown.html",
+            "url": "https://bobthefarmer.github.io/Colin-Blog2/markdown/2022/08/22/Markdown.html",
+            "relUrl": "/markdown/2022/08/22/Markdown.html",
             "date": " • Aug 22, 2022"
         }
         
