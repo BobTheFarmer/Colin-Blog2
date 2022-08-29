@@ -13,7 +13,7 @@
   
     
         ,"post1": {
-            "title": "PE Calender",
+            "title": "PE Calendar",
             "content": "print(&quot;What day is it? Please don&#39;t use caps&quot;) dayOfTheWeek = input() #Answer accordingly if(dayOfTheWeek == &quot;monday&quot; or dayOfTheWeek == &quot;wednesday&quot;): print(&quot;In PE today, you have kickball&quot;) else: if(dayOfTheWeek == &quot;tuesday&quot;): print(&quot;In PE today, you have a run and classroom time&quot;) else: if(dayOfTheWeek == &quot;thursday&quot;): print(&quot;In PE today, you have a run and kickball&quot;) else: if(dayOfTheWeek == &quot;friday&quot;): print(&quot;In PE today, you have the weight room&quot;) else: if(dayOfTheWeek == &quot;saturday&quot; or dayOfTheWeek == &quot;sunday&quot;): print(&quot;It&#39;s the weekend silly&quot;) else: print(&quot;That&#39;s not a day of the week. If you think it is, make sure there are no caps and check your spelling&quot;) . What day is it? Please don&#39;t use caps In PE today, you have kickball .",
             "url": "https://bobthefarmer.github.io/Colin-Blog2/python/week2/ipynb/notes/pe/2022/08/27/PE-Calender.html",
             "relUrl": "/python/week2/ipynb/notes/pe/2022/08/27/PE-Calender.html",
