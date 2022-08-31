@@ -157,7 +157,14 @@ window.onload = wrap_img;
 <span class="n">run</span> <span class="o">=</span> <span class="kc">True</span>
 
 <span class="k">while</span><span class="p">(</span><span class="n">run</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;What recipe do you want to see? Type stop to stop the program. All lowercase please&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;What recipe do you want to see? Type stop to stop the program. All lowercase please.&quot;</span><span class="p">)</span>
+    <span class="n">recipeInput</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+
+    <span class="k">if</span><span class="p">(</span><span class="n">recipeInput</span> <span class="o">!=</span> <span class="s2">&quot;stop&quot;</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">recipeDict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">recipeInput</span><span class="p">))</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Stopping program...&quot;</span><span class="p">)</span>
+        <span class="n">run</span> <span class="o">=</span> <span class="kc">False</span>
    
 
    
@@ -175,23 +182,24 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>What recipe do you want to see? Type stop to stop the program. All lowercase please
+<pre>What recipe do you want to see? Type stop to stop the program. All lowercase please.
+Recipe for a pickaxe: 
+ wood wood wood
+     stick     
+     stick     
+What recipe do you want to see? Type stop to stop the program. All lowercase please.
+Recipe for a sword: 
+      wood     
+     wood     
+     stick     
+What recipe do you want to see? Type stop to stop the program. All lowercase please.
+Recipe for a crafting table: 
+               
+     Wood Wood
+     Wood Wood
+What recipe do you want to see? Type stop to stop the program. All lowercase please.
+Stopping program...
 </pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">TypeError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-intense-fg ansi-bold">/Users/colin/Colin-Blog2-4/_notebooks/2022-08-30-Blog4.ipynb Cell 2</span> in <span class="ansi-cyan-fg">&lt;cell line: 27&gt;</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell:/Users/colin/Colin-Blog2-4/_notebooks/2022-08-30-Blog4.ipynb#W2sZmlsZQ%3D%3D?line=26&#39;&gt;27&lt;/a&gt;</span> while(run):
-<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell:/Users/colin/Colin-Blog2-4/_notebooks/2022-08-30-Blog4.ipynb#W2sZmlsZQ%3D%3D?line=27&#39;&gt;28&lt;/a&gt;</span>     print(&#34;What recipe do you want to see? Type stop to stop the program. All lowercase please&#34;)
-<span class="ansi-green-fg">---&gt; &lt;a href=&#39;vscode-notebook-cell:/Users/colin/Colin-Blog2-4/_notebooks/2022-08-30-Blog4.ipynb#W2sZmlsZQ%3D%3D?line=28&#39;&gt;29&lt;/a&gt;</span>     print(recipeDict.get(input()))
-
-<span class="ansi-red-fg">TypeError</span>: &#39;str&#39; object is not callable</pre>
 </div>
 </div>
 
