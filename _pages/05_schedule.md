@@ -7,10 +7,10 @@ search_exclude: true
 
 {% if site.categories.size > 0 %}
     <html>
-    A
+    <h1>A<h1>
     </html>
 
 {% if site.categories.size == 0 %}
     <html>
-    fail
+    <h2>fail<h2>
     </html>
