@@ -26,7 +26,7 @@ search_exclude: true
             1
         </td>
         <td>
-            <a href="{{site.baseurl}}/week/3">Creative Development</a>
+            <a href="https://github.com/BobTheFarmer/Colin-Blog2/issues/2">Week 1 Issue</a>
         </td>
     </tr>
     
