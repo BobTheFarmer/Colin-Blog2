@@ -4,9 +4,9 @@
         "post0": {
             "title": "Adding a custom theme",
             "content": "",
-            "url": "https://bobthefarmer.github.io/Colin-Blog2/week3/ipynb/2022/08/31/Blog5.html",
-            "relUrl": "/week3/ipynb/2022/08/31/Blog5.html",
-            "date": " • Aug 31, 2022"
+            "url": "https://bobthefarmer.github.io/Colin-Blog2/week3/ipynb/2022/09/01/Blog5.html",
+            "relUrl": "/week3/ipynb/2022/09/01/Blog5.html",
+            "date": " • Sep 1, 2022"
         }
         
     
@@ -154,7 +154,6 @@
   
 
   
-  
 
   
   
@@ -169,7 +168,10 @@
   
 
   
-      ,"page11": {
+  
+
+  
+      ,"page12": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://bobthefarmer.github.io/Colin-Blog2/robots.txt",
