@@ -5,11 +5,6 @@ title: Schedule
 search_exclude: true
 ---
 
----
-layout: page
-permalink: /schedule
-title: Schedule
----
 # Schedule
 <table>
     <tr>
@@ -22,7 +17,7 @@ title: Schedule
             0
         </td>
         <td>
-            <a href="{{site.baseurl}}/week/3">Creative Development</a>
+            <a href="{{site.baseurl}}/markdown/2020/01/14/test-markdown-post.html">Creative Development</a>
         </td>
     </tr>
     
