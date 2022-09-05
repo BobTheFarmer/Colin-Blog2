@@ -36,7 +36,7 @@ search_exclude: true
             2
         </td>
         <td>
-            <a href="https://github.com/BobTheFarmer/Colin-Blog2/issues/4">Week 1 Issue</a>
+            <a href="https://github.com/BobTheFarmer/Colin-Blog2/issues/4">Week 2 Issue</a>
         </td>≈
     </tr>
     
