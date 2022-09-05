@@ -6,7 +6,7 @@ search_exclude: true
 ---
 
 # Schedule
-### A table with each weeks issue linked for easy access
+### A table with each week's issue linked for easy access
 <table>
     <tr>
      <th>Week</th>
