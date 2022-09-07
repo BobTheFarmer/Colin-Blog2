@@ -58,7 +58,7 @@ search_exclude: true
            Working on it
         </td>
         <td>
-            TBDß
+            TBD
         </td>
     </tr>
 </table>
