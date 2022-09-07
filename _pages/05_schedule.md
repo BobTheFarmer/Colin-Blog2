@@ -5,7 +5,7 @@ title: Schedule
 search_exclude: true
 ---
 
-ß
+
 ### A table with each week's issue linked for easy access
 <table>
     <tr>
