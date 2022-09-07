@@ -11,6 +11,7 @@ search_exclude: true
     <tr>
      <th>Week</th>
      <th>Page</th>
+     <th>Grade</th>
     </tr>
 
     <tr>
@@ -19,6 +20,9 @@ search_exclude: true
         </td>
         <td>
             <a href="https://github.com/BobTheFarmer/Colin-Blog2/issues/3">Week 0 Issue</a>
+        </td>
+        <td>
+            3/3
         </td>
     </tr>
     
@@ -29,6 +33,9 @@ search_exclude: true
         <td>
             <a href="https://github.com/BobTheFarmer/Colin-Blog2/issues/2">Week 1 Issue</a>
         </td>
+        <td>
+            3/3
+        </td>
     </tr>
     
      <tr>
@@ -37,7 +44,10 @@ search_exclude: true
         </td>
         <td>
             <a href="https://github.com/BobTheFarmer/Colin-Blog2/issues/4">Week 2 Issue</a>
-        </td>≈
+        </td>
+        <td>
+            TBD
+        </td>
     </tr>
     
      <tr>
@@ -46,6 +56,9 @@ search_exclude: true
         </td>
         <td>
            Working on it
+        </td>
+        <td>
+            TBDß
         </td>
     </tr>
 </table>
