@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      1 min read
+      3 min read
     
 </span></p>
 
@@ -144,6 +144,8 @@ window.onload = wrap_img;
 <li>3: Combine the blueprint and parts of the original code to make the final project</li>
 </ul>
 <h2 id="Drafting:">Drafting:<a class="anchor-link" href="#Drafting:"> </a></h2><p>For my draft, I used a basic repeating code structure over and over again to create a basic quiz</p>
+<p><img src="/Colin-Blog2/images/copied_from_nb/my_icons/draft.png" alt="" /></p>
+<h2 id="Blueprinting:">Blueprinting:<a class="anchor-link" href="#Blueprinting:"> </a></h2><p>To plan my final quiz, I wanted to see what was good and bad about my draft:</p>
 <table>
 <thead><tr>
 <th>Pros</th>
@@ -161,15 +163,141 @@ window.onload = wrap_img;
 </tr>
 </tbody>
 </table>
-<h2 id="Blueprinting:">Blueprinting:<a class="anchor-link" href="#Blueprinting:"> </a></h2><p>To plan my final quiz, I wanted to see what was good and bad about my draft:</p>
 <ul>
 <li>To keep the simple code but make it less confusing, for the final product I will add a function that does the repeating code for me </li>
-<li>To make the quiz more unique, I will add a game to the end: You will have to catch diamonds before they fall, and the points you get on the quiz will determine how many you can let fall during the game before losing</li>
+<li>To make the quiz more unique, I will add a game to the end: You will have to click on diamonds as they fall, and the points you get on the quiz will determine how many you can let fall during the game before losing</li>
 </ul>
-<h2 id="The-Final-Product">The Final Product<a class="anchor-link" href="#The-Final-Product"> </a></h2>
+<h2 id="The-Final-Product">The Final Product<a class="anchor-link" href="#The-Final-Product"> </a></h2><p><a href="https://studio.code.org/projects/applab/65lB5ByZwUrQQYnJ2aYPpiFw_9S3XmB6G2jo3W3h-3I/edit">The final product can be viewed with this link</a>, and the code is below</p>
+
 </div>
 </div>
-</div>
+</div>var score = 0;
+
+function checkGuess(guess, answer, levelToGoTo) {
+  //Is the guess correct? Award points and provide feedback accordingly
+  if (guess == answer) {
+    playSpeech(("Correct! You guessed " + guess + "; and that's the right answser. You are now on level" + levelToGoTo), "female", "English");
+    updateAllScores();
+    
+  } else {
+    playSpeech((("Incorrect. You guessed " + guess) + "; but the anwser was" + answer + ". You are now on level" + levelToGoTo), "female", "English");
+  }
+}
+
+function updateAllScores() {
+  //Update scores; not all are needed ex: start screen as no points could have been awarded
+  score = score + 10;
+  setText("score3", "Score: " + score);
+  setText("score4", "Score: " + score);
+  setText("score5", "Lives: " + score);
+}
+
+//When the start button is clicked, start the game
+onEvent("startButton", "click", function( ) {
+  playSpeech("Enjoy this minecraft quiz! Level 1.", "female", "English");
+  setScreen("Question1");
+});
+
+//Questions, using the meathod above: 
+
+//Question 1
+onEvent("cake", "click", function( ) {
+  checkGuess("the second one", "the second one",  "2");
+  setScreen("Question2");
+});
+onEvent("fake1", "click", function( ) {
+  checkGuess("the first one", "the second one",  "2");
+  setScreen("Question2");
+});
+onEvent("fake2", "click", function( ) {
+  checkGuess("the third one", "the second one",  "2");
+  setScreen("Question2");
+});
+onEvent("fake3", "click", function( ) {
+  checkGuess("the fourth one", "the second one",  "2");
+  setScreen("Question2");
+});
+
+//Question 2
+onEvent("true", "click", function( ) {
+  checkGuess("true", "false",  "3");
+  setScreen("Question3");
+});
+onEvent("false", "click", function( ) {
+  checkGuess("false", "false",  "3");
+  setScreen("Question3");
+});
+
+//Question 3
+onEvent("submit", "click", function( ) {
+  checkGuess(getText("text_input1"), "357",  "Mini Game!");
+  setScreen("MiniGame");
+  miniGame();
+});
+
+
+
+//Mini Game!!!
+var diamondMoveCooldown1 = 0;
+var diamondMoveCooldown2 = 0;
+var diamondMoveCooldown3 = 0;
+
+var points = 0;
+
+function updateDiamond(diamond, cooldown) {
+  
+  if(cooldown&gt;30) {
+  setPosition(diamond, getXPosition(diamond), getYPosition(diamond)+1);
+  cooldown=0;
+  }
+
+  if(getYPosition(diamond)&gt;500) {
+     setPosition(diamond, Math.random()*260, -120);
+     score--;
+     setText("score5", "Lives: " + score);
+     
+  }
+  cooldown++;
+  return cooldown;
+}
+
+function updatePoints(diamond) {
+  setPosition(diamond, Math.random()*300+20, -120);
+  points++;
+  setText("thanksForPlaying", "Thanks for playing! You clicked the diamonds " + (points + " time(s)!"));
+}
+
+
+//Check for clicks
+
+onEvent("diamond1", "click", function( ) {
+  updatePoints("diamond1");
+});
+onEvent("diamond2", "click", function( ) {
+  updatePoints("diamond2");
+});
+onEvent("diamond3", "click", function( ) {
+  updatePoints("diamond3");
+});
+    
+    
+
+function miniGame() {
+  while (score&gt;0) {
+    //Update diamonds
+    
+    diamondMoveCooldown1 = updateDiamond("diamond1", diamondMoveCooldown1);
+    diamondMoveCooldown2 = updateDiamond("diamond2", diamondMoveCooldown2);
+    diamondMoveCooldown3 = updateDiamond("diamond3", diamondMoveCooldown3);
+  }
+ setScreen("End");
+ 
+   
+}
+
+
+
+
 </div>
 
 
