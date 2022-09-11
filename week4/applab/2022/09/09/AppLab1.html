@@ -167,136 +167,179 @@ window.onload = wrap_img;
 <li>To keep the simple code but make it less confusing, for the final product I will add a function that does the repeating code for me </li>
 <li>To make the quiz more unique, I will add a game to the end: You will have to click on diamonds as they fall, and the points you get on the quiz will determine how many you can let fall during the game before losing</li>
 </ul>
+<h3 id="Design,-Successes,-Discoveries-and-Challenges">Design, Successes, Discoveries and Challenges<a class="anchor-link" href="#Design,-Successes,-Discoveries-and-Challenges"> </a></h3><table>
+<thead><tr>
+<th>Key Idea</th>
+<th>How I used it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Program Purpose and Function</td>
+<td>The purpose and function of my program is to present the user with a quiz they enjoy</td>
+</tr>
+<tr>
+<td>Data Abstraction</td>
+<td>One example of data abstraction in my quiz is all of the separate score labels on each page all using the same int variable to control them</td>
+</tr>
+<tr>
+<td>Managing Complexity</td>
+<td>I used comments and methods to organize my code in a clear and concise way </td>
+</tr>
+<tr>
+<td>Procedural Abstraction</td>
+<td>I added a lot of methods with inputs for they could be used in similar but slightly different ways, like my <em>checkGuess(guess, answer, levelToGoTo)</em> method uses the parameters to be able to check different questions and go to a different page every time</td>
+</tr>
+<tr>
+<td>Algorithm Implementation</td>
+<td>Algorithms are used in my program to check multiple questions and to manage multiple button objects representing diamonds</td>
+</tr>
+<tr>
+<td>Testing</td>
+<td>I used various <em>console.log</em> statements to be able to find problems</td>
+</tr>
+</tbody>
+</table>
 <h2 id="The-Final-Product">The Final Product<a class="anchor-link" href="#The-Final-Product"> </a></h2><p><a href="https://studio.code.org/projects/applab/65lB5ByZwUrQQYnJ2aYPpiFw_9S3XmB6G2jo3W3h-3I/edit">The final product can be viewed with this link</a>, and the code is below</p>
 
 </div>
 </div>
-</div>var score = 0;
-
-function checkGuess(guess, answer, levelToGoTo) {
-  //Is the guess correct? Award points and provide feedback accordingly
-  if (guess == answer) {
-    playSpeech(("Correct! You guessed " + guess + "; and that's the right answser. You are now on level" + levelToGoTo), "female", "English");
-    updateAllScores();
+</div>
     
-  } else {
-    playSpeech((("Incorrect. You guessed " + guess) + "; but the anwser was" + answer + ". You are now on level" + levelToGoTo), "female", "English");
-  }
-}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
 
-function updateAllScores() {
-  //Update scores; not all are needed ex: start screen as no points could have been awarded
-  score = score + 10;
-  setText("score3", "Score: " + score);
-  setText("score4", "Score: " + score);
-  setText("score5", "Lives: " + score);
-}
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">var</span> <span class="n">score</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 
-//When the start button is clicked, start the game
-onEvent("startButton", "click", function( ) {
-  playSpeech("Enjoy this minecraft quiz! Level 1.", "female", "English");
-  setScreen("Question1");
-});
+<span class="n">function</span> <span class="n">checkGuess</span><span class="p">(</span><span class="n">guess</span><span class="p">,</span> <span class="n">answer</span><span class="p">,</span> <span class="n">levelToGoTo</span><span class="p">)</span> <span class="p">{</span>
+  <span class="o">//</span><span class="n">Is</span> <span class="n">the</span> <span class="n">guess</span> <span class="n">correct</span><span class="err">?</span> <span class="n">Award</span> <span class="n">points</span> <span class="ow">and</span> <span class="n">provide</span> <span class="n">feedback</span> <span class="n">accordingly</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">guess</span> <span class="o">==</span> <span class="n">answer</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">playSpeech</span><span class="p">((</span><span class="s2">&quot;Correct! You guessed &quot;</span> <span class="o">+</span> <span class="n">guess</span> <span class="o">+</span> <span class="s2">&quot;; and that&#39;s the right answser. You are now on level&quot;</span> <span class="o">+</span> <span class="n">levelToGoTo</span><span class="p">),</span> <span class="s2">&quot;female&quot;</span><span class="p">,</span> <span class="s2">&quot;English&quot;</span><span class="p">);</span>
+    <span class="n">updateAllScores</span><span class="p">();</span>
+    
+  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="n">playSpeech</span><span class="p">(((</span><span class="s2">&quot;Incorrect. You guessed &quot;</span> <span class="o">+</span> <span class="n">guess</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;; but the anwser was&quot;</span> <span class="o">+</span> <span class="n">answer</span> <span class="o">+</span> <span class="s2">&quot;. You are now on level&quot;</span> <span class="o">+</span> <span class="n">levelToGoTo</span><span class="p">),</span> <span class="s2">&quot;female&quot;</span><span class="p">,</span> <span class="s2">&quot;English&quot;</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
 
-//Questions, using the meathod above: 
+<span class="n">function</span> <span class="n">updateAllScores</span><span class="p">()</span> <span class="p">{</span>
+  <span class="o">//</span><span class="n">Update</span> <span class="n">scores</span><span class="p">;</span> <span class="ow">not</span> <span class="nb">all</span> <span class="n">are</span> <span class="n">needed</span> <span class="n">ex</span><span class="p">:</span> <span class="n">start</span> <span class="n">screen</span> <span class="k">as</span> <span class="n">no</span> <span class="n">points</span> <span class="n">could</span> <span class="n">have</span> <span class="n">been</span> <span class="n">awarded</span>
+  <span class="n">score</span> <span class="o">=</span> <span class="n">score</span> <span class="o">+</span> <span class="mi">10</span><span class="p">;</span>
+  <span class="n">setText</span><span class="p">(</span><span class="s2">&quot;score3&quot;</span><span class="p">,</span> <span class="s2">&quot;Score: &quot;</span> <span class="o">+</span> <span class="n">score</span><span class="p">);</span>
+  <span class="n">setText</span><span class="p">(</span><span class="s2">&quot;score4&quot;</span><span class="p">,</span> <span class="s2">&quot;Score: &quot;</span> <span class="o">+</span> <span class="n">score</span><span class="p">);</span>
+  <span class="n">setText</span><span class="p">(</span><span class="s2">&quot;score5&quot;</span><span class="p">,</span> <span class="s2">&quot;Lives: &quot;</span> <span class="o">+</span> <span class="n">score</span><span class="p">);</span>
+<span class="p">}</span>
 
-//Question 1
-onEvent("cake", "click", function( ) {
-  checkGuess("the second one", "the second one",  "2");
-  setScreen("Question2");
-});
-onEvent("fake1", "click", function( ) {
-  checkGuess("the first one", "the second one",  "2");
-  setScreen("Question2");
-});
-onEvent("fake2", "click", function( ) {
-  checkGuess("the third one", "the second one",  "2");
-  setScreen("Question2");
-});
-onEvent("fake3", "click", function( ) {
-  checkGuess("the fourth one", "the second one",  "2");
-  setScreen("Question2");
-});
+<span class="o">//</span><span class="n">When</span> <span class="n">the</span> <span class="n">start</span> <span class="n">button</span> <span class="ow">is</span> <span class="n">clicked</span><span class="p">,</span> <span class="n">start</span> <span class="n">the</span> <span class="n">game</span>
+<span class="n">onEvent</span><span class="p">(</span><span class="s2">&quot;startButton&quot;</span><span class="p">,</span> <span class="s2">&quot;click&quot;</span><span class="p">,</span> <span class="n">function</span><span class="p">(</span> <span class="p">)</span> <span class="p">{</span>
+  <span class="n">playSpeech</span><span class="p">(</span><span class="s2">&quot;Enjoy this minecraft quiz! Level 1.&quot;</span><span class="p">,</span> <span class="s2">&quot;female&quot;</span><span class="p">,</span> <span class="s2">&quot;English&quot;</span><span class="p">);</span>
+  <span class="n">setScreen</span><span class="p">(</span><span class="s2">&quot;Question1&quot;</span><span class="p">);</span>
+<span class="p">});</span>
 
-//Question 2
-onEvent("true", "click", function( ) {
-  checkGuess("true", "false",  "3");
-  setScreen("Question3");
-});
-onEvent("false", "click", function( ) {
-  checkGuess("false", "false",  "3");
-  setScreen("Question3");
-});
+<span class="o">//</span><span class="n">Questions</span><span class="p">,</span> <span class="n">using</span> <span class="n">the</span> <span class="n">meathod</span> <span class="n">above</span><span class="p">:</span> 
 
-//Question 3
-onEvent("submit", "click", function( ) {
-  checkGuess(getText("text_input1"), "357",  "Mini Game!");
-  setScreen("MiniGame");
-  miniGame();
-});
+<span class="o">//</span><span class="n">Question</span> <span class="mi">1</span>
+<span class="n">onEvent</span><span class="p">(</span><span class="s2">&quot;cake&quot;</span><span class="p">,</span> <span class="s2">&quot;click&quot;</span><span class="p">,</span> <span class="n">function</span><span class="p">(</span> <span class="p">)</span> <span class="p">{</span>
+  <span class="n">checkGuess</span><span class="p">(</span><span class="s2">&quot;the second one&quot;</span><span class="p">,</span> <span class="s2">&quot;the second one&quot;</span><span class="p">,</span>  <span class="s2">&quot;2&quot;</span><span class="p">);</span>
+  <span class="n">setScreen</span><span class="p">(</span><span class="s2">&quot;Question2&quot;</span><span class="p">);</span>
+<span class="p">});</span>
+<span class="n">onEvent</span><span class="p">(</span><span class="s2">&quot;fake1&quot;</span><span class="p">,</span> <span class="s2">&quot;click&quot;</span><span class="p">,</span> <span class="n">function</span><span class="p">(</span> <span class="p">)</span> <span class="p">{</span>
+  <span class="n">checkGuess</span><span class="p">(</span><span class="s2">&quot;the first one&quot;</span><span class="p">,</span> <span class="s2">&quot;the second one&quot;</span><span class="p">,</span>  <span class="s2">&quot;2&quot;</span><span class="p">);</span>
+  <span class="n">setScreen</span><span class="p">(</span><span class="s2">&quot;Question2&quot;</span><span class="p">);</span>
+<span class="p">});</span>
+<span class="n">onEvent</span><span class="p">(</span><span class="s2">&quot;fake2&quot;</span><span class="p">,</span> <span class="s2">&quot;click&quot;</span><span class="p">,</span> <span class="n">function</span><span class="p">(</span> <span class="p">)</span> <span class="p">{</span>
+  <span class="n">checkGuess</span><span class="p">(</span><span class="s2">&quot;the third one&quot;</span><span class="p">,</span> <span class="s2">&quot;the second one&quot;</span><span class="p">,</span>  <span class="s2">&quot;2&quot;</span><span class="p">);</span>
+  <span class="n">setScreen</span><span class="p">(</span><span class="s2">&quot;Question2&quot;</span><span class="p">);</span>
+<span class="p">});</span>
+<span class="n">onEvent</span><span class="p">(</span><span class="s2">&quot;fake3&quot;</span><span class="p">,</span> <span class="s2">&quot;click&quot;</span><span class="p">,</span> <span class="n">function</span><span class="p">(</span> <span class="p">)</span> <span class="p">{</span>
+  <span class="n">checkGuess</span><span class="p">(</span><span class="s2">&quot;the fourth one&quot;</span><span class="p">,</span> <span class="s2">&quot;the second one&quot;</span><span class="p">,</span>  <span class="s2">&quot;2&quot;</span><span class="p">);</span>
+  <span class="n">setScreen</span><span class="p">(</span><span class="s2">&quot;Question2&quot;</span><span class="p">);</span>
+<span class="p">});</span>
+
+<span class="o">//</span><span class="n">Question</span> <span class="mi">2</span>
+<span class="n">onEvent</span><span class="p">(</span><span class="s2">&quot;true&quot;</span><span class="p">,</span> <span class="s2">&quot;click&quot;</span><span class="p">,</span> <span class="n">function</span><span class="p">(</span> <span class="p">)</span> <span class="p">{</span>
+  <span class="n">checkGuess</span><span class="p">(</span><span class="s2">&quot;true&quot;</span><span class="p">,</span> <span class="s2">&quot;false&quot;</span><span class="p">,</span>  <span class="s2">&quot;3&quot;</span><span class="p">);</span>
+  <span class="n">setScreen</span><span class="p">(</span><span class="s2">&quot;Question3&quot;</span><span class="p">);</span>
+<span class="p">});</span>
+<span class="n">onEvent</span><span class="p">(</span><span class="s2">&quot;false&quot;</span><span class="p">,</span> <span class="s2">&quot;click&quot;</span><span class="p">,</span> <span class="n">function</span><span class="p">(</span> <span class="p">)</span> <span class="p">{</span>
+  <span class="n">checkGuess</span><span class="p">(</span><span class="s2">&quot;false&quot;</span><span class="p">,</span> <span class="s2">&quot;false&quot;</span><span class="p">,</span>  <span class="s2">&quot;3&quot;</span><span class="p">);</span>
+  <span class="n">setScreen</span><span class="p">(</span><span class="s2">&quot;Question3&quot;</span><span class="p">);</span>
+<span class="p">});</span>
+
+<span class="o">//</span><span class="n">Question</span> <span class="mi">3</span>
+<span class="n">onEvent</span><span class="p">(</span><span class="s2">&quot;submit&quot;</span><span class="p">,</span> <span class="s2">&quot;click&quot;</span><span class="p">,</span> <span class="n">function</span><span class="p">(</span> <span class="p">)</span> <span class="p">{</span>
+  <span class="n">checkGuess</span><span class="p">(</span><span class="n">getText</span><span class="p">(</span><span class="s2">&quot;text_input1&quot;</span><span class="p">),</span> <span class="s2">&quot;357&quot;</span><span class="p">,</span>  <span class="s2">&quot;Mini Game!&quot;</span><span class="p">);</span>
+  <span class="n">setScreen</span><span class="p">(</span><span class="s2">&quot;MiniGame&quot;</span><span class="p">);</span>
+  <span class="n">miniGame</span><span class="p">();</span>
+<span class="p">});</span>
 
 
 
-//Mini Game!!!
-var diamondMoveCooldown1 = 0;
-var diamondMoveCooldown2 = 0;
-var diamondMoveCooldown3 = 0;
+<span class="o">//</span><span class="n">Mini</span> <span class="n">Game</span><span class="err">!!!</span>
+<span class="n">var</span> <span class="n">diamondMoveCooldown1</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="n">var</span> <span class="n">diamondMoveCooldown2</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="n">var</span> <span class="n">diamondMoveCooldown3</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 
-var points = 0;
+<span class="n">var</span> <span class="n">points</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 
-function updateDiamond(diamond, cooldown) {
+<span class="n">function</span> <span class="n">updateDiamond</span><span class="p">(</span><span class="n">diamond</span><span class="p">,</span> <span class="n">cooldown</span><span class="p">)</span> <span class="p">{</span>
   
-  if(cooldown&gt;30) {
-  setPosition(diamond, getXPosition(diamond), getYPosition(diamond)+1);
-  cooldown=0;
-  }
+  <span class="k">if</span><span class="p">(</span><span class="n">cooldown</span><span class="o">&gt;</span><span class="mi">30</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">setPosition</span><span class="p">(</span><span class="n">diamond</span><span class="p">,</span> <span class="n">getXPosition</span><span class="p">(</span><span class="n">diamond</span><span class="p">),</span> <span class="n">getYPosition</span><span class="p">(</span><span class="n">diamond</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span>
+  <span class="n">cooldown</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+  <span class="p">}</span>
 
-  if(getYPosition(diamond)&gt;500) {
-     setPosition(diamond, Math.random()*260, -120);
-     score--;
-     setText("score5", "Lives: " + score);
+  <span class="k">if</span><span class="p">(</span><span class="n">getYPosition</span><span class="p">(</span><span class="n">diamond</span><span class="p">)</span><span class="o">&gt;</span><span class="mi">500</span><span class="p">)</span> <span class="p">{</span>
+     <span class="n">setPosition</span><span class="p">(</span><span class="n">diamond</span><span class="p">,</span> <span class="n">Math</span><span class="o">.</span><span class="n">random</span><span class="p">()</span><span class="o">*</span><span class="mi">260</span><span class="p">,</span> <span class="o">-</span><span class="mi">120</span><span class="p">);</span>
+     <span class="n">score</span><span class="o">--</span><span class="p">;</span>
+     <span class="n">setText</span><span class="p">(</span><span class="s2">&quot;score5&quot;</span><span class="p">,</span> <span class="s2">&quot;Lives: &quot;</span> <span class="o">+</span> <span class="n">score</span><span class="p">);</span>
      
-  }
-  cooldown++;
-  return cooldown;
-}
+  <span class="p">}</span>
+  <span class="n">cooldown</span><span class="o">++</span><span class="p">;</span>
+  <span class="k">return</span> <span class="n">cooldown</span><span class="p">;</span>
+<span class="p">}</span>
 
-function updatePoints(diamond) {
-  setPosition(diamond, Math.random()*300+20, -120);
-  points++;
-  setText("thanksForPlaying", "Thanks for playing! You clicked the diamonds " + (points + " time(s)!"));
-}
+<span class="n">function</span> <span class="n">updatePoints</span><span class="p">(</span><span class="n">diamond</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">setPosition</span><span class="p">(</span><span class="n">diamond</span><span class="p">,</span> <span class="n">Math</span><span class="o">.</span><span class="n">random</span><span class="p">()</span><span class="o">*</span><span class="mi">300</span><span class="o">+</span><span class="mi">20</span><span class="p">,</span> <span class="o">-</span><span class="mi">120</span><span class="p">);</span>
+  <span class="n">points</span><span class="o">++</span><span class="p">;</span>
+  <span class="n">setText</span><span class="p">(</span><span class="s2">&quot;thanksForPlaying&quot;</span><span class="p">,</span> <span class="s2">&quot;Thanks for playing! You clicked the diamonds &quot;</span> <span class="o">+</span> <span class="p">(</span><span class="n">points</span> <span class="o">+</span> <span class="s2">&quot; time(s)!&quot;</span><span class="p">));</span>
+<span class="p">}</span>
 
 
-//Check for clicks
+<span class="o">//</span><span class="n">Check</span> <span class="k">for</span> <span class="n">clicks</span>
 
-onEvent("diamond1", "click", function( ) {
-  updatePoints("diamond1");
-});
-onEvent("diamond2", "click", function( ) {
-  updatePoints("diamond2");
-});
-onEvent("diamond3", "click", function( ) {
-  updatePoints("diamond3");
-});
+<span class="n">onEvent</span><span class="p">(</span><span class="s2">&quot;diamond1&quot;</span><span class="p">,</span> <span class="s2">&quot;click&quot;</span><span class="p">,</span> <span class="n">function</span><span class="p">(</span> <span class="p">)</span> <span class="p">{</span>
+  <span class="n">updatePoints</span><span class="p">(</span><span class="s2">&quot;diamond1&quot;</span><span class="p">);</span>
+<span class="p">});</span>
+<span class="n">onEvent</span><span class="p">(</span><span class="s2">&quot;diamond2&quot;</span><span class="p">,</span> <span class="s2">&quot;click&quot;</span><span class="p">,</span> <span class="n">function</span><span class="p">(</span> <span class="p">)</span> <span class="p">{</span>
+  <span class="n">updatePoints</span><span class="p">(</span><span class="s2">&quot;diamond2&quot;</span><span class="p">);</span>
+<span class="p">});</span>
+<span class="n">onEvent</span><span class="p">(</span><span class="s2">&quot;diamond3&quot;</span><span class="p">,</span> <span class="s2">&quot;click&quot;</span><span class="p">,</span> <span class="n">function</span><span class="p">(</span> <span class="p">)</span> <span class="p">{</span>
+  <span class="n">updatePoints</span><span class="p">(</span><span class="s2">&quot;diamond3&quot;</span><span class="p">);</span>
+<span class="p">});</span>
     
     
 
-function miniGame() {
-  while (score&gt;0) {
-    //Update diamonds
+<span class="n">function</span> <span class="n">miniGame</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">while</span> <span class="p">(</span><span class="n">score</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+    <span class="o">//</span><span class="n">Update</span> <span class="n">diamonds</span>
+    <span class="n">diamondMoveCooldown1</span> <span class="o">=</span> <span class="n">updateDiamond</span><span class="p">(</span><span class="s2">&quot;diamond1&quot;</span><span class="p">,</span> <span class="n">diamondMoveCooldown1</span><span class="p">);</span>
+    <span class="n">diamondMoveCooldown2</span> <span class="o">=</span> <span class="n">updateDiamond</span><span class="p">(</span><span class="s2">&quot;diamond2&quot;</span><span class="p">,</span> <span class="n">diamondMoveCooldown2</span><span class="p">);</span>
+    <span class="n">diamondMoveCooldown3</span> <span class="o">=</span> <span class="n">updateDiamond</span><span class="p">(</span><span class="s2">&quot;diamond3&quot;</span><span class="p">,</span> <span class="n">diamondMoveCooldown3</span><span class="p">);</span>
+  <span class="p">}</span>
+ <span class="n">setScreen</span><span class="p">(</span><span class="s2">&quot;End&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
     
-    diamondMoveCooldown1 = updateDiamond("diamond1", diamondMoveCooldown1);
-    diamondMoveCooldown2 = updateDiamond("diamond2", diamondMoveCooldown2);
-    diamondMoveCooldown3 = updateDiamond("diamond3", diamondMoveCooldown3);
-  }
- setScreen("End");
- 
-   
-}
-
-
-
 
 </div>
 
