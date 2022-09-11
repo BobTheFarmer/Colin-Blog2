@@ -14,7 +14,7 @@
     
         ,"post1": {
             "title": "Puppys",
-            "content": "print(&quot;hello world&quot;) . hello world .",
+            "content": "Minecraft Quiz Using Applab! . Using applab to make a minecraft quiz . categories:[week4,applab]- comments: true | . Plan: . My plan for this project is to: . 1: Make a basic draft in applab to get an idea for how it works | 2: Then use this blog to blueprint a more advanced and streamlined version of original | 3: Combine the blueprint and parts of the original code to make the final project | . Drafting: . For my draft, I used a basic repeating code structure over and over again to create a basic quiz . Pros Cons . Easy to code | Confusing code; so it would be hard to add more features to | . N/A | Not unique | . Blueprinting: . To plan my final quiz, I wanted to see what was good and bad about my draft: . To keep the simple code but make it less confusing, for the final product I will add a function that does the repeating code for me | To make the quiz more unique, I will add a game to the end: You will have to catch diamonds before they fall, and the points you get on the quiz will determine how many you can let fall during the game before losing | . The Final Product . print(&quot;hello world&quot;) . hello world .",
             "url": "https://bobthefarmer.github.io/Colin-Blog2/2022/09/11/AppLab2.html",
             "relUrl": "/2022/09/11/AppLab2.html",
             "date": " • Sep 11, 2022"
