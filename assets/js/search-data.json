@@ -4,9 +4,9 @@
         "post0": {
             "title": "Outline for Creative Performance Task Project",
             "content": "Scrum Board . To-Do In Progress Finished . Figure out how to use an image URL as an input and to return an image | Make a working draft of the more promising ideas | Brainstorm a list of ideas | . Add more ideas to the list | | | . What happens when there is a &#39;donut&#39; | | . Potential Ideas . Use an algorithm to remove a mono-color background from an image, making it a PNG | . Start of design . Input a URL of an image | Program takes the image and compiles it into a 3D array of pixels, with RGB values | Find the background by seeing what single pixel/very similar pixels are near the edge | TBD: Edge cases like donuts | Return an image | .",
-            "url": "https://bobthefarmer.github.io/Colin-Blog2/week4/2022/09/15/2022-09-11-Outline-for-Create-Performance-Task-Project.html",
-            "relUrl": "/week4/2022/09/15/2022-09-11-Outline-for-Create-Performance-Task-Project.html",
-            "date": " • Sep 15, 2022"
+            "url": "https://bobthefarmer.github.io/Colin-Blog2/week4/2022/09/19/2022-09-11-Outline-for-Create-Performance-Task-Project.html",
+            "relUrl": "/week4/2022/09/19/2022-09-11-Outline-for-Create-Performance-Task-Project.html",
+            "date": " • Sep 19, 2022"
         }
         
     
