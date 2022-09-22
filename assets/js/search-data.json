@@ -14,9 +14,9 @@
     
         ,"post1": {
             "title": "Javascript Tables",
-            "content": "Using javascript and HTML format for tables . Regular Post that uses HTML fragments and JavaScript data to build a table . categories: [week6,ipynb,javascript] | comments: true | permalink: /javascriptTables | .",
-            "url": "https://bobthefarmer.github.io/Colin-Blog2/2022/09/22/Javascript-Tables.html",
-            "relUrl": "/2022/09/22/Javascript-Tables.html",
+            "content": "Using javascript and HTML format for tables . Regular Post that uses HTML fragments and JavaScript data to build a table .",
+            "url": "https://bobthefarmer.github.io/Colin-Blog2/javascriptTables",
+            "relUrl": "/javascriptTables",
             "date": " • Sep 22, 2022"
         }
         
