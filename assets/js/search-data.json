@@ -2,17 +2,6 @@
   
     
         "post0": {
-            "title": "Using javascript and HTML format for tables",
-            "content": "",
-            "url": "https://bobthefarmer.github.io/Colin-Blog2/javascriptTables",
-            "relUrl": "/javascriptTables",
-            "date": " • Sep 22, 2022"
-        }
-        
-    
-  
-    
-        ,"post1": {
             "title": "Sorting Algorithm",
             "content": "",
             "url": "https://bobthefarmer.github.io/Colin-Blog2/sortingAlgorithm",
@@ -23,11 +12,22 @@
     
   
     
+        ,"post1": {
+            "title": "Javascript Tables",
+            "content": "Using javascript and HTML format for tables . Regular Post that uses HTML fragments and JavaScript data to build a table . categories: [week6,ipynb,javascript] | comments: true | permalink: /javascriptTables | .",
+            "url": "https://bobthefarmer.github.io/Colin-Blog2/2022/09/22/Javascript-Tables.html",
+            "relUrl": "/2022/09/22/Javascript-Tables.html",
+            "date": " • Sep 22, 2022"
+        }
+        
+    
+  
+    
         ,"post2": {
             "title": "Using javascript and HTML format to make a sorting algorithm",
-            "content": "Sorting Algorithm Demo (Regular post that uses HTML fragments and JavaScript data to build a table) | Personal Usage of Jupyter JavaScript Kernel | . .",
-            "url": "https://bobthefarmer.github.io/Colin-Blog2/week6/ipynb/javascript/2022/09/22/Javascript-Sorting-Algoritm-Demo.html",
-            "relUrl": "/week6/ipynb/javascript/2022/09/22/Javascript-Sorting-Algoritm-Demo.html",
+            "content": "Main Page | Sorting Algorithm Demo | JavaScript Table | . .",
+            "url": "https://bobthefarmer.github.io/Colin-Blog2/javascript1",
+            "relUrl": "/javascript1",
             "date": " • Sep 22, 2022"
         }
         
