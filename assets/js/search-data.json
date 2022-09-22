@@ -14,7 +14,7 @@
     
         ,"post1": {
             "title": "Javascript Tables",
-            "content": "Using javascript and HTML format for tables . Regular Post that uses HTML fragments and JavaScript data to build a table .",
+            "content": "Using javascript and HTML format for tables . Regular Post that uses HTML fragments and JavaScript data to build a table . Remix of Game of Life . start step",
             "url": "https://bobthefarmer.github.io/Colin-Blog2/javascriptTables",
             "relUrl": "/javascriptTables",
             "date": " • Sep 22, 2022"
