@@ -3,7 +3,7 @@
     
         "post0": {
             "title": "Sorting Algorithm",
-            "content": "",
+            "content": "//Define data function Data(name, github, fastpages) { this.name = name; this.git = github; this.fastpages = fastpages; } Data.prototype.setRole = function(role) { this.role = role; } Data.prototype.toJSON = function() { const obj = {name: this.name, github: this.github, fastpages: this.fastpages}; const json = JSON.stringify(obj); return json; } //Make a new data var data = new Data(&quot;test&quot;, &quot;test&quot;, &quot;test&quot;); logItType(data); logItType(data.toJSON()); . evalmachine.&lt;anonymous&gt;:19 logItType(data); ^ ReferenceError: logItType is not defined at evalmachine.&lt;anonymous&gt;:19:1 at Script.runInThisContext (vm.js:96:20) at Object.runInThisContext (vm.js:303:38) at run ([eval]:1020:15) at onRunRequest ([eval]:864:18) at onMessage ([eval]:828:13) at process.emit (events.js:182:13) at emit (internal/child_process.js:812:12) at process._tickCallback (internal/process/next_tick.js:63:19) .",
             "url": "https://bobthefarmer.github.io/Colin-Blog2/sortingAlgorithm",
             "relUrl": "/sortingAlgorithm",
             "date": " • Sep 22, 2022"
