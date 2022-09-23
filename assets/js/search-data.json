@@ -3,7 +3,7 @@
     
         "post0": {
             "title": "Sorting Algorithm",
-            "content": "//Define data function Data(name, github, fastpages) { this.name = name; this.git = github; this.fastpages = fastpages; } Data.prototype.setRole = function(role) { this.role = role; } Data.prototype.toJSON = function() { const obj = {name: this.name, github: this.github, fastpages: this.fastpages}; const json = JSON.stringify(obj); return json; } //Make a new data var data = new Data(&quot;test&quot;, &quot;test&quot;, &quot;test&quot;); logItType(data); logItType(data.toJSON()); . evalmachine.&lt;anonymous&gt;:19 logItType(data); ^ ReferenceError: logItType is not defined at evalmachine.&lt;anonymous&gt;:19:1 at Script.runInThisContext (vm.js:96:20) at Object.runInThisContext (vm.js:303:38) at run ([eval]:1020:15) at onRunRequest ([eval]:864:18) at onMessage ([eval]:828:13) at process.emit (events.js:182:13) at emit (internal/child_process.js:812:12) at process._tickCallback (internal/process/next_tick.js:63:19) .",
+            "content": "",
             "url": "https://bobthefarmer.github.io/Colin-Blog2/sortingAlgorithm",
             "relUrl": "/sortingAlgorithm",
             "date": " • Sep 22, 2022"
@@ -13,10 +13,10 @@
   
     
         ,"post1": {
-            "title": "Javascript Tables",
-            "content": "Using javascript and HTML format for tables . Regular Post that uses HTML fragments and JavaScript data to build a table which holds your important APCSP data . Click below to start! . Start",
-            "url": "https://bobthefarmer.github.io/Colin-Blog2/javascriptTables",
-            "relUrl": "/javascriptTables",
+            "title": "Title",
+            "content": ". categories: [week6,ipynb,javascript] comments: true . permalink: /javascriptTables . Using javascript and HTML format for tables . Post that uses HTML fragments and JavaScript data to build a table which holds your important APCSP data . //Define data function Data(name, github, fastpages) { this.name = name; this.git = github; this.fastpages = fastpages; } Data.prototype.setRole = function(role) { this.role = role; } Data.prototype.toJSON = function() { const obj = {name: this.name, github: this.github, fastpages: this.fastpages}; const json = JSON.stringify(obj); return json; } //Make a new data var colin = new Data(&quot;Colin&quot;, &quot;https://github.com/BobTheFarmer/Colin-Blog2/actions&quot;, &quot;https://bobthefarmer.github.io/Colin-Blog2/&quot;); var orlando = new Data(&quot;Orlando&quot;, &quot;https://github.com/Orlando-c&quot;, &quot;https://orlando-c.github.io/que-pro/&quot;); var ethan = new Data(&quot;Ethan&quot;, &quot;https://github.com/dolphinalt&quot;, &quot;https://github.com/dolphinalt/APCSP-Fastpages&quot;) console.log(colin.github); //Compile into a list allData = [colin, orlando, ethan]; //HTML conversion method function ._toHtml = function() { var style = ( &quot;display:inline-block;&quot; + &quot;border: 2px solid grey;&quot; + &quot;box-shadow: 0.8em 0.4em 0.4em grey;&quot; ); var table = &quot;&quot;; body += &quot;&lt;tr&gt;&quot;; body += &quot;&lt;th&gt;&lt;mark&gt;&quot; + &quot;Name&quot; + &quot;&lt;/mark&gt;&lt;/th&gt;&quot;; body += &quot;&lt;th&gt;&lt;mark&gt;&quot; + &quot;GitHub&quot; + &quot;&lt;/mark&gt;&lt;/th&gt;&quot;; body += &quot;&lt;th&gt;&lt;mark&gt;&quot; + &quot;Fastpages&quot; + &quot;&lt;/mark&gt;&lt;/th&gt;&quot;; body += &quot;&lt;/tr&gt;&quot;; //Go through all data and each data&#39;s properties in a table format for (var row of allData) { body += &quot;&lt;tr&gt;&quot;; body += &quot;&lt;td&gt;&quot; + row.name; body += &quot;&lt;td&gt;&quot; + &quot;![&quot; + row.name + &quot;&#39;s Github]{&quot; + row.github + &quot;}&quot; + &quot;&lt;/td&gt;&quot;; body += &quot;&lt;td&gt;&quot; + &quot;![&quot; + row.name + &quot;&#39;s Fastpages]{&quot; + row.github + &quot;}&quot; + &quot;&lt;/td&gt;&quot;; body += &quot;&lt;tr&gt;&quot; + &quot;&lt;/td&gt;&quot;; } //Return table return ( &quot;&lt;div style=&#39;&quot; + style + &quot;&#39;&gt;&quot; + &quot;&lt;table&gt;&quot; + body + &quot;&lt;/table&gt;&quot; + &quot;&lt;/div&gt;&quot; ); }; // IJavaScript HTML processor receive parameter of defined HTML fragment $$.html(tableMaker._toHtml()); .",
+            "url": "https://bobthefarmer.github.io/Colin-Blog2/2022/09/22/Javascript-Tables.html",
+            "relUrl": "/2022/09/22/Javascript-Tables.html",
             "date": " • Sep 22, 2022"
         }
         
