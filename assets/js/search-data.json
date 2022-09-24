@@ -2,17 +2,6 @@
   
     
         "post0": {
-            "title": "Outline for Creative Performance Task Project",
-            "content": "Scrum Board . To-Do In Progress Finished . Figure out how to use an image URL as an input and to return an image | Make a working draft of the more promising ideas | Brainstorm a list of ideas | . Add more ideas to the list | | | . What happens when there is a &#39;donut&#39; | | . Potential Ideas . Use an algorithm to remove a mono-color background from an image, making it a PNG | . Start of design . Input a URL of an image | Program takes the image and compiles it into a 3D array of pixels, with RGB values | Find the background by seeing what single pixel/very similar pixels are near the edge | TBD: Edge cases like donuts | Return an image | .",
-            "url": "https://bobthefarmer.github.io/Colin-Blog2/week4/2022/09/23/2022-09-11-Outline-for-Create-Performance-Task-Project.html",
-            "relUrl": "/week4/2022/09/23/2022-09-11-Outline-for-Create-Performance-Task-Project.html",
-            "date": " • Sep 23, 2022"
-        }
-        
-    
-  
-    
-        ,"post1": {
             "title": "Sorting Algorithm Using JavaScript",
             "content": "Main Page | Sorting Algorithm Demo | JavaScript Table | . . sorted = false; //Make a random set of 15 ints values = []; for(let i = 0; i&lt;10; i++) { values[i] = Math.floor(Math.random()*6); } //Put the set into a holder function ValuesHolder(values) { this.values = values; } valuesHolder = new ValuesHolder(values); //Displays the values function getDisplayValues() { stringOfValues = &quot;&quot;; //Count down from ten for(let i = 5; i &gt;= 0; i--) { //For every value in values check if it is equal to or more than current i to determine box color values.forEach(value =&gt; { if(value&gt;=i) { stringOfValues+=&quot;🟦&quot; } else { stringOfValues+=&quot;⬛&quot; } }); stringOfValues+=&quot; n&quot; } return(stringOfValues); } step = 0; console.log(&quot;Lets sort this random array using bubble sort!&quot;); while(sorted == false) { //Update log console.log(&quot;Step &quot; + step + &quot;: n&quot; + getDisplayValues()); step+=1; //See if the list is sorted using fail fail = false; //Go through all pairs in values for(let i = 0; i&lt;10; i++) { if(values[i]&lt;values[i+1]) { fail = true; //If fail, switch them var temp = values[i]; values[i] = values[i+1]; values[i+1] = temp; } } //Determine if done or not if(fail == false) { console.log(&quot;The array has been sorted! :)&quot;) sorted = true; } } . Lets sort this random array using bubble sort! Step 0: ⬛⬛⬛⬛🟦⬛⬛⬛⬛🟦 ⬛⬛⬛⬛🟦🟦⬛⬛⬛🟦 ⬛🟦⬛⬛🟦🟦⬛⬛🟦🟦 ⬛🟦⬛⬛🟦🟦🟦⬛🟦🟦 ⬛🟦⬛⬛🟦🟦🟦🟦🟦🟦 🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦 Step 1: ⬛⬛⬛🟦⬛⬛⬛⬛🟦⬛ ⬛⬛⬛🟦🟦⬛⬛⬛🟦⬛ 🟦⬛⬛🟦🟦⬛⬛🟦🟦⬛ 🟦⬛⬛🟦🟦🟦⬛🟦🟦⬛ 🟦⬛⬛🟦🟦🟦🟦🟦🟦⬛ 🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦 Step 2: ⬛⬛🟦⬛⬛⬛⬛🟦⬛⬛ ⬛⬛🟦🟦⬛⬛⬛🟦⬛⬛ 🟦⬛🟦🟦⬛⬛🟦🟦⬛⬛ 🟦⬛🟦🟦🟦⬛🟦🟦⬛⬛ 🟦⬛🟦🟦🟦🟦🟦🟦⬛⬛ 🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦 Step 3: ⬛🟦⬛⬛⬛⬛🟦⬛⬛⬛ ⬛🟦🟦⬛⬛⬛🟦⬛⬛⬛ 🟦🟦🟦⬛⬛🟦🟦⬛⬛⬛ 🟦🟦🟦🟦⬛🟦🟦⬛⬛⬛ 🟦🟦🟦🟦🟦🟦🟦⬛⬛⬛ 🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦 Step 4: 🟦⬛⬛⬛⬛🟦⬛⬛⬛⬛ 🟦🟦⬛⬛⬛🟦⬛⬛⬛⬛ 🟦🟦🟦⬛🟦🟦⬛⬛⬛⬛ 🟦🟦🟦🟦🟦🟦⬛⬛⬛⬛ 🟦🟦🟦🟦🟦🟦🟦⬛⬛⬛ 🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦 Step 5: 🟦⬛⬛⬛🟦⬛⬛⬛⬛⬛ 🟦🟦⬛⬛🟦⬛⬛⬛⬛⬛ 🟦🟦🟦🟦🟦⬛⬛⬛⬛⬛ 🟦🟦🟦🟦🟦🟦⬛⬛⬛⬛ 🟦🟦🟦🟦🟦🟦🟦⬛⬛⬛ 🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦 Step 6: 🟦⬛⬛🟦⬛⬛⬛⬛⬛⬛ 🟦🟦⬛🟦⬛⬛⬛⬛⬛⬛ 🟦🟦🟦🟦🟦⬛⬛⬛⬛⬛ 🟦🟦🟦🟦🟦🟦⬛⬛⬛⬛ 🟦🟦🟦🟦🟦🟦🟦⬛⬛⬛ 🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦 Step 7: 🟦⬛🟦⬛⬛⬛⬛⬛⬛⬛ 🟦🟦🟦⬛⬛⬛⬛⬛⬛⬛ 🟦🟦🟦🟦🟦⬛⬛⬛⬛⬛ 🟦🟦🟦🟦🟦🟦⬛⬛⬛⬛ 🟦🟦🟦🟦🟦🟦🟦⬛⬛⬛ 🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦 Step 8: 🟦🟦⬛⬛⬛⬛⬛⬛⬛⬛ 🟦🟦🟦⬛⬛⬛⬛⬛⬛⬛ 🟦🟦🟦🟦🟦⬛⬛⬛⬛⬛ 🟦🟦🟦🟦🟦🟦⬛⬛⬛⬛ 🟦🟦🟦🟦🟦🟦🟦⬛⬛⬛ 🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦 The array has been sorted! :) . true .",
             "url": "https://bobthefarmer.github.io/Colin-Blog2/sortingAlgorithm",
@@ -23,7 +12,7 @@
     
   
     
-        ,"post2": {
+        ,"post1": {
             "title": "Using javascript and HTML format for tables",
             "content": "Main Page | Sorting Algorithm Demo | JavaScript Table | . . //Define data function Data(name, github, fastpages) { this.name = name; this.git = github; this.fastpages = fastpages; } Data.prototype.setRole = function(role) { this.role = role; } Data.prototype.toJSON = function() { const obj = {name: this.name, github: this.github, fastpages: this.fastpages}; const json = JSON.stringify(obj); return json; } //Make new data and put in a list var colin = new Data(&quot;Colin&quot;, &quot;https://github.com/BobTheFarmer/Colin-Blog2&quot;, &quot;https://bobthefarmer.github.io/Colin-Blog2/&quot;); var orlando = new Data(&quot;Orlando&quot;, &quot;https://github.com/Orlando-c&quot;, &quot;https://orlando-c.github.io/que-pro/&quot;); var ethan = new Data(&quot;Ethan&quot;, &quot;https://github.com/dolphinalt/APCSP-Fastpages&quot;, &quot;https://github.com/dolphinalt/APCSP-Fastpages&quot;) var jaden = new Data(&quot;Jaden&quot;, &quot;https://raisinbran25.github.io/csp2/&quot;, &quot;https://github.com/raisinbran25/csp2&quot;) allData = [colin, orlando, ethan]; //Make a object to hold the data function DataHolder(allData) { this.allData = allData; this.allData.forEach(data =&gt; { this.allData.push(data); }); this.json = []; this.allData.forEach(data =&gt; this.json.push(data.toJSON())); } //Use object to hold data dataHolder = new DataHolder(allData); //HTML conversion method DataHolder.prototype._toHtml = function() { var style = ( &quot;display:inline-block;&quot; + &quot;border: 2px solid grey;&quot; + &quot;box-shadow: 0.8em 0.4em 0.4em grey;&quot; ); var table = &quot;&quot;; table += &quot;&lt;tr&gt;&quot;; table += &quot;&lt;th&gt;&lt;mark&gt;&quot; + &quot;Name&quot; + &quot;&lt;/mark&gt;&lt;/th&gt;&quot;; table += &quot;&lt;th&gt;&lt;mark&gt;&quot; + &quot;GitHub&quot; + &quot;&lt;/mark&gt;&lt;/th&gt;&quot;; table += &quot;&lt;th&gt;&lt;mark&gt;&quot; + &quot;Fastpages&quot; + &quot;&lt;/mark&gt;&lt;/th&gt;&quot;; table += &quot;&lt;/tr&gt;&quot;; //Go through all data and each data&#39;s properties in a table format for (var row of allData) { table += &quot;&lt;tr&gt;&quot;; table += &quot;&lt;td&gt;&quot; + row.name; table += &quot;&lt;td&gt;&quot; + row.name + &quot;&#39;s Github: &quot; + row.git + &quot;&lt;/td&gt;&quot;; table += &quot;&lt;td&gt;&quot; + row.name + &quot;&#39;s Fastpages: &quot; + row.fastpages + &quot;&lt;/td&gt;&quot;; table += &quot;&lt;tr&gt;&quot; + &quot;&lt;/td&gt;&quot;; } //Return table return ( &quot;&lt;div style=&#39;&quot; + style + &quot;&#39;&gt;&quot; + &quot;&lt;table&gt;&quot; + table + &quot;&lt;/table&gt;&quot; + &quot;&lt;/div&gt;&quot; ); }; // IJavaScript HTML processor receive parameter of defined HTML fragment $$.html(dataHolder._toHtml()); . NameGitHubFastpages . ColinColin&#39;s Github: https://github.com/BobTheFarmer/Colin-Blog2 | Colin&#39;s Fastpages: https://bobthefarmer.github.io/Colin-Blog2/ | &lt;/td&gt;OrlandoOrlando&#39;s Github: https://github.com/Orlando-c | Orlando&#39;s Fastpages: https://orlando-c.github.io/que-pro/ | &lt;/td&gt;EthanEthan&#39;s Github: https://github.com/dolphinalt/APCSP-Fastpages | Ethan&#39;s Fastpages: https://github.com/dolphinalt/APCSP-Fastpages | &lt;/td&gt;ColinColin&#39;s Github: https://github.com/BobTheFarmer/Colin-Blog2 | Colin&#39;s Fastpages: https://bobthefarmer.github.io/Colin-Blog2/ | &lt;/td&gt;OrlandoOrlando&#39;s Github: https://github.com/Orlando-c | Orlando&#39;s Fastpages: https://orlando-c.github.io/que-pro/ | &lt;/td&gt;EthanEthan&#39;s Github: https://github.com/dolphinalt/APCSP-Fastpages | Ethan&#39;s Fastpages: https://github.com/dolphinalt/APCSP-Fastpages | &lt;/td&gt;&lt;/table&gt;&lt;/div&gt; &lt;/div&gt; &lt;/div&gt; &lt;/div&gt; &lt;/div&gt; &lt;/div&gt; &lt;/div&gt; . | . | . | . | . | . | .",
             "url": "https://bobthefarmer.github.io/Colin-Blog2/javascriptTables",
@@ -34,7 +23,7 @@
     
   
     
-        ,"post3": {
+        ,"post2": {
             "title": "Using javascript and HTML format",
             "content": "Main Page | Sorting Algorithm Demo | JavaScript Table | . . The above links link to my personal use of JavaScript and the table hacks for JavaScript and HTML format .",
             "url": "https://bobthefarmer.github.io/Colin-Blog2/javascript1",
@@ -45,7 +34,7 @@
     
   
     
-        ,"post4": {
+        ,"post3": {
             "title": "Week5 Summary",
             "content": "Key Idea How I used it . Program Purpose and Function | To be able to locally host our fastpages and group project; improving the speed we can work at | . Data Abstraction | N/A | i | . Managing Complexity | I went back to the week 1 instructions in order to better understand the instillation process | . Procedural Abstraction | N/A | . Algorithm Implementation | Outside algorithms where used in the command log to download things | . Testing | Trial and error | . Mental Health . This week we also learned about the importance of keeping time for things like social connections, gratitude, helping others; and making time for these things and other stress relievers .",
             "url": "https://bobthefarmer.github.io/Colin-Blog2/week5/ipynb/2022/09/19/Week5-Summary.html",
@@ -56,7 +45,7 @@
     
   
     
-        ,"post5": {
+        ,"post4": {
             "title": "Video and Gratitude",
             "content": "Video Vocabulary/Notes/Big Ideas . Circumstances of life don&#39;t matter as much as we think | Our happiness is not bound by our circumstances | Taking control of our life is hard | Important things to make time for: | Social connections | Gratitude | Helping others | These things are very important and matter a lot | We need to take time to live in the present | In order to do that we have to become &#39;wealthy&#39; with time | . Note of Gratitude . I am very grateful for my parents. They have always been very loving and supported me for longer than I can remember. They have always provided for me and I am very grateful for that. . Gratitude List . Here is some of the things I am grateful . My parents | We live in a safe place where I can not worry about food or safety | I am able to go to a very good school | I have a secure future because of all of these things | .",
             "url": "https://bobthefarmer.github.io/Colin-Blog2/week5/ipynb/2022/09/13/Video-Notes.html",
@@ -67,12 +56,23 @@
     
   
     
-        ,"post6": {
+        ,"post5": {
             "title": "Video Notes",
             "content": "",
             "url": "https://bobthefarmer.github.io/Colin-Blog2/week4/ipynb/notes/2022/09/12/Video-Notes.html",
             "relUrl": "/week4/ipynb/notes/2022/09/12/Video-Notes.html",
             "date": " • Sep 12, 2022"
+        }
+        
+    
+  
+    
+        ,"post6": {
+            "title": "Outline for Creative Performance Task Project",
+            "content": "Scrum Board . To-Do In Progress Finished . Figure out how to use an image URL as an input and to return an image | Make a working draft of the more promising ideas | Brainstorm a list of ideas | . Add more ideas to the list | | | . What happens when there is a &#39;donut&#39; | | . Potential Ideas . Use an algorithm to remove a mono-color background from an image, making it a PNG | . Start of design . Input a URL of an image | Program takes the image and compiles it into a 3D array of pixels, with RGB values | Find the background by seeing what single pixel/very similar pixels are near the edge | TBD: Edge cases like donuts | Return an image | .",
+            "url": "https://bobthefarmer.github.io/Colin-Blog2/week4/2022/09/11/Outline-for-Create-Performance-Task-Project.html",
+            "relUrl": "/week4/2022/09/11/Outline-for-Create-Performance-Task-Project.html",
+            "date": " • Sep 11, 2022"
         }
         
     
