@@ -8,8 +8,8 @@
 <meta name="generator" content="Jekyll v4.1.1" />
 <meta property="og:title" content="Sorting Algorithm Using JavaScript" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Jupyter Notebook that shows personal usage of Jupyter JavaScript kernel" />
-<meta property="og:description" content="Jupyter Notebook that shows personal usage of Jupyter JavaScript kernel" />
+<meta name="description" content="Jupyter Notebook that shows personal usage of Jupyter JavaScript kernel by using bubble sorting" />
+<meta property="og:description" content="Jupyter Notebook that shows personal usage of Jupyter JavaScript kernel by using bubble sorting" />
 <link rel="canonical" href="https://bobthefarmer.github.io/Colin-Blog2/sortingAlgorithm" />
 <meta property="og:url" content="https://bobthefarmer.github.io/Colin-Blog2/sortingAlgorithm" />
 <meta property="og:site_name" content="Colin’s Blog!" />
@@ -18,7 +18,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Sorting Algorithm Using JavaScript" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-09-22T00:00:00-05:00","datePublished":"2022-09-22T00:00:00-05:00","description":"Jupyter Notebook that shows personal usage of Jupyter JavaScript kernel","headline":"Sorting Algorithm Using JavaScript","mainEntityOfPage":{"@type":"WebPage","@id":"https://bobthefarmer.github.io/Colin-Blog2/sortingAlgorithm"},"url":"https://bobthefarmer.github.io/Colin-Blog2/sortingAlgorithm"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-09-22T00:00:00-05:00","datePublished":"2022-09-22T00:00:00-05:00","description":"Jupyter Notebook that shows personal usage of Jupyter JavaScript kernel by using bubble sorting","headline":"Sorting Algorithm Using JavaScript","mainEntityOfPage":{"@type":"WebPage","@id":"https://bobthefarmer.github.io/Colin-Blog2/sortingAlgorithm"},"url":"https://bobthefarmer.github.io/Colin-Blog2/sortingAlgorithm"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/Colin-Blog2/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://bobthefarmer.github.io/Colin-Blog2/feed.xml" title="Colin's Blog!" /><link rel="shortcut icon" type="image/x-icon" href="/Colin-Blog2/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -73,13 +73,13 @@ window.onload = wrap_img;
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">Sorting Algorithm Using JavaScript</h1><p class="page-description">Jupyter Notebook that shows personal usage of Jupyter JavaScript kernel</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-09-22T00:00:00-05:00" itemprop="datePublished">
+    <h1 class="post-title p-name" itemprop="name headline">Sorting Algorithm Using JavaScript</h1><p class="page-description">Jupyter Notebook that shows personal usage of Jupyter JavaScript kernel by using bubble sorting</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-09-22T00:00:00-05:00" itemprop="datePublished">
         Sep 22, 2022
       </time>
        • <span class="read-time" title="Estimated read time">
     
     
-      7 words
+      284 words
     
 </span></p>
 
@@ -143,14 +143,185 @@ window.onload = wrap_img;
 <p><table>
     <tr>
         <td><a href="/Colin-Blog2/javascript1">Main Page</a></td>
-        <td><a href="/Colin-Blog2/javascriptTables">Sorting Algorithm Demo</a></td>
-        <td><a href="/Colin-Blog2/sortingAlgorithm">JavaScript Table</a></td>
+        <td><a href="/Colin-Blog2/sortingAlgorithm">Sorting Algorithm Demo</a></td>
+        <td><a href="/Colin-Blog2/javascriptTables">JavaScript Table</a></td>
     </tr>
 </table></p>
 
 </div>
 </div>
 </div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-javascript"><pre><span></span><span class="nx">sorted</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+<span class="c1">//Make a random set of 15 ints</span>
+<span class="nx">values</span> <span class="o">=</span> <span class="p">[];</span>
+<span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span> <span class="nx">i</span><span class="o">&lt;</span><span class="mf">10</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">values</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span><span class="o">*</span><span class="mf">6</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">//Put the set into a holder</span>
+<span class="kd">function</span> <span class="nx">ValuesHolder</span><span class="p">(</span><span class="nx">values</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">values</span> <span class="o">=</span> <span class="nx">values</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nx">valuesHolder</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ValuesHolder</span><span class="p">(</span><span class="nx">values</span><span class="p">);</span>
+
+<span class="c1">//Displays the values</span>
+<span class="kd">function</span> <span class="nx">getDisplayValues</span><span class="p">()</span> <span class="p">{</span>
+<span class="nx">stringOfValues</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
+    <span class="c1">//Count down from ten</span>
+    <span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mf">5</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&gt;=</span> <span class="mf">0</span><span class="p">;</span> <span class="nx">i</span><span class="o">--</span><span class="p">)</span> <span class="p">{</span>
+       
+        <span class="c1">//For every value in values check if it is equal to or more than current i to determine box color </span>
+        <span class="nx">values</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">value</span> <span class="p">=&gt;</span> <span class="p">{</span> 
+            <span class="k">if</span><span class="p">(</span><span class="nx">value</span><span class="o">&gt;=</span><span class="nx">i</span><span class="p">)</span> <span class="p">{</span>
+                <span class="nx">stringOfValues</span><span class="o">+=</span><span class="s2">&quot;🟦&quot;</span>
+            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                <span class="nx">stringOfValues</span><span class="o">+=</span><span class="s2">&quot;⬛&quot;</span>
+            <span class="p">}</span>
+        <span class="p">});</span>
+    <span class="nx">stringOfValues</span><span class="o">+=</span><span class="s2">&quot;\n&quot;</span>
+    <span class="p">}</span>
+<span class="k">return</span><span class="p">(</span><span class="nx">stringOfValues</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nx">step</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Lets sort this random array using bubble sort!&quot;</span><span class="p">);</span>
+<span class="k">while</span><span class="p">(</span><span class="nx">sorted</span> <span class="o">==</span> <span class="kc">false</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">//Update log</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Step &quot;</span> <span class="o">+</span> <span class="nx">step</span> <span class="o">+</span> <span class="s2">&quot;:\n&quot;</span> <span class="o">+</span> <span class="nx">getDisplayValues</span><span class="p">());</span>
+    <span class="nx">step</span><span class="o">+=</span><span class="mf">1</span><span class="p">;</span>
+
+    <span class="c1">//See if the list is sorted using fail</span>
+    <span class="nx">fail</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+
+    <span class="c1">//Go through all pairs in values</span>
+    <span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span> <span class="nx">i</span><span class="o">&lt;</span><span class="mf">10</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span><span class="p">(</span><span class="nx">values</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span><span class="o">&lt;</span><span class="nx">values</span><span class="p">[</span><span class="nx">i</span><span class="o">+</span><span class="mf">1</span><span class="p">])</span> <span class="p">{</span>
+            <span class="nx">fail</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+            <span class="c1">//If fail, switch them</span>
+            <span class="kd">var</span> <span class="nx">temp</span> <span class="o">=</span> <span class="nx">values</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
+            <span class="nx">values</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">=</span> <span class="nx">values</span><span class="p">[</span><span class="nx">i</span><span class="o">+</span><span class="mf">1</span><span class="p">];</span>
+            <span class="nx">values</span><span class="p">[</span><span class="nx">i</span><span class="o">+</span><span class="mf">1</span><span class="p">]</span> <span class="o">=</span> <span class="nx">temp</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="c1">//Determine if done or not </span>
+    <span class="k">if</span><span class="p">(</span><span class="nx">fail</span> <span class="o">==</span> <span class="kc">false</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;The array has been sorted! :)&quot;</span><span class="p">)</span>
+        <span class="nx">sorted</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Lets sort this random array using bubble sort!
+Step 0:
+⬛⬛⬛⬛🟦⬛⬛⬛⬛🟦
+⬛⬛⬛⬛🟦🟦⬛⬛⬛🟦
+⬛🟦⬛⬛🟦🟦⬛⬛🟦🟦
+⬛🟦⬛⬛🟦🟦🟦⬛🟦🟦
+⬛🟦⬛⬛🟦🟦🟦🟦🟦🟦
+🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦
+
+Step 1:
+⬛⬛⬛🟦⬛⬛⬛⬛🟦⬛
+⬛⬛⬛🟦🟦⬛⬛⬛🟦⬛
+🟦⬛⬛🟦🟦⬛⬛🟦🟦⬛
+🟦⬛⬛🟦🟦🟦⬛🟦🟦⬛
+🟦⬛⬛🟦🟦🟦🟦🟦🟦⬛
+🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦
+
+Step 2:
+⬛⬛🟦⬛⬛⬛⬛🟦⬛⬛
+⬛⬛🟦🟦⬛⬛⬛🟦⬛⬛
+🟦⬛🟦🟦⬛⬛🟦🟦⬛⬛
+🟦⬛🟦🟦🟦⬛🟦🟦⬛⬛
+🟦⬛🟦🟦🟦🟦🟦🟦⬛⬛
+🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦
+
+Step 3:
+⬛🟦⬛⬛⬛⬛🟦⬛⬛⬛
+⬛🟦🟦⬛⬛⬛🟦⬛⬛⬛
+🟦🟦🟦⬛⬛🟦🟦⬛⬛⬛
+🟦🟦🟦🟦⬛🟦🟦⬛⬛⬛
+🟦🟦🟦🟦🟦🟦🟦⬛⬛⬛
+🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦
+
+Step 4:
+🟦⬛⬛⬛⬛🟦⬛⬛⬛⬛
+🟦🟦⬛⬛⬛🟦⬛⬛⬛⬛
+🟦🟦🟦⬛🟦🟦⬛⬛⬛⬛
+🟦🟦🟦🟦🟦🟦⬛⬛⬛⬛
+🟦🟦🟦🟦🟦🟦🟦⬛⬛⬛
+🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦
+
+Step 5:
+🟦⬛⬛⬛🟦⬛⬛⬛⬛⬛
+🟦🟦⬛⬛🟦⬛⬛⬛⬛⬛
+🟦🟦🟦🟦🟦⬛⬛⬛⬛⬛
+🟦🟦🟦🟦🟦🟦⬛⬛⬛⬛
+🟦🟦🟦🟦🟦🟦🟦⬛⬛⬛
+🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦
+
+Step 6:
+🟦⬛⬛🟦⬛⬛⬛⬛⬛⬛
+🟦🟦⬛🟦⬛⬛⬛⬛⬛⬛
+🟦🟦🟦🟦🟦⬛⬛⬛⬛⬛
+🟦🟦🟦🟦🟦🟦⬛⬛⬛⬛
+🟦🟦🟦🟦🟦🟦🟦⬛⬛⬛
+🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦
+
+Step 7:
+🟦⬛🟦⬛⬛⬛⬛⬛⬛⬛
+🟦🟦🟦⬛⬛⬛⬛⬛⬛⬛
+🟦🟦🟦🟦🟦⬛⬛⬛⬛⬛
+🟦🟦🟦🟦🟦🟦⬛⬛⬛⬛
+🟦🟦🟦🟦🟦🟦🟦⬛⬛⬛
+🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦
+
+Step 8:
+🟦🟦⬛⬛⬛⬛⬛⬛⬛⬛
+🟦🟦🟦⬛⬛⬛⬛⬛⬛⬛
+🟦🟦🟦🟦🟦⬛⬛⬛⬛⬛
+🟦🟦🟦🟦🟦🟦⬛⬛⬛⬛
+🟦🟦🟦🟦🟦🟦🟦⬛⬛⬛
+🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦
+
+The array has been sorted! :)
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>true</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
 </div>
 
 
