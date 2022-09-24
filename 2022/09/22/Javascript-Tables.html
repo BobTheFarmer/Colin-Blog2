@@ -77,7 +77,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      262 words
+      327 words
     
 </span></p>
 
@@ -157,17 +157,28 @@ comments: true</p>
     <span class="k">return</span> <span class="nx">json</span><span class="p">;</span>
 <span class="p">}</span>
 
-<span class="c1">//Make a new data</span>
-<span class="kd">var</span> <span class="nx">colin</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Data</span><span class="p">(</span><span class="s2">&quot;Colin&quot;</span><span class="p">,</span> <span class="s2">&quot;https://github.com/BobTheFarmer/Colin-Blog2/actions&quot;</span><span class="p">,</span> <span class="s2">&quot;https://bobthefarmer.github.io/Colin-Blog2/&quot;</span><span class="p">);</span>
+<span class="c1">//Make new data and put in a list</span>
+<span class="kd">var</span> <span class="nx">colin</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Data</span><span class="p">(</span><span class="s2">&quot;Colin&quot;</span><span class="p">,</span> <span class="s2">&quot;https://github.com/BobTheFarmer/Colin-Blog2&quot;</span><span class="p">,</span> <span class="s2">&quot;https://bobthefarmer.github.io/Colin-Blog2/&quot;</span><span class="p">);</span>
 <span class="kd">var</span> <span class="nx">orlando</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Data</span><span class="p">(</span><span class="s2">&quot;Orlando&quot;</span><span class="p">,</span> <span class="s2">&quot;https://github.com/Orlando-c&quot;</span><span class="p">,</span> <span class="s2">&quot;https://orlando-c.github.io/que-pro/&quot;</span><span class="p">);</span>
-<span class="kd">var</span> <span class="nx">ethan</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Data</span><span class="p">(</span><span class="s2">&quot;Ethan&quot;</span><span class="p">,</span> <span class="s2">&quot;https://github.com/dolphinalt&quot;</span><span class="p">,</span> <span class="s2">&quot;https://github.com/dolphinalt/APCSP-Fastpages&quot;</span><span class="p">)</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">colin</span><span class="p">.</span><span class="nx">github</span><span class="p">);</span>
-
-<span class="c1">//Compile into a list</span>
+<span class="kd">var</span> <span class="nx">ethan</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Data</span><span class="p">(</span><span class="s2">&quot;Ethan&quot;</span><span class="p">,</span> <span class="s2">&quot;https://github.com/dolphinalt/APCSP-Fastpages&quot;</span><span class="p">,</span> <span class="s2">&quot;https://github.com/dolphinalt/APCSP-Fastpages&quot;</span><span class="p">)</span>
+<span class="kd">var</span> <span class="nx">jaden</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Data</span><span class="p">(</span><span class="s2">&quot;Jaden&quot;</span><span class="p">,</span> <span class="s2">&quot;https://raisinbran25.github.io/csp2/&quot;</span><span class="p">,</span> <span class="s2">&quot;https://github.com/raisinbran25/csp2&quot;</span><span class="p">)</span>
 <span class="nx">allData</span> <span class="o">=</span> <span class="p">[</span><span class="nx">colin</span><span class="p">,</span> <span class="nx">orlando</span><span class="p">,</span> <span class="nx">ethan</span><span class="p">];</span>
 
+<span class="c1">//Make a object to hold the data</span>
+<span class="kd">function</span> <span class="nx">DataHolder</span><span class="p">(</span><span class="nx">allData</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">allData</span> <span class="o">=</span> <span class="nx">allData</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">allData</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">data</span> <span class="p">=&gt;</span> <span class="p">{</span> <span class="k">this</span><span class="p">.</span><span class="nx">allData</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span> <span class="p">});</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">json</span> <span class="o">=</span> <span class="p">[];</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">allData</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">data</span> <span class="p">=&gt;</span> <span class="k">this</span><span class="p">.</span><span class="nx">json</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">toJSON</span><span class="p">()));</span>
+<span class="p">}</span>
+
+<span class="c1">//Use object to hold data</span>
+<span class="nx">dataHolder</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">DataHolder</span><span class="p">(</span><span class="nx">allData</span><span class="p">);</span>
+
+
+
 <span class="c1">//HTML conversion method</span>
-<span class="kd">function</span> <span class="p">.</span><span class="nx">_toHtml</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+<span class="nx">DataHolder</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">_toHtml</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
     <span class="kd">var</span> <span class="nx">style</span> <span class="o">=</span> <span class="p">(</span>
       <span class="s2">&quot;display:inline-block;&quot;</span> <span class="o">+</span>
       <span class="s2">&quot;border: 2px solid grey;&quot;</span> <span class="o">+</span>
@@ -175,44 +186,62 @@ comments: true</p>
     <span class="p">);</span>
   
     <span class="kd">var</span> <span class="nx">table</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
-    <span class="nx">body</span> <span class="o">+=</span> <span class="s2">&quot;&lt;tr&gt;&quot;</span><span class="p">;</span>
-    <span class="nx">body</span> <span class="o">+=</span> <span class="s2">&quot;&lt;th&gt;&lt;mark&gt;&quot;</span> <span class="o">+</span> <span class="s2">&quot;Name&quot;</span> <span class="o">+</span> <span class="s2">&quot;&lt;/mark&gt;&lt;/th&gt;&quot;</span><span class="p">;</span>
-    <span class="nx">body</span> <span class="o">+=</span> <span class="s2">&quot;&lt;th&gt;&lt;mark&gt;&quot;</span> <span class="o">+</span> <span class="s2">&quot;GitHub&quot;</span> <span class="o">+</span> <span class="s2">&quot;&lt;/mark&gt;&lt;/th&gt;&quot;</span><span class="p">;</span>
-    <span class="nx">body</span> <span class="o">+=</span> <span class="s2">&quot;&lt;th&gt;&lt;mark&gt;&quot;</span> <span class="o">+</span> <span class="s2">&quot;Fastpages&quot;</span> <span class="o">+</span> <span class="s2">&quot;&lt;/mark&gt;&lt;/th&gt;&quot;</span><span class="p">;</span>
-    <span class="nx">body</span> <span class="o">+=</span> <span class="s2">&quot;&lt;/tr&gt;&quot;</span><span class="p">;</span>
+    <span class="nx">table</span> <span class="o">+=</span> <span class="s2">&quot;&lt;tr&gt;&quot;</span><span class="p">;</span>
+    <span class="nx">table</span> <span class="o">+=</span> <span class="s2">&quot;&lt;th&gt;&lt;mark&gt;&quot;</span> <span class="o">+</span> <span class="s2">&quot;Name&quot;</span> <span class="o">+</span> <span class="s2">&quot;&lt;/mark&gt;&lt;/th&gt;&quot;</span><span class="p">;</span>
+    <span class="nx">table</span> <span class="o">+=</span> <span class="s2">&quot;&lt;th&gt;&lt;mark&gt;&quot;</span> <span class="o">+</span> <span class="s2">&quot;GitHub&quot;</span> <span class="o">+</span> <span class="s2">&quot;&lt;/mark&gt;&lt;/th&gt;&quot;</span><span class="p">;</span>
+    <span class="nx">table</span> <span class="o">+=</span> <span class="s2">&quot;&lt;th&gt;&lt;mark&gt;&quot;</span> <span class="o">+</span> <span class="s2">&quot;Fastpages&quot;</span> <span class="o">+</span> <span class="s2">&quot;&lt;/mark&gt;&lt;/th&gt;&quot;</span><span class="p">;</span>
+    <span class="nx">table</span> <span class="o">+=</span> <span class="s2">&quot;&lt;/tr&gt;&quot;</span><span class="p">;</span>
 
     <span class="c1">//Go through all data and each data&#39;s properties in a table format</span>
     <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">row</span> <span class="k">of</span> <span class="nx">allData</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nx">body</span> <span class="o">+=</span> <span class="s2">&quot;&lt;tr&gt;&quot;</span><span class="p">;</span>
-        <span class="nx">body</span> <span class="o">+=</span> <span class="s2">&quot;&lt;td&gt;&quot;</span> <span class="o">+</span> <span class="nx">row</span><span class="p">.</span><span class="nx">name</span><span class="p">;</span>
-        <span class="nx">body</span> <span class="o">+=</span> <span class="s2">&quot;&lt;td&gt;&quot;</span> <span class="o">+</span> <span class="s2">&quot;![&quot;</span> <span class="o">+</span> <span class="nx">row</span><span class="p">.</span><span class="nx">name</span> <span class="o">+</span> <span class="s2">&quot;&#39;s Github]{&quot;</span> <span class="o">+</span> <span class="nx">row</span><span class="p">.</span><span class="nx">github</span> <span class="o">+</span> <span class="s2">&quot;}&quot;</span> <span class="o">+</span> <span class="s2">&quot;&lt;/td&gt;&quot;</span><span class="p">;</span>
-        <span class="nx">body</span> <span class="o">+=</span> <span class="s2">&quot;&lt;td&gt;&quot;</span> <span class="o">+</span> <span class="s2">&quot;![&quot;</span> <span class="o">+</span> <span class="nx">row</span><span class="p">.</span><span class="nx">name</span> <span class="o">+</span> <span class="s2">&quot;&#39;s Fastpages]{&quot;</span> <span class="o">+</span> <span class="nx">row</span><span class="p">.</span><span class="nx">github</span> <span class="o">+</span> <span class="s2">&quot;}&quot;</span> <span class="o">+</span> <span class="s2">&quot;&lt;/td&gt;&quot;</span><span class="p">;</span>
-        <span class="nx">body</span> <span class="o">+=</span> <span class="s2">&quot;&lt;tr&gt;&quot;</span> <span class="o">+</span> <span class="s2">&quot;&lt;/td&gt;&quot;</span><span class="p">;</span> 
+        <span class="nx">table</span> <span class="o">+=</span> <span class="s2">&quot;&lt;tr&gt;&quot;</span><span class="p">;</span>
+        <span class="nx">table</span> <span class="o">+=</span> <span class="s2">&quot;&lt;td&gt;&quot;</span> <span class="o">+</span> <span class="nx">row</span><span class="p">.</span><span class="nx">name</span><span class="p">;</span>
+        <span class="nx">table</span> <span class="o">+=</span> <span class="s2">&quot;&lt;td&gt;&quot;</span> <span class="o">+</span> <span class="nx">row</span><span class="p">.</span><span class="nx">name</span> <span class="o">+</span> <span class="s2">&quot;&#39;s Github: &quot;</span> <span class="o">+</span> <span class="nx">row</span><span class="p">.</span><span class="nx">git</span> <span class="o">+</span> <span class="s2">&quot;&lt;/td&gt;&quot;</span><span class="p">;</span>
+        <span class="nx">table</span> <span class="o">+=</span> <span class="s2">&quot;&lt;td&gt;&quot;</span> <span class="o">+</span> <span class="nx">row</span><span class="p">.</span><span class="nx">name</span> <span class="o">+</span> <span class="s2">&quot;&#39;s Fastpages: &quot;</span> <span class="o">+</span> <span class="nx">row</span><span class="p">.</span><span class="nx">fastpages</span> <span class="o">+</span> <span class="s2">&quot;&lt;/td&gt;&quot;</span><span class="p">;</span>
+        <span class="nx">table</span> <span class="o">+=</span> <span class="s2">&quot;&lt;tr&gt;&quot;</span> <span class="o">+</span> <span class="s2">&quot;&lt;/td&gt;&quot;</span><span class="p">;</span> 
     <span class="p">}</span>
   
      <span class="c1">//Return table</span>
     <span class="k">return</span> <span class="p">(</span>
       <span class="s2">&quot;&lt;div style=&#39;&quot;</span> <span class="o">+</span> <span class="nx">style</span> <span class="o">+</span> <span class="s2">&quot;&#39;&gt;&quot;</span> <span class="o">+</span>
         <span class="s2">&quot;&lt;table&gt;&quot;</span> <span class="o">+</span>
-          <span class="nx">body</span> <span class="o">+</span>
+            <span class="nx">table</span> <span class="o">+</span>
         <span class="s2">&quot;&lt;/table&gt;&quot;</span> <span class="o">+</span>
       <span class="s2">&quot;&lt;/div&gt;&quot;</span>
     <span class="p">);</span>
   <span class="p">};</span>
   
   <span class="c1">// IJavaScript HTML processor receive parameter of defined HTML fragment</span>
-  <span class="nx">$$</span><span class="p">.</span><span class="nx">html</span><span class="p">(</span><span class="nx">tableMaker</span><span class="p">.</span><span class="nx">_toHtml</span><span class="p">());</span>
+  <span class="nx">$$</span><span class="p">.</span><span class="nx">html</span><span class="p">(</span><span class="nx">dataHolder</span><span class="p">.</span><span class="nx">_toHtml</span><span class="p">());</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">colin</span><span class="p">.</span><span class="nx">getGithub</span><span class="p">());</span>
 </pre></div>
 
     </div>
 </div>
 </div>
 
-</div>
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div style="display:inline-block;border: 2px solid grey;box-shadow: 0.8em 0.4em 0.4em grey;"><table><tr><th><mark>Name</mark></th><th><mark>GitHub</mark></th><th><mark>Fastpages</mark></th></tr><tr><td>Colin<td>Colin's Github: https://github.com/BobTheFarmer/Colin-Blog2</td><td>Colin's Fastpages: https://bobthefarmer.github.io/Colin-Blog2/</td><tr>&lt;/td&gt;<tr><td>Orlando<td>Orlando's Github: https://github.com/Orlando-c</td><td>Orlando's Fastpages: https://orlando-c.github.io/que-pro/</td><tr>&lt;/td&gt;<tr><td>Ethan<td>Ethan's Github: https://github.com/dolphinalt/APCSP-Fastpages</td><td>Ethan's Fastpages: https://github.com/dolphinalt/APCSP-Fastpages</td><tr>&lt;/td&gt;<tr><td>Colin<td>Colin's Github: https://github.com/BobTheFarmer/Colin-Blog2</td><td>Colin's Fastpages: https://bobthefarmer.github.io/Colin-Blog2/</td><tr>&lt;/td&gt;<tr><td>Orlando<td>Orlando's Github: https://github.com/Orlando-c</td><td>Orlando's Fastpages: https://orlando-c.github.io/que-pro/</td><tr>&lt;/td&gt;<tr><td>Ethan<td>Ethan's Github: https://github.com/dolphinalt/APCSP-Fastpages</td><td>Ethan's Fastpages: https://github.com/dolphinalt/APCSP-Fastpages</td><tr>&lt;/td&gt;&lt;/table&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
     
 
-</div>
+&lt;/div&gt;
+ 
 
+</tr></td></tr></tr></td></tr></tr></td></tr></tr></td></tr></tr></td></tr></tr></td></tr></table></div></div></div></div></div></div></div>
 
 
   </div><a class="u-url" href="/Colin-Blog2/2022/09/22/Javascript-Tables.html" hidden></a>
