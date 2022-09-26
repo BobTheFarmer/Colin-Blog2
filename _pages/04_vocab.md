@@ -5,7 +5,7 @@ permalink: /vocab/
 toc: true
 ---
 
-# Vocab
+
 > A collection of vocabulary from throughout the trimester
 
 # Basic Terms
