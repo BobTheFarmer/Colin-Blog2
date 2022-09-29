@@ -246,7 +246,6 @@
   
 
   
-  
 
   
   
@@ -258,12 +257,15 @@
   
 
   
+  
+
+  
 
   
   
 
   
-      ,"page14": {
+      ,"page15": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://bobthefarmer.github.io/Colin-Blog2/robots.txt",
