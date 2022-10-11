@@ -9,3 +9,4 @@ search_exclude: true
 
 ![]({{site.baseurl}}/images/quiz1.png)
 ![]({{site.baseurl}}/images/quiz2.png)
+![]({{site.baseurl}}/images/quiz3.png)
