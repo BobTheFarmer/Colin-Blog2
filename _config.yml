@@ -37,9 +37,7 @@ url: "https://BobTheFarmer.github.io" # the base hostname & protocol for your si
 baseurl: "/Colin-Blog2" # the subpath of your site, e.g. "/blog".
 
 # Github and twitter are optional:
-minima:
-  social_links:
-    github: BobTheFarmer
+
 
 # Set this to true to get LaTeX math equation support
 use_math: 
