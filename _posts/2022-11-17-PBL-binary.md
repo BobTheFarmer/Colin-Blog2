@@ -13,7 +13,7 @@ type: pbl
 <!-- Hack 2: change to 24 bits and add a color code and display color when 24 bits, think about display on this one -->
 <!-- Hack 3: do your own thing -->
 
-{% assign BITS = 9 %}
+{% assign BITS = 8 %}
 
 <div class="container bg-primary">
     <header class="pb-3 mb-4 border-bottom border-primary text-dark">
@@ -135,6 +135,7 @@ type: pbl
         if (n > 0) {  // PLUS
         decimal = MAX === decimal ? 0 : decimal += n; // OVERFLOW or PLUS
         window.alert("Warning: You went over 8 bits!");
+        add(-1)
         } else  {     // MINUS
         decimal = 0 === decimal ? MAX : decimal += n; // OVERFLOW or MINUS
         }
