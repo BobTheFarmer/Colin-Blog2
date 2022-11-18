@@ -13,14 +13,12 @@
 <link rel="canonical" href="https://bobthefarmer.github.io/Colin-Blog2/frontend/binary" />
 <meta property="og:url" content="https://bobthefarmer.github.io/Colin-Blog2/frontend/binary" />
 <meta property="og:site_name" content="Colin’s Blog!" />
-<meta property="og:image" content="https://bobthefarmer.github.io/Colin-Blog2/images/binary.png" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2022-11-17T00:00:00-06:00" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta property="twitter:image" content="https://bobthefarmer.github.io/Colin-Blog2/images/binary.png" />
+<meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Binary Math" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-11-17T00:00:00-06:00","datePublished":"2022-11-17T00:00:00-06:00","description":"A Binary Math illustrative application using HTML, Liquid, and JavaScript.","headline":"Binary Math","image":"https://bobthefarmer.github.io/Colin-Blog2/images/binary.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://bobthefarmer.github.io/Colin-Blog2/frontend/binary"},"url":"https://bobthefarmer.github.io/Colin-Blog2/frontend/binary"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-11-17T00:00:00-06:00","datePublished":"2022-11-17T00:00:00-06:00","description":"A Binary Math illustrative application using HTML, Liquid, and JavaScript.","headline":"Binary Math","mainEntityOfPage":{"@type":"WebPage","@id":"https://bobthefarmer.github.io/Colin-Blog2/frontend/binary"},"url":"https://bobthefarmer.github.io/Colin-Blog2/frontend/binary"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/Colin-Blog2/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://bobthefarmer.github.io/Colin-Blog2/feed.xml" title="Colin's Blog!" /><link rel="shortcut icon" type="image/x-icon" href="/Colin-Blog2/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -140,6 +138,10 @@ window.onload = wrap_img;
                     <button type="button" id="butt7" onclick="javascript:toggleBit(7)">Turn on</button>
                 </td>
                 
+                <td><img class="img-responsive py-3" id="bulb8" src="/Colin-Blog2/images/bulb_off.png" alt="" width="40" height="Auto" />
+                    <button type="button" id="butt8" onclick="javascript:toggleBit(8)">Turn on</button>
+                </td>
+                
             </tr>
             <tr>
                 
@@ -160,6 +162,8 @@ window.onload = wrap_img;
                 
                 <td><input type="text" id="digit7" value="0" size="1" readonly="" /></td>
                 
+                <td><input type="text" id="digit8" value="0" size="1" readonly="" /></td>
+                
             </tr>
             </table>
         </div>
@@ -167,7 +171,7 @@ window.onload = wrap_img;
 </div>
 
 <script>
-    const BITS = 8;
+    const BITS = 9;
     const MAX = 2 ** BITS - 1;
     const MSG_ON = "Turn on";
     const IMAGE_ON = "/Colin-Blog2/images/bulb_on.gif";
@@ -237,6 +241,7 @@ window.onload = wrap_img;
         let decimal = parseInt(binary, 2);
         if (n > 0) {  // PLUS
         decimal = MAX === decimal ? 0 : decimal += n; // OVERFLOW or PLUS
+        window.alert("Warning: You went over 8 bits!");
         } else  {     // MINUS
         decimal = 0 === decimal ? MAX : decimal += n; // OVERFLOW or MINUS
         }
@@ -256,6 +261,10 @@ window.onload = wrap_img;
             document.getElementById('butt' + i).innerHTML = MSG_ON;
         }
         }
+    }
+    function updateBytes() {
+        bits = getBits()
+        
     }
 </script>
 
