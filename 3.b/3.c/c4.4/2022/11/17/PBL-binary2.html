@@ -325,11 +325,7 @@ window.onload = wrap_img;
 
     // toggle selected bit and recalculate
     function toggleBit(i) {
-        if(document.getElementById('rgb').class == "square1") {
-            document.getElementById('rgb').class = "square2"
-        } else {
-            document.getElementById('rgb').class = "square3"
-        }
+        document.getElementById('colorBox').style.backgroundColor = rgb(100, 100, 100);
         //alert("Digit action: " + i );
         const dig = document.getElementById('digit' + i);
         const image = document.getElementById('bulb' + i);
