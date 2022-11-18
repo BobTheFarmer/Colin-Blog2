@@ -133,9 +133,9 @@ type: pbl
         // convert to decimal and do math
         let decimal = parseInt(binary, 2);
         if (n > 0) {  // PLUS
-        decimal = MAX === decimal ? 0 : decimal += n; // OVERFLOW or PLUS
-        window.alert("Warning: You went over 8 bits!");
-        add(-1)
+        if()
+        decimal = MAX === decimal ? 0; window.alert("Warning: You went over 8 bits!") : decimal += n; // OVERFLOW or PLUS
+        
         } else  {     // MINUS
         decimal = 0 === decimal ? MAX : decimal += n; // OVERFLOW or MINUS
         }
@@ -155,9 +155,5 @@ type: pbl
             document.getElementById('butt' + i).innerHTML = MSG_ON;
         }
         }
-    }
-    function updateBytes() {
-        bits = getBits()
-        
     }
 </script>
