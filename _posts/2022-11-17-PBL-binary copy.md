@@ -135,7 +135,6 @@ type: pbl
         if (n > 0) {  // PLUS
         if()
         decimal = MAX === decimal ? 0; window.alert("Warning: You went over 8 bits!") : decimal += n; // OVERFLOW or PLUS
-        
         } else  {     // MINUS
         decimal = 0 === decimal ? MAX : decimal += n; // OVERFLOW or MINUS
         }
