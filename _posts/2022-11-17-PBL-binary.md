@@ -3,7 +3,6 @@ title: Binary Math
 layout: default
 description: A Binary Math illustrative application using HTML, Liquid, and JavaScript.
 permalink: /frontend/binary
-image: /images/binary.png
 categories: [3.B, 3.C, C4.4]
 tags: [html, liquid, javascript]
 week: 13
@@ -14,7 +13,7 @@ type: pbl
 <!-- Hack 2: change to 24 bits and add a color code and display color when 24 bits, think about display on this one -->
 <!-- Hack 3: do your own thing -->
 
-{% assign BITS = 8 %}
+{% assign BITS = 9 %}
 
 <div class="container bg-primary">
     <header class="pb-3 mb-4 border-bottom border-primary text-dark">
@@ -135,6 +134,7 @@ type: pbl
         let decimal = parseInt(binary, 2);
         if (n > 0) {  // PLUS
         decimal = MAX === decimal ? 0 : decimal += n; // OVERFLOW or PLUS
+        window.alert("Warning: You went over 8 bits!");
         } else  {     // MINUS
         decimal = 0 === decimal ? MAX : decimal += n; // OVERFLOW or MINUS
         }
@@ -154,5 +154,9 @@ type: pbl
             document.getElementById('butt' + i).innerHTML = MSG_ON;
         }
         }
+    }
+    function updateBytes() {
+        bits = getBits()
+        
     }
 </script>
