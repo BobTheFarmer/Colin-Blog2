@@ -24,22 +24,3 @@ Frontend Developer: A front-end developer builds the front-end portion of websit
 Backend Developer: Back-end developers a build and maintain the mechanisms that process data and perform actions like data storage, security, and other server-side functions that you cannot see. <br>
 Sprint: Workflow used for Agile software development <br>
 
-# Peer lesson vocab
-
-- Variables: A holder for values
-- Data Types: Different types of data that a variable can hold
-- Assignment Operators: How you assign a varibles' value
-- Lists2D: A list that holds other lists
-- Lists: A variable that holds other variables
-- Dictionaries: A list that's indexes are strings
-- Class: A holder for code
-- Binary Numbers: The lowest level of code in a computer. It is base-2, using 0s and 1s
-- Unsigned Integer: An integer type variable that is not holding any value
-- Signed Integer: An integer type variable that is holding a value
-- Floating Point: A type of variable that allows a mix of very small and large numbers
-- Boolean: A variable that holds a true or false value
-- ASCII: A type of character encoding 
-- Unicode: A way for numbers to represent a variety of characters
-- RGB: Pixels can be colored by using red, blue, and green light
-- Algorithms: A way to interate thorgh the same steps to complete a task 
-
