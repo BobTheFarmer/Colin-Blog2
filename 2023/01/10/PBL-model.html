@@ -1,56 +1,78 @@
-<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Model and Object-Oriented Programming | Colin’s Blog!</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Model and Object-Oriented Programming" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Object Oriented Programming is a part of learning Python. The objective of this blog is to introduce OOP with the intention of PBL task to create a database. The foundations for a database is defining a Class and understanding instance data and methods. A database is often a focus of backend coding as it will store persistent data, that can be recalled after the immediate session is closed." />
+<meta property="og:description" content="Object Oriented Programming is a part of learning Python. The objective of this blog is to introduce OOP with the intention of PBL task to create a database. The foundations for a database is defining a Class and understanding instance data and methods. A database is often a focus of backend coding as it will store persistent data, that can be recalled after the immediate session is closed." />
+<link rel="canonical" href="https://bobthefarmer.github.io/Colin-Blog2/2023/01/10/PBL-model.html" />
+<meta property="og:url" content="https://bobthefarmer.github.io/Colin-Blog2/2023/01/10/PBL-model.html" />
+<meta property="og:site_name" content="Colin’s Blog!" />
+<meta property="og:image" content="https://bobthefarmer.github.io/Colin-Blog2/images/python.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-01-10T00:00:00-06:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://bobthefarmer.github.io/Colin-Blog2/images/python.png" />
+<meta property="twitter:title" content="Model and Object-Oriented Programming" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-01-10T00:00:00-06:00","datePublished":"2023-01-10T00:00:00-06:00","description":"Object Oriented Programming is a part of learning Python. The objective of this blog is to introduce OOP with the intention of PBL task to create a database. The foundations for a database is defining a Class and understanding instance data and methods. A database is often a focus of backend coding as it will store persistent data, that can be recalled after the immediate session is closed.","headline":"Model and Object-Oriented Programming","image":"https://bobthefarmer.github.io/Colin-Blog2/images/python.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://bobthefarmer.github.io/Colin-Blog2/2023/01/10/PBL-model.html"},"url":"https://bobthefarmer.github.io/Colin-Blog2/2023/01/10/PBL-model.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/Colin-Blog2/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://bobthefarmer.github.io/Colin-Blog2/feed.xml" title="Colin's Blog!" /><link rel="shortcut icon" type="image/x-icon" href="/Colin-Blog2/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
 
-  <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">Model and Object-Oriented Programming</h1><p class="page-description">Object Oriented Programming is a part of learning Python.  The objective of this blog is to introduce OOP with the intention of PBL task to create a database.  The foundations for a database is defining a Class and understanding instance data and methods.  A database is often a focus of backend coding as it will store persistent data, that can be recalled after the immediate session is closed.</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2023-01-10T00:00:00-06:00" itemprop="datePublished">
-        Jan 10, 2023
-      </time>
-       • <span class="read-time" title="Estimated read time">
-    
-    
-      1716 words
-    
-</span></p>
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
 
-    
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
 
-    
-      
-        <div class="pb-5 d-flex flex-justify-center">
-          <div class="px-2">
+  <div class="wrapper"><a class="site-title" rel="author" href="/Colin-Blog2/">Colin&#39;s Blog!</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
 
-    <a href="https://github.com/BobTheFarmer/Colin-Blog2/tree/master/_notebooks/2023-01-10-PBL-model.ipynb" role="button" target="_blank">
-<img class="notebook-badge-image" src="/Colin-Blog2/assets/badges/github.svg" alt="View On GitHub">
-    </a>
-</div>
-
-          <div class="px-2">
-    <a href="https://mybinder.org/v2/gh/BobTheFarmer/Colin-Blog2/master?filepath=_notebooks%2F2023-01-10-PBL-model.ipynb" target="_blank">
-        <img class="notebook-badge-image" src="/Colin-Blog2/assets/badges/binder.svg" alt="Open In Binder"/>
-    </a>
-</div>
-
-          <div class="px-2">
-    <a href="https://colab.research.google.com/github/BobTheFarmer/Colin-Blog2/blob/master/_notebooks/2023-01-10-PBL-model.ipynb" target="_blank">
-        <img class="notebook-badge-image" src="/Colin-Blog2/assets/badges/colab.svg" alt="Open In Colab"/>
-    </a>
-</div>
-          <div class="px-2">
-  <a href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2FBobTheFarmer%2FColin-Blog2%2Fblob%2Fmaster%2F_notebooks%2F2023-01-10-PBL-model.ipynb" target="_blank">
-      <img class="notebook-badge-image" src="/Colin-Blog2/assets/badges/deepnote.svg" alt="Launch in Deepnote"/>
-  </a>
-</div>
-
-        </div>
-      </header>
-
-  <div class="post-content e-content" itemprop="articleBody">
-    <ul id="toc" class="section-nav">
-<li class="toc-entry toc-h2"><a href="#Class-and-Object-Terms">Class and Object Terms </a></li>
-<li class="toc-entry toc-h2"><a href="#Class-and-Object-Code">Class and Object Code </a></li>
-<li class="toc-entry toc-h2"><a href="#Hacks">Hacks </a></li>
-<li class="toc-entry toc-h2"><a href="#Start-Code-for-Hacks">Start Code for Hacks </a></li>
-<li class="toc-entry toc-h1"><a href="#Definitions">Definitions </a></li>
-</ul><!--
+        <div class="trigger"><a class="page-link" href="/Colin-Blog2/search/">Search</a><a class="page-link" href="/Colin-Blog2/categories/">Tags</a><a class="page-link" href="/Colin-Blog2/about/">About Me</a><a class="page-link" href="/Colin-Blog2/vocab/">Vocab</a><a class="page-link" href="/Colin-Blog2/schedule/">Schedule</a><a class="page-link" href="/Colin-Blog2/apquizzes/">AP Quizzes</a><a class="page-link" href="/Colin-Blog2/partnerblog/">My Partner&#39;s Blog!</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <!--
 #################################################
 ### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
 #################################################
@@ -59,27 +81,20 @@
 
 <div class="container" id="notebook-container">
         
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Class-and-Object-Terms">
-<a class="anchor" href="#Class-and-Object-Terms" aria-hidden="true"><span class="octicon octicon-link"></span></a>Class and Object Terms<a class="anchor-link" href="#Class-and-Object-Terms"> </a>
-</h2>
-<blockquote>
-<p>The foundations of Object-Oriented Programming is defining a <strong><em>Class</em></strong></p>
+<h2 id="Class-and-Object-Terms">Class and Object Terms<a class="anchor-link" href="#Class-and-Object-Terms"> </a></h2><blockquote><p>The foundations of Object-Oriented Programming is defining a <strong><em>Class</em></strong></p>
 <ul>
 <li>In Object-Oriented Programming (OOP), a class is a blueprint for creating an <strong><em>Object</em></strong>. (a data structure).  An Object is used like many other Python variables.</li>
 <li>A Class has ...<ul>
-<li>a collection of data, these are called <strong><em>Attributes</em></strong> and in Python are pre-fixed using the keyword <strong><em>self</em></strong>
-</li>
+<li>a collection of data, these are called <strong><em>Attributes</em></strong> and in Python are pre-fixed using the keyword <strong><em>self</em></strong></li>
 <li>a collection of Functions/Procedures.  These are called <strong>*Methods</strong> when they exist inside a Class definition.</li>
 </ul>
 </li>
 <li>An Object is created from the Class/Template.  Characteristics of objects ...<ul>
 <li>an Object is an <strong><em>Instance</em></strong> of the Class/Template</li>
 <li>there can be many Objects created from the same Class</li>
-<li>each Object contains its own <strong><em>Instance Data</em></strong>
-</li>
+<li>each Object contains its own <strong><em>Instance Data</em></strong></li>
 <li>the data is setup by the <strong><em>Constructor</em></strong>, this is the "<strong>init</strong>" method in a Python class</li>
 <li>all methods in the Class/Template become part of the Object, methods are accessed using <strong><em>dot notation</em></strong> (object.method())</li>
 </ul>
@@ -96,12 +111,9 @@
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Class-and-Object-Code">
-<a class="anchor" href="#Class-and-Object-Code" aria-hidden="true"><span class="octicon octicon-link"></span></a>Class and Object Code<a class="anchor-link" href="#Class-and-Object-Code"> </a>
-</h2>
+<h2 id="Class-and-Object-Code">Class and Object Code<a class="anchor-link" href="#Class-and-Object-Code"> </a></h2>
 </div>
 </div>
 </div>
@@ -152,26 +164,26 @@
     
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">password</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_password</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">10</span><span class="p">]</span> <span class="o">+</span> <span class="s2">"..."</span> <span class="c1"># because of security only show 1st characters</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_password</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">10</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&quot;...&quot;</span> <span class="c1"># because of security only show 1st characters</span>
 
     <span class="c1"># update password, this is conventional setter</span>
     <span class="k">def</span> <span class="nf">set_password</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">password</span><span class="p">):</span>
-        <span class="sd">"""Create a hashed password."""</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_password</span> <span class="o">=</span> <span class="n">generate_password_hash</span><span class="p">(</span><span class="n">password</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s1">'sha256'</span><span class="p">)</span>
+        <span class="sd">&quot;&quot;&quot;Create a hashed password.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_password</span> <span class="o">=</span> <span class="n">generate_password_hash</span><span class="p">(</span><span class="n">password</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s1">&#39;sha256&#39;</span><span class="p">)</span>
 
     <span class="c1"># check password parameter versus stored/encrypted password</span>
     <span class="k">def</span> <span class="nf">is_password</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">password</span><span class="p">):</span>
-        <span class="sd">"""Check against hashed password."""</span>
+        <span class="sd">&quot;&quot;&quot;Check against hashed password.&quot;&quot;&quot;</span>
         <span class="n">result</span> <span class="o">=</span> <span class="n">check_password_hash</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_password</span><span class="p">,</span> <span class="n">password</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">result</span>
     
     <span class="c1"># output content using str(object) in human readable form, uses getter</span>
     <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="sa">f</span><span class="s1">'name: "</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s1">", id: "</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">uid</span><span class="si">}</span><span class="s1">", psw: "</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">password</span><span class="si">}</span><span class="s1">"'</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;name: &quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s1">&quot;, id: &quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">uid</span><span class="si">}</span><span class="s1">&quot;, psw: &quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">password</span><span class="si">}</span><span class="s1">&quot;&#39;</span>
 
     <span class="c1"># output command to recreate the object, uses attribute directly</span>
     <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="sa">f</span><span class="s1">'Person(name=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_name</span><span class="si">}</span><span class="s1">, uid=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_uid</span><span class="si">}</span><span class="s1">, password=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_password</span><span class="si">}</span><span class="s1">)'</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;Person(name=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_name</span><span class="si">}</span><span class="s1">, uid=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_uid</span><span class="si">}</span><span class="s1">, password=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_password</span><span class="si">}</span><span class="s1">)&#39;</span>
 
 
 <span class="c1"># tester method to print users</span>
@@ -180,7 +192,7 @@
     <span class="k">for</span> <span class="n">user</span> <span class="ow">in</span> <span class="n">users</span><span class="p">:</span>
         <span class="c1"># test for match in database</span>
         <span class="k">if</span> <span class="n">user</span><span class="o">.</span><span class="n">uid</span> <span class="o">==</span> <span class="n">uid</span> <span class="ow">and</span> <span class="n">user</span><span class="o">.</span><span class="n">is_password</span><span class="p">(</span><span class="n">psw</span><span class="p">):</span>  <span class="c1"># check for match</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s2">"* "</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">""</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;* &quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
             <span class="n">result</span> <span class="o">=</span> <span class="n">user</span>
         <span class="c1"># print using __str__ method</span>
         <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">user</span><span class="p">))</span>
@@ -188,42 +200,42 @@
         
 
 <span class="c1"># place tester code inside of special if!  This allows include without tester running</span>
-<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">"__main__"</span><span class="p">:</span>
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
 
     <span class="c1"># define user objects</span>
-    <span class="n">u1</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">'Thomas Edison'</span><span class="p">,</span> <span class="n">uid</span><span class="o">=</span><span class="s1">'toby'</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s1">'123toby'</span><span class="p">)</span>
-    <span class="n">u2</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">'Nicholas Tesla'</span><span class="p">,</span> <span class="n">uid</span><span class="o">=</span><span class="s1">'nick'</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s1">'123nick'</span><span class="p">)</span>
-    <span class="n">u3</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">'Alexander Graham Bell'</span><span class="p">,</span> <span class="n">uid</span><span class="o">=</span><span class="s1">'lex'</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s1">'123lex'</span><span class="p">)</span>
-    <span class="n">u4</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">'Eli Whitney'</span><span class="p">,</span> <span class="n">uid</span><span class="o">=</span><span class="s1">'eli'</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s1">'123eli'</span><span class="p">)</span>
-    <span class="n">u5</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">'Hedy Lemarr'</span><span class="p">,</span> <span class="n">uid</span><span class="o">=</span><span class="s1">'hedy'</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s1">'123hedy'</span><span class="p">)</span>
+    <span class="n">u1</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;Thomas Edison&#39;</span><span class="p">,</span> <span class="n">uid</span><span class="o">=</span><span class="s1">&#39;toby&#39;</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s1">&#39;123toby&#39;</span><span class="p">)</span>
+    <span class="n">u2</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;Nicholas Tesla&#39;</span><span class="p">,</span> <span class="n">uid</span><span class="o">=</span><span class="s1">&#39;nick&#39;</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s1">&#39;123nick&#39;</span><span class="p">)</span>
+    <span class="n">u3</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;Alexander Graham Bell&#39;</span><span class="p">,</span> <span class="n">uid</span><span class="o">=</span><span class="s1">&#39;lex&#39;</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s1">&#39;123lex&#39;</span><span class="p">)</span>
+    <span class="n">u4</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;Eli Whitney&#39;</span><span class="p">,</span> <span class="n">uid</span><span class="o">=</span><span class="s1">&#39;eli&#39;</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s1">&#39;123eli&#39;</span><span class="p">)</span>
+    <span class="n">u5</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;Hedy Lemarr&#39;</span><span class="p">,</span> <span class="n">uid</span><span class="o">=</span><span class="s1">&#39;hedy&#39;</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s1">&#39;123hedy&#39;</span><span class="p">)</span>
 
     <span class="c1"># put user objects in list for convenience</span>
     <span class="n">users</span> <span class="o">=</span> <span class="p">[</span><span class="n">u1</span><span class="p">,</span> <span class="n">u2</span><span class="p">,</span> <span class="n">u3</span><span class="p">,</span> <span class="n">u4</span><span class="p">,</span> <span class="n">u5</span><span class="p">]</span>
 
     <span class="c1"># Find user</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">"Test 1, find user 3"</span><span class="p">)</span>
-    <span class="n">u</span> <span class="o">=</span> <span class="n">tester</span><span class="p">(</span><span class="n">users</span><span class="p">,</span> <span class="n">u3</span><span class="o">.</span><span class="n">uid</span><span class="p">,</span> <span class="s2">"123lex"</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Test 1, find user 3&quot;</span><span class="p">)</span>
+    <span class="n">u</span> <span class="o">=</span> <span class="n">tester</span><span class="p">(</span><span class="n">users</span><span class="p">,</span> <span class="n">u3</span><span class="o">.</span><span class="n">uid</span><span class="p">,</span> <span class="s2">&quot;123lex&quot;</span><span class="p">)</span>
 
 
     <span class="c1"># Change user</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">"Test 2, change user 3"</span><span class="p">)</span>
-    <span class="n">u</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s2">"John Mortensen"</span>
-    <span class="n">u</span><span class="o">.</span><span class="n">uid</span> <span class="o">=</span> <span class="s2">"jm1021"</span>
-    <span class="n">u</span><span class="o">.</span><span class="n">set_password</span><span class="p">(</span><span class="s2">"123qwerty"</span><span class="p">)</span>
-    <span class="n">u</span> <span class="o">=</span> <span class="n">tester</span><span class="p">(</span><span class="n">users</span><span class="p">,</span> <span class="n">u</span><span class="o">.</span><span class="n">uid</span><span class="p">,</span> <span class="s2">"123qwerty"</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Test 2, change user 3&quot;</span><span class="p">)</span>
+    <span class="n">u</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;John Mortensen&quot;</span>
+    <span class="n">u</span><span class="o">.</span><span class="n">uid</span> <span class="o">=</span> <span class="s2">&quot;jm1021&quot;</span>
+    <span class="n">u</span><span class="o">.</span><span class="n">set_password</span><span class="p">(</span><span class="s2">&quot;123qwerty&quot;</span><span class="p">)</span>
+    <span class="n">u</span> <span class="o">=</span> <span class="n">tester</span><span class="p">(</span><span class="n">users</span><span class="p">,</span> <span class="n">u</span><span class="o">.</span><span class="n">uid</span><span class="p">,</span> <span class="s2">&quot;123qwerty&quot;</span><span class="p">)</span>
 
 
     <span class="c1"># Make dictionary</span>
-    <span class="sd">''' </span>
+    <span class="sd">&#39;&#39;&#39; </span>
 <span class="sd">    The __dict__ in Python represents a dictionary or any mapping object that is used to store the attributes of the object. </span>
 <span class="sd">    Every object in Python has an attribute that is denoted by __dict__. </span>
 <span class="sd">    Use the json.dumps() method to convert the list of Users to a JSON string.</span>
-<span class="sd">    '''</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">"Test 3, make a dictionary"</span><span class="p">)</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Test 3, make a dictionary&quot;</span><span class="p">)</span>
     <span class="n">json_string</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">([</span><span class="n">user</span><span class="o">.</span><span class="vm">__dict__</span> <span class="k">for</span> <span class="n">user</span> <span class="ow">in</span> <span class="n">users</span><span class="p">])</span> 
     <span class="nb">print</span><span class="p">(</span><span class="n">json_string</span><span class="p">)</span>
 
-    <span class="nb">print</span><span class="p">(</span><span class="s2">"Test 4, make a dictionary"</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Test 4, make a dictionary&quot;</span><span class="p">)</span>
     <span class="n">json_string</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">([</span><span class="nb">vars</span><span class="p">(</span><span class="n">user</span><span class="p">)</span> <span class="k">for</span> <span class="n">user</span> <span class="ow">in</span> <span class="n">users</span><span class="p">])</span> 
     <span class="nb">print</span><span class="p">(</span><span class="n">json_string</span><span class="p">)</span>
 </pre></div>
@@ -239,21 +251,21 @@
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Test 1, find user 3
-name: "Thomas Edison", id: "toby", psw: "sha256$Cmq..."
-name: "Nicholas Tesla", id: "nick", psw: "sha256$UoG..."
-* name: "Alexander Graham Bell", id: "lex", psw: "sha256$dMQ..."
-name: "Eli Whitney", id: "eli", psw: "sha256$mmH..."
-name: "Hedy Lemarr", id: "hedy", psw: "sha256$lKa..."
+name: &#34;Thomas Edison&#34;, id: &#34;toby&#34;, psw: &#34;sha256$Cmq...&#34;
+name: &#34;Nicholas Tesla&#34;, id: &#34;nick&#34;, psw: &#34;sha256$UoG...&#34;
+* name: &#34;Alexander Graham Bell&#34;, id: &#34;lex&#34;, psw: &#34;sha256$dMQ...&#34;
+name: &#34;Eli Whitney&#34;, id: &#34;eli&#34;, psw: &#34;sha256$mmH...&#34;
+name: &#34;Hedy Lemarr&#34;, id: &#34;hedy&#34;, psw: &#34;sha256$lKa...&#34;
 Test 2, change user 3
-name: "Thomas Edison", id: "toby", psw: "sha256$Cmq..."
-name: "Nicholas Tesla", id: "nick", psw: "sha256$UoG..."
-* name: "John Mortensen", id: "jm1021", psw: "sha256$Hrq..."
-name: "Eli Whitney", id: "eli", psw: "sha256$mmH..."
-name: "Hedy Lemarr", id: "hedy", psw: "sha256$lKa..."
+name: &#34;Thomas Edison&#34;, id: &#34;toby&#34;, psw: &#34;sha256$Cmq...&#34;
+name: &#34;Nicholas Tesla&#34;, id: &#34;nick&#34;, psw: &#34;sha256$UoG...&#34;
+* name: &#34;John Mortensen&#34;, id: &#34;jm1021&#34;, psw: &#34;sha256$Hrq...&#34;
+name: &#34;Eli Whitney&#34;, id: &#34;eli&#34;, psw: &#34;sha256$mmH...&#34;
+name: &#34;Hedy Lemarr&#34;, id: &#34;hedy&#34;, psw: &#34;sha256$lKa...&#34;
 Test 3, make a dictionary
-[{"_name": "Thomas Edison", "_uid": "toby", "_password": "sha256$CmqebR4fTRRksOaT$91727cc133bc6f52be4868e17c051d486d262e96526699a592198dfc8b07c57c"}, {"_name": "Nicholas Tesla", "_uid": "nick", "_password": "sha256$UoGKVo9l3vJVkGrq$ccde35d62344cc712cc8d525b79bb3a0ccf961175f9d6d051ba620e39cc4f907"}, {"_name": "John Mortensen", "_uid": "jm1021", "_password": "sha256$HrqzJ2GAoMBKlgfw$151378634a7cb075cf82be639b3cb4f78692cbc2be6bb846821b20bcc94b3b0c"}, {"_name": "Eli Whitney", "_uid": "eli", "_password": "sha256$mmHQad1EYrjP1un5$32e1ee35e4f83de826fd134ec7d822cc8761e8f31553ecde5d82b2f3a8b8a2c7"}, {"_name": "Hedy Lemarr", "_uid": "hedy", "_password": "sha256$lKa0B5Tu9yEnZhGo$7a50cfeea675e1927c55cead697a5b398c974f85b4a9fbaa57340c145e0030c6"}]
+[{&#34;_name&#34;: &#34;Thomas Edison&#34;, &#34;_uid&#34;: &#34;toby&#34;, &#34;_password&#34;: &#34;sha256$CmqebR4fTRRksOaT$91727cc133bc6f52be4868e17c051d486d262e96526699a592198dfc8b07c57c&#34;}, {&#34;_name&#34;: &#34;Nicholas Tesla&#34;, &#34;_uid&#34;: &#34;nick&#34;, &#34;_password&#34;: &#34;sha256$UoGKVo9l3vJVkGrq$ccde35d62344cc712cc8d525b79bb3a0ccf961175f9d6d051ba620e39cc4f907&#34;}, {&#34;_name&#34;: &#34;John Mortensen&#34;, &#34;_uid&#34;: &#34;jm1021&#34;, &#34;_password&#34;: &#34;sha256$HrqzJ2GAoMBKlgfw$151378634a7cb075cf82be639b3cb4f78692cbc2be6bb846821b20bcc94b3b0c&#34;}, {&#34;_name&#34;: &#34;Eli Whitney&#34;, &#34;_uid&#34;: &#34;eli&#34;, &#34;_password&#34;: &#34;sha256$mmHQad1EYrjP1un5$32e1ee35e4f83de826fd134ec7d822cc8761e8f31553ecde5d82b2f3a8b8a2c7&#34;}, {&#34;_name&#34;: &#34;Hedy Lemarr&#34;, &#34;_uid&#34;: &#34;hedy&#34;, &#34;_password&#34;: &#34;sha256$lKa0B5Tu9yEnZhGo$7a50cfeea675e1927c55cead697a5b398c974f85b4a9fbaa57340c145e0030c6&#34;}]
 Test 4, make a dictionary
-[{"_name": "Thomas Edison", "_uid": "toby", "_password": "sha256$CmqebR4fTRRksOaT$91727cc133bc6f52be4868e17c051d486d262e96526699a592198dfc8b07c57c"}, {"_name": "Nicholas Tesla", "_uid": "nick", "_password": "sha256$UoGKVo9l3vJVkGrq$ccde35d62344cc712cc8d525b79bb3a0ccf961175f9d6d051ba620e39cc4f907"}, {"_name": "John Mortensen", "_uid": "jm1021", "_password": "sha256$HrqzJ2GAoMBKlgfw$151378634a7cb075cf82be639b3cb4f78692cbc2be6bb846821b20bcc94b3b0c"}, {"_name": "Eli Whitney", "_uid": "eli", "_password": "sha256$mmHQad1EYrjP1un5$32e1ee35e4f83de826fd134ec7d822cc8761e8f31553ecde5d82b2f3a8b8a2c7"}, {"_name": "Hedy Lemarr", "_uid": "hedy", "_password": "sha256$lKa0B5Tu9yEnZhGo$7a50cfeea675e1927c55cead697a5b398c974f85b4a9fbaa57340c145e0030c6"}]
+[{&#34;_name&#34;: &#34;Thomas Edison&#34;, &#34;_uid&#34;: &#34;toby&#34;, &#34;_password&#34;: &#34;sha256$CmqebR4fTRRksOaT$91727cc133bc6f52be4868e17c051d486d262e96526699a592198dfc8b07c57c&#34;}, {&#34;_name&#34;: &#34;Nicholas Tesla&#34;, &#34;_uid&#34;: &#34;nick&#34;, &#34;_password&#34;: &#34;sha256$UoGKVo9l3vJVkGrq$ccde35d62344cc712cc8d525b79bb3a0ccf961175f9d6d051ba620e39cc4f907&#34;}, {&#34;_name&#34;: &#34;John Mortensen&#34;, &#34;_uid&#34;: &#34;jm1021&#34;, &#34;_password&#34;: &#34;sha256$HrqzJ2GAoMBKlgfw$151378634a7cb075cf82be639b3cb4f78692cbc2be6bb846821b20bcc94b3b0c&#34;}, {&#34;_name&#34;: &#34;Eli Whitney&#34;, &#34;_uid&#34;: &#34;eli&#34;, &#34;_password&#34;: &#34;sha256$mmHQad1EYrjP1un5$32e1ee35e4f83de826fd134ec7d822cc8761e8f31553ecde5d82b2f3a8b8a2c7&#34;}, {&#34;_name&#34;: &#34;Hedy Lemarr&#34;, &#34;_uid&#34;: &#34;hedy&#34;, &#34;_password&#34;: &#34;sha256$lKa0B5Tu9yEnZhGo$7a50cfeea675e1927c55cead697a5b398c974f85b4a9fbaa57340c145e0030c6&#34;}]
 </pre>
 </div>
 </div>
@@ -264,14 +276,9 @@ Test 4, make a dictionary
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Hacks">
-<a class="anchor" href="#Hacks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hacks<a class="anchor-link" href="#Hacks"> </a>
-</h2>
-<blockquote>
-<p>Add new attributes/variables to the Class.  Make class specific to your CPT work.</p>
+<h2 id="Hacks">Hacks<a class="anchor-link" href="#Hacks"> </a></h2><blockquote><p>Add new attributes/variables to the Class.  Make class specific to your CPT work.</p>
 <ul>
 <li>Add classOf attribute to define year of graduation<ul>
 <li>Add setter and getter for classOf</li>
@@ -300,12 +307,9 @@ Test 4, make a dictionary
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Start-Code-for-Hacks">
-<a class="anchor" href="#Start-Code-for-Hacks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Start Code for Hacks<a class="anchor-link" href="#Start-Code-for-Hacks"> </a>
-</h2>
+<h2 id="Start-Code-for-Hacks">Start Code for Hacks<a class="anchor-link" href="#Start-Code-for-Hacks"> </a></h2>
 </div>
 </div>
 </div>
@@ -370,7 +374,7 @@ Test 4, make a dictionary
     <span class="k">def</span> <span class="nf">classOf</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">classOf</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_classOf</span> <span class="o">=</span> <span class="n">classOf</span>
 
-<span class="c1">#userTest = User(name='Fredrick', dob=date(2004, 12, 31))</span>
+<span class="c1">#userTest = User(name=&#39;Fredrick&#39;, dob=date(2004, 12, 31))</span>
 <span class="c1">#print(userTest.classOf)</span>
 
 <span class="c1"># tester method to print users</span>
@@ -379,7 +383,7 @@ Test 4, make a dictionary
     <span class="k">for</span> <span class="n">user</span> <span class="ow">in</span> <span class="n">users</span><span class="p">:</span>
         <span class="c1"># test for match in database</span>
         <span class="k">if</span> <span class="n">user</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="n">name</span> <span class="ow">and</span> <span class="n">user</span><span class="o">.</span><span class="n">dob</span> <span class="o">==</span> <span class="n">dob</span> <span class="ow">and</span> <span class="n">user</span><span class="o">.</span><span class="n">age</span> <span class="o">==</span> <span class="n">age</span> <span class="ow">and</span> <span class="n">user</span><span class="o">.</span><span class="n">classOf</span> <span class="o">==</span> <span class="n">classOf</span><span class="p">:</span>  <span class="c1"># check for match</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s2">"* "</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">""</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;* &quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
             <span class="n">result</span> <span class="o">=</span> <span class="n">user</span>
         <span class="c1"># print using __str__ method</span>
         <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">user</span><span class="p">))</span>
@@ -387,46 +391,46 @@ Test 4, make a dictionary
         
 
 <span class="c1"># place tester code inside of special if!  This allows include without tester running</span>
-<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">"__main__"</span><span class="p">:</span>
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
 
     <span class="c1"># define user objects</span>
-    <span class="n">u1</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">'Thomas Edison'</span><span class="p">,</span> <span class="n">dob</span><span class="o">=</span><span class="n">date</span><span class="p">(</span><span class="mi">2004</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">31</span><span class="p">))</span>
-    <span class="n">u2</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">'Nicholas Tesla'</span><span class="p">,</span> <span class="n">dob</span><span class="o">=</span><span class="n">date</span><span class="p">(</span><span class="mi">1840</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">12</span><span class="p">))</span>
-    <span class="n">u3</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">'Alexander Graham Bell'</span><span class="p">,</span> <span class="n">dob</span><span class="o">=</span><span class="n">date</span><span class="p">(</span><span class="mi">1983</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">14</span><span class="p">))</span>
-    <span class="n">u4</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">'Eli Whitney'</span><span class="p">,</span> <span class="n">dob</span><span class="o">=</span><span class="n">date</span><span class="p">(</span><span class="mi">2000</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
-    <span class="n">u5</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">'Hedy Lemarr'</span><span class="p">,</span> <span class="n">dob</span><span class="o">=</span><span class="n">date</span><span class="p">(</span><span class="mi">2020</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+    <span class="n">u1</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;Thomas Edison&#39;</span><span class="p">,</span> <span class="n">dob</span><span class="o">=</span><span class="n">date</span><span class="p">(</span><span class="mi">2004</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">31</span><span class="p">))</span>
+    <span class="n">u2</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;Nicholas Tesla&#39;</span><span class="p">,</span> <span class="n">dob</span><span class="o">=</span><span class="n">date</span><span class="p">(</span><span class="mi">1840</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">12</span><span class="p">))</span>
+    <span class="n">u3</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;Alexander Graham Bell&#39;</span><span class="p">,</span> <span class="n">dob</span><span class="o">=</span><span class="n">date</span><span class="p">(</span><span class="mi">1983</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">14</span><span class="p">))</span>
+    <span class="n">u4</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;Eli Whitney&#39;</span><span class="p">,</span> <span class="n">dob</span><span class="o">=</span><span class="n">date</span><span class="p">(</span><span class="mi">2000</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+    <span class="n">u5</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;Hedy Lemarr&#39;</span><span class="p">,</span> <span class="n">dob</span><span class="o">=</span><span class="n">date</span><span class="p">(</span><span class="mi">2020</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
 
     <span class="c1"># put user objects in list for convenience</span>
     <span class="n">users</span> <span class="o">=</span> <span class="p">[</span><span class="n">u1</span><span class="p">,</span> <span class="n">u2</span><span class="p">,</span> <span class="n">u3</span><span class="p">,</span> <span class="n">u4</span><span class="p">,</span> <span class="n">u5</span><span class="p">]</span>
 
     <span class="c1"># Find user</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">"Test 1, find user 3"</span><span class="p">)</span>
-    <span class="n">u</span> <span class="o">=</span> <span class="n">tester</span><span class="p">(</span><span class="n">users</span><span class="p">,</span> <span class="s1">'Alexander Graham Bell'</span><span class="p">,</span> <span class="n">date</span><span class="p">(</span><span class="mi">1983</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">14</span><span class="p">),</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">2001</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Test 1, find user 3&quot;</span><span class="p">)</span>
+    <span class="n">u</span> <span class="o">=</span> <span class="n">tester</span><span class="p">(</span><span class="n">users</span><span class="p">,</span> <span class="s1">&#39;Alexander Graham Bell&#39;</span><span class="p">,</span> <span class="n">date</span><span class="p">(</span><span class="mi">1983</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">14</span><span class="p">),</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">2001</span><span class="p">)</span>
     <span class="n">u</span> <span class="o">=</span> <span class="n">users</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
 
     <span class="c1"># Change user</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">"Test 2, change user 3"</span><span class="p">)</span>
-    <span class="n">u</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s2">"John Mortensen"</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Test 2, change user 3&quot;</span><span class="p">)</span>
+    <span class="n">u</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;John Mortensen&quot;</span>
     <span class="n">u</span><span class="o">.</span><span class="n">dob</span> <span class="o">=</span> <span class="n">date</span><span class="p">(</span><span class="mi">2004</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">31</span><span class="p">)</span>
     <span class="c1">#u._age = calculateAge(u._dob)</span>
    <span class="c1">#u.classOf(u._dob)</span>
 
 
     <span class="c1"># Make dictionary</span>
-    <span class="sd">''' </span>
+    <span class="sd">&#39;&#39;&#39; </span>
 <span class="sd">    The __dict__ in Python represents a dictionary or any mapping object that is used to store the attributes of the object. </span>
 <span class="sd">    Every object in Python has an attribute that is denoted by __dict__. </span>
 <span class="sd">    Use the json.dumps() method to convert the list of Users to a JSON string.</span>
-<span class="sd">    '''</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">"Test 3, print all"</span><span class="p">)</span>
-    <span class="c1">#json_string = json.dumps(User(name='Thomas Edison', dob=date(2004, 12, 31))) </span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Test 3, print all&quot;</span><span class="p">)</span>
+    <span class="c1">#json_string = json.dumps(User(name=&#39;Thomas Edison&#39;, dob=date(2004, 12, 31))) </span>
     <span class="c1">#for user in users:</span>
-        <span class="c1"># print("Name:", user.name())</span>
-        <span class="c1"># print("DOB:", user.dob())</span>
-        <span class="c1"># print("Age:", user.age())</span>
-        <span class="c1"># print("Class:", user.classOf())</span>
+        <span class="c1"># print(&quot;Name:&quot;, user.name())</span>
+        <span class="c1"># print(&quot;DOB:&quot;, user.dob())</span>
+        <span class="c1"># print(&quot;Age:&quot;, user.age())</span>
+        <span class="c1"># print(&quot;Class:&quot;, user.classOf())</span>
 
-    <span class="nb">print</span><span class="p">(</span><span class="s2">"Test 4, make a dictionary"</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Test 4, make a dictionary&quot;</span><span class="p">)</span>
     <span class="c1"># json_string = json.dumps([vars(user) for user in users]) </span>
     <span class="c1"># print(json_string)</span>
 </pre></div>
@@ -460,14 +464,9 @@ Test 4, make a dictionary
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Definitions">
-<a class="anchor" href="#Definitions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Definitions<a class="anchor-link" href="#Definitions"> </a>
-</h1>
-<blockquote>
-<p>After researching OOP, here is some important vocabulary</p>
+<h1 id="Definitions">Definitions<a class="anchor-link" href="#Definitions"> </a></h1><blockquote><p>After researching OOP, here is some important vocabulary</p>
 <ul>
 <li>Class:a blueprint for creating objects (or instances).- Object: an instance of a class.</li>
 <li>Method: a function that is associated with a class and its objects.</li>
@@ -492,5 +491,33 @@ Test 4, make a dictionary
 
 
 
-  </div><a class="u-url" href="/Colin-Blog2/2023/01/10/PBL-model.html" hidden></a>
-</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/Colin-Blog2/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="https://bobthefarmer.github.io/Colin-Blog2/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/Colin-Blog2/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p></p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
