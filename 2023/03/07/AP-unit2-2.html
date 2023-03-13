@@ -118,9 +118,9 @@ window.onload = wrap_img;
 </blockquote>
 <p>Describe some of the meta data and considerations when managing Image files.  Describe how these relate to Data Compression ...</p>
 <ul>
-<li>File Type, PNG and JPG are two types used in this lab</li>
-<li>Size, height and width, number of pixels</li>
-<li>Visual perception, lossy compression</li>
+<li>File Type, PNG and JPG are two types used in this lab: These formats compress the images to allow smaller files</li>
+<li>Size, height and width, number of pixels: The number of pixels correlates to the size of the file and the size of the image often dictates how many pixels</li>
+<li>Visual perception, lossy compression: It is bad to compress to the point where a lot of quality is lost</li>
 </ul>
 
 </div>
@@ -141,9 +141,9 @@ window.onload = wrap_img;
 </blockquote>
 <p>Provide what you observed, struggled with, or leaned while playing with this code.</p>
 <ul>
-<li>Why is path a big deal when working with images?</li>
-<li>How does the meta data source and label relate to Unit 5 topics?</li>
-<li>Look up IPython, describe why this is interesting in Jupyter Notebooks for both Pandas and Images?</li>
+<li>Why is path a big deal when working with images? Because all os need to compress</li>
+<li>How does the meta data source and label relate to Unit 5 topics? It labels how the image has been manipulated</li>
+<li>Look up IPython, describe why this is interesting in Jupyter Notebooks for both Pandas and Images? It allows multiple coding languages to compress</li>
 </ul>
 
 </div>
@@ -235,18 +235,18 @@ window.onload = wrap_img;
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Reading-and-Encoding-Images-(2-implementations-follow)">Reading and Encoding Images (2 implementations follow)<a class="anchor-link" href="#Reading-and-Encoding-Images-(2-implementations-follow)"> </a></h2><h3 id="PIL-(Python-Image-Library)">PIL (Python Image Library)<a class="anchor-link" href="#PIL-(Python-Image-Library)"> </a></h3><blockquote><p><a href="https://pillow.readthedocs.io/en/stable/">Pillow or PIL</a> provides the ability to work with images in Python.  <a href="https://www.geeksforgeeks.org/working-images-python/?ref=lbp">Geeks for Geeks</a> shows some ideas on working with images.</p>
 </blockquote>
-<h3 id="base64">base64<a class="anchor-link" href="#base64"> </a></h3><blockquote><p>Image formats (JPG, PNG) are often called <strong>*Binary File formats</strong>, it is difficult to pass these over HTTP.   Thus, <a href="https://en.wikipedia.org/wiki/Base64">base64</a> converts binary encoded data (8-bit, ASCII/Unicode) into a text encoded scheme (24 bits, 6-bit Base64 digits).  Thus base64 is used to transport and embed binary images into textual assets such as HTML and CSS.- How is Base64 similar or different to Binary and Hexadecimal?</p>
+<h3 id="base64">base64<a class="anchor-link" href="#base64"> </a></h3><blockquote><p>Image formats (JPG, PNG) are often called <strong>*Binary File formats</strong>, it is difficult to pass these over HTTP.   Thus, <a href="https://en.wikipedia.org/wiki/Base64">base64</a> converts binary encoded data (8-bit, ASCII/Unicode) into a text encoded scheme (24 bits, 6-bit Base64 digits).  Thus base64 is used to transport and embed binary images into textual assets such as HTML and CSS.- How is Base64 similar or different to Binary and Hexadecimal? Base 64 has much more bits to hold images rather than text</p>
 <ul>
-<li>Translate first 3 letters of your name to Base64.</li>
+<li>Translate first 3 letters of your name to Base64. Y29s</li>
 </ul>
 </blockquote>
 <h3 id="numpy">numpy<a class="anchor-link" href="#numpy"> </a></h3><blockquote><p><a href="https://numpy.org/">Numpy</a> is described as "The fundamental package for scientific computing with Python".  In the Image Lab, a Numpy array is created from the image data in order to simplify access and change to the RGB values of the pixels, converting pixels to grey scale.</p>
 </blockquote>
 <h3 id="io,-BytesIO">io, BytesIO<a class="anchor-link" href="#io,-BytesIO"> </a></h3><blockquote><p>Input and Output (I/O) is a fundamental of all Computer Programming. Input/output (I/O) buffering is a technique used to optimize I/O operations.  In large quantities of data, how many frames of input the server currently has queued is the buffer.  In this example, there is a very large picture that lags.</p>
 <ul>
-<li>Where have you been a consumer of buffering?  </li>
-<li>From your consumer experience, what effects have you experienced from buffering?  </li>
-<li>How do these effects apply to images?</li>
+<li>Where have you been a consumer of buffering? Buying all tech that needs to process graphics</li>
+<li>From your consumer experience, what effects have you experienced from buffering? Slow loading of pages</li>
+<li>How do these effects apply to image They require time to buffer</li>
 </ul>
 </blockquote>
 
@@ -257,10 +257,10 @@ window.onload = wrap_img;
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Data-Structures,-Imperative-Programming-Style,-and-working-with-Images">Data Structures, Imperative Programming Style, and working with Images<a class="anchor-link" href="#Data-Structures,-Imperative-Programming-Style,-and-working-with-Images"> </a></h2><blockquote><p>Introduction to creating meta data and manipulating images.  Look at each procedure and explain the the purpose and results of this program.  Add any insights or challenges as you explored this program.</p>
 <ul>
-<li>Does this code seem like a series of steps are being performed?</li>
-<li>Describe Grey Scale algorithm in English or Pseudo code?</li>
-<li>Describe scale image?  What is before and after on pixels in three images?</li>
-<li>Is scale image a type of compression?  If so, line it up with College Board terms described?</li>
+<li>Does this code seem like a series of steps are being performed? Yes it is algorithmic</li>
+<li>Describe Grey Scale algorithm in English or Pseudo code? It turns each pixels rgb to only be based on brightness</li>
+<li>Describe scale image?  What is before and after on pixels in three images? It makes the image much smaller</li>
+<li>Is scale image a type of compression?  If so, line it up with College Board terms described? Yes because the file is now smaller</li>
 </ul>
 </blockquote>
 
