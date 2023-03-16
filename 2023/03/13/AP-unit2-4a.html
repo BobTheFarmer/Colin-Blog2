@@ -420,6 +420,24 @@ window.onload = wrap_img;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-cyan-fg">  File </span><span class="ansi-green-fg">&#34;&lt;ipython-input-5-21963d6f998d&gt;&#34;</span><span class="ansi-cyan-fg">, line </span><span class="ansi-green-fg">25</span>
+<span class="ansi-red-fg">    print(f&#34;Created new uid {object.uid}&#34;)</span>
+                                        ^
+<span class="ansi-red-fg">SyntaxError</span><span class="ansi-red-fg">:</span> invalid syntax
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
     
 
@@ -537,6 +555,24 @@ window.onload = wrap_img;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-cyan-fg">  File </span><span class="ansi-green-fg">&#34;&lt;ipython-input-7-157ce266773a&gt;&#34;</span><span class="ansi-cyan-fg">, line </span><span class="ansi-green-fg">28</span>
+<span class="ansi-red-fg">    print(f&#34;Invalid date {dob} require YYYY-mm-dd, date defaulted to {user.dob}&#34;)</span>
+                                                                               ^
+<span class="ansi-red-fg">SyntaxError</span><span class="ansi-red-fg">:</span> invalid syntax
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
     
 
@@ -573,6 +609,107 @@ window.onload = wrap_img;
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+
+<span class="ansi-red-fg">OperationalError</span>Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-8-f11ea24ae22e&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">      7</span>     <span class="ansi-green-fg">return</span> json_ready
+<span class="ansi-green-intense-fg ansi-bold">      8</span> 
+<span class="ansi-green-fg">----&gt; 9</span><span class="ansi-red-fg"> </span>read<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-green-fg">&lt;ipython-input-8-f11ea24ae22e&gt;</span> in <span class="ansi-cyan-fg">read</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">      3</span> <span class="ansi-green-fg">def</span> read<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">      4</span>     <span class="ansi-green-fg">with</span> app<span class="ansi-blue-fg">.</span>app_context<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">----&gt; 5</span><span class="ansi-red-fg">         </span>table <span class="ansi-blue-fg">=</span> User<span class="ansi-blue-fg">.</span>query<span class="ansi-blue-fg">.</span>all<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      6</span>     json_ready <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">[</span>user<span class="ansi-blue-fg">.</span>read<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span> <span class="ansi-green-fg">for</span> user <span class="ansi-green-fg">in</span> table<span class="ansi-blue-fg">]</span> <span class="ansi-red-fg"># &#34;List Comprehensions&#34;, for each user add user.read() to list</span>
+<span class="ansi-green-intense-fg ansi-bold">      7</span>     <span class="ansi-green-fg">return</span> json_ready
+
+<span class="ansi-green-fg">/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/sqlalchemy/orm/query.pyc</span> in <span class="ansi-cyan-fg">all</span><span class="ansi-blue-fg">(self)</span>
+<span class="ansi-green-intense-fg ansi-bold">   2771</span>                 <span class="ansi-blue-fg">:</span>ref<span class="ansi-blue-fg">:</span><span class="ansi-blue-fg">`</span>faq_query_deduplicating<span class="ansi-blue-fg">`</span>
+<span class="ansi-green-intense-fg ansi-bold">   2772</span>         &#34;&#34;&#34;
+<span class="ansi-green-fg">-&gt; 2773</span><span class="ansi-red-fg">         </span><span class="ansi-green-fg">return</span> self<span class="ansi-blue-fg">.</span>_iter<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>all<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">   2774</span> 
+<span class="ansi-green-intense-fg ansi-bold">   2775</span>     <span class="ansi-blue-fg">@</span>_generative
+
+<span class="ansi-green-fg">/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/sqlalchemy/orm/query.pyc</span> in <span class="ansi-cyan-fg">_iter</span><span class="ansi-blue-fg">(self)</span>
+<span class="ansi-green-intense-fg ansi-bold">   2917</span>             statement<span class="ansi-blue-fg">,</span>
+<span class="ansi-green-intense-fg ansi-bold">   2918</span>             params<span class="ansi-blue-fg">,</span>
+<span class="ansi-green-fg">-&gt; 2919</span><span class="ansi-red-fg">             </span>execution_options<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">{</span><span class="ansi-blue-fg">&#34;_sa_orm_load_options&#34;</span><span class="ansi-blue-fg">:</span> self<span class="ansi-blue-fg">.</span>load_options<span class="ansi-blue-fg">}</span><span class="ansi-blue-fg">,</span>
+<span class="ansi-green-intense-fg ansi-bold">   2920</span>         )
+<span class="ansi-green-intense-fg ansi-bold">   2921</span> 
+
+<span class="ansi-green-fg">/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/sqlalchemy/orm/session.pyc</span> in <span class="ansi-cyan-fg">execute</span><span class="ansi-blue-fg">(self, statement, params, execution_options, bind_arguments, _parent_execute_state, _add_event, **kw)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1712</span>         <span class="ansi-green-fg">else</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">   1713</span>             conn <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>_connection_for_bind<span class="ansi-blue-fg">(</span>bind<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">-&gt; 1714</span><span class="ansi-red-fg">         </span>result <span class="ansi-blue-fg">=</span> conn<span class="ansi-blue-fg">.</span>_execute_20<span class="ansi-blue-fg">(</span>statement<span class="ansi-blue-fg">,</span> params <span class="ansi-green-fg">or</span> <span class="ansi-blue-fg">{</span><span class="ansi-blue-fg">}</span><span class="ansi-blue-fg">,</span> execution_options<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1715</span> 
+<span class="ansi-green-intense-fg ansi-bold">   1716</span>         <span class="ansi-green-fg">if</span> compile_state_cls<span class="ansi-blue-fg">:</span>
+
+<span class="ansi-green-fg">/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/sqlalchemy/engine/base.pyc</span> in <span class="ansi-cyan-fg">_execute_20</span><span class="ansi-blue-fg">(self, statement, parameters, execution_options)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1703</span>             )
+<span class="ansi-green-intense-fg ansi-bold">   1704</span>         <span class="ansi-green-fg">else</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">-&gt; 1705</span><span class="ansi-red-fg">             </span><span class="ansi-green-fg">return</span> meth<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> args_10style<span class="ansi-blue-fg">,</span> kwargs_10style<span class="ansi-blue-fg">,</span> execution_options<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1706</span> 
+<span class="ansi-green-intense-fg ansi-bold">   1707</span>     def exec_driver_sql(
+
+<span class="ansi-green-fg">/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/sqlalchemy/sql/elements.pyc</span> in <span class="ansi-cyan-fg">_execute_on_connection</span><span class="ansi-blue-fg">(self, connection, multiparams, params, execution_options, _force)</span>
+<span class="ansi-green-intense-fg ansi-bold">    333</span>         <span class="ansi-green-fg">if</span> _force <span class="ansi-green-fg">or</span> self<span class="ansi-blue-fg">.</span>supports_execution<span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">    334</span>             return connection._execute_clauseelement(
+<span class="ansi-green-fg">--&gt; 335</span><span class="ansi-red-fg">                 </span>self<span class="ansi-blue-fg">,</span> multiparams<span class="ansi-blue-fg">,</span> params<span class="ansi-blue-fg">,</span> execution_options
+<span class="ansi-green-intense-fg ansi-bold">    336</span>             )
+<span class="ansi-green-intense-fg ansi-bold">    337</span>         <span class="ansi-green-fg">else</span><span class="ansi-blue-fg">:</span>
+
+<span class="ansi-green-fg">/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/sqlalchemy/engine/base.pyc</span> in <span class="ansi-cyan-fg">_execute_clauseelement</span><span class="ansi-blue-fg">(self, elem, multiparams, params, execution_options)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1580</span>             elem<span class="ansi-blue-fg">,</span>
+<span class="ansi-green-intense-fg ansi-bold">   1581</span>             extracted_params<span class="ansi-blue-fg">,</span>
+<span class="ansi-green-fg">-&gt; 1582</span><span class="ansi-red-fg">             </span>cache_hit<span class="ansi-blue-fg">=</span>cache_hit<span class="ansi-blue-fg">,</span>
+<span class="ansi-green-intense-fg ansi-bold">   1583</span>         )
+<span class="ansi-green-intense-fg ansi-bold">   1584</span>         <span class="ansi-green-fg">if</span> has_events<span class="ansi-blue-fg">:</span>
+
+<span class="ansi-green-fg">/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/sqlalchemy/engine/base.pyc</span> in <span class="ansi-cyan-fg">_execute_context</span><span class="ansi-blue-fg">(self, dialect, constructor, statement, parameters, execution_options, *args, **kw)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1942</span>         <span class="ansi-green-fg">except</span> BaseException <span class="ansi-green-fg">as</span> e<span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">   1943</span>             self._handle_dbapi_exception(
+<span class="ansi-green-fg">-&gt; 1944</span><span class="ansi-red-fg">                 </span>e<span class="ansi-blue-fg">,</span> statement<span class="ansi-blue-fg">,</span> parameters<span class="ansi-blue-fg">,</span> cursor<span class="ansi-blue-fg">,</span> context
+<span class="ansi-green-intense-fg ansi-bold">   1945</span>             )
+<span class="ansi-green-intense-fg ansi-bold">   1946</span> 
+
+<span class="ansi-green-fg">/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/sqlalchemy/engine/base.pyc</span> in <span class="ansi-cyan-fg">_handle_dbapi_exception</span><span class="ansi-blue-fg">(self, e, statement, parameters, cursor, context)</span>
+<span class="ansi-green-intense-fg ansi-bold">   2123</span>             <span class="ansi-green-fg">elif</span> should_wrap<span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">   2124</span>                 util.raise_(
+<span class="ansi-green-fg">-&gt; 2125</span><span class="ansi-red-fg">                     </span>sqlalchemy_exception<span class="ansi-blue-fg">,</span> with_traceback<span class="ansi-blue-fg">=</span>exc_info<span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">2</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span> from_<span class="ansi-blue-fg">=</span>e
+<span class="ansi-green-intense-fg ansi-bold">   2126</span>                 )
+<span class="ansi-green-intense-fg ansi-bold">   2127</span>             <span class="ansi-green-fg">else</span><span class="ansi-blue-fg">:</span>
+
+<span class="ansi-green-fg">/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/sqlalchemy/engine/base.pyc</span> in <span class="ansi-cyan-fg">_execute_context</span><span class="ansi-blue-fg">(self, dialect, constructor, statement, parameters, execution_options, *args, **kw)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1899</span>                 <span class="ansi-green-fg">if</span> <span class="ansi-green-fg">not</span> evt_handled<span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">   1900</span>                     self.dialect.do_execute(
+<span class="ansi-green-fg">-&gt; 1901</span><span class="ansi-red-fg">                         </span>cursor<span class="ansi-blue-fg">,</span> statement<span class="ansi-blue-fg">,</span> parameters<span class="ansi-blue-fg">,</span> context
+<span class="ansi-green-intense-fg ansi-bold">   1902</span>                     )
+<span class="ansi-green-intense-fg ansi-bold">   1903</span> 
+
+<span class="ansi-green-fg">/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/sqlalchemy/engine/default.pyc</span> in <span class="ansi-cyan-fg">do_execute</span><span class="ansi-blue-fg">(self, cursor, statement, parameters, context)</span>
+<span class="ansi-green-intense-fg ansi-bold">    734</span> 
+<span class="ansi-green-intense-fg ansi-bold">    735</span>     <span class="ansi-green-fg">def</span> do_execute<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> cursor<span class="ansi-blue-fg">,</span> statement<span class="ansi-blue-fg">,</span> parameters<span class="ansi-blue-fg">,</span> context<span class="ansi-blue-fg">=</span>None<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">--&gt; 736</span><span class="ansi-red-fg">         </span>cursor<span class="ansi-blue-fg">.</span>execute<span class="ansi-blue-fg">(</span>statement<span class="ansi-blue-fg">,</span> parameters<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    737</span> 
+<span class="ansi-green-intense-fg ansi-bold">    738</span>     <span class="ansi-green-fg">def</span> do_execute_no_params<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> cursor<span class="ansi-blue-fg">,</span> statement<span class="ansi-blue-fg">,</span> context<span class="ansi-blue-fg">=</span>None<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+
+<span class="ansi-red-fg">OperationalError</span>: (sqlite3.OperationalError) no such table: users
+[SQL: SELECT users.id AS users_id, users._name AS users__name, users._uid AS users__uid, users._password AS users__password, users._dob AS users__dob 
+FROM users]
+(Background on this error at: https://sqlalche.me/e/14/e3q8)</pre>
+</div>
+</div>
+
 </div>
 </div>
 
