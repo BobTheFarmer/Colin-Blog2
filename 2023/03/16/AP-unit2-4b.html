@@ -148,24 +148,13 @@ window.onload = wrap_img;
 
 <div class="output_area">
 
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">OperationalError</span>                          Traceback (most recent call last)
-<span class="ansi-green-intense-fg ansi-bold">/Users/colin/vscode/Colin-Blog2/_notebooks/2023-03-16-AP-unit2-4b.ipynb Cell 4</span> in <span class="ansi-cyan-fg">&lt;cell line: 23&gt;</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell:/Users/colin/vscode/Colin-Blog2/_notebooks/2023-03-16-AP-unit2-4b.ipynb#W3sZmlsZQ%3D%3D?line=19&#39;&gt;20&lt;/a&gt;</span>     # Close the database connection
-<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell:/Users/colin/vscode/Colin-Blog2/_notebooks/2023-03-16-AP-unit2-4b.ipynb#W3sZmlsZQ%3D%3D?line=20&#39;&gt;21&lt;/a&gt;</span>     conn.close()
-<span class="ansi-green-fg">---&gt; &lt;a href=&#39;vscode-notebook-cell:/Users/colin/vscode/Colin-Blog2/_notebooks/2023-03-16-AP-unit2-4b.ipynb#W3sZmlsZQ%3D%3D?line=22&#39;&gt;23&lt;/a&gt;</span> schema()
-
-<span class="ansi-green-intense-fg ansi-bold">/Users/colin/vscode/Colin-Blog2/_notebooks/2023-03-16-AP-unit2-4b.ipynb Cell 4</span> in <span class="ansi-cyan-fg">schema</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-intense-fg ansi-bold">      &lt;a href=&#39;vscode-notebook-cell:/Users/colin/vscode/Colin-Blog2/_notebooks/2023-03-16-AP-unit2-4b.ipynb#W3sZmlsZQ%3D%3D?line=4&#39;&gt;5&lt;/a&gt;</span> def schema():
-<span class="ansi-green-intense-fg ansi-bold">      &lt;a href=&#39;vscode-notebook-cell:/Users/colin/vscode/Colin-Blog2/_notebooks/2023-03-16-AP-unit2-4b.ipynb#W3sZmlsZQ%3D%3D?line=5&#39;&gt;6&lt;/a&gt;</span>     
-<span class="ansi-green-intense-fg ansi-bold">      &lt;a href=&#39;vscode-notebook-cell:/Users/colin/vscode/Colin-Blog2/_notebooks/2023-03-16-AP-unit2-4b.ipynb#W3sZmlsZQ%3D%3D?line=6&#39;&gt;7&lt;/a&gt;</span>     # Connect to the database file
-<span class="ansi-green-fg">----&gt; &lt;a href=&#39;vscode-notebook-cell:/Users/colin/vscode/Colin-Blog2/_notebooks/2023-03-16-AP-unit2-4b.ipynb#W3sZmlsZQ%3D%3D?line=7&#39;&gt;8&lt;/a&gt;</span>     conn = sqlite3.connect(database)
-<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell:/Users/colin/vscode/Colin-Blog2/_notebooks/2023-03-16-AP-unit2-4b.ipynb#W3sZmlsZQ%3D%3D?line=9&#39;&gt;10&lt;/a&gt;</span>     # Create a cursor object to execute SQL queries
-<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell:/Users/colin/vscode/Colin-Blog2/_notebooks/2023-03-16-AP-unit2-4b.ipynb#W3sZmlsZQ%3D%3D?line=10&#39;&gt;11&lt;/a&gt;</span>     cursor = conn.cursor()
-
-<span class="ansi-red-fg">OperationalError</span>: unable to open database file</pre>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>(0, &#39;id&#39;, &#39;INTEGER&#39;, 1, None, 1)
+(1, &#39;_name&#39;, &#39;VARCHAR(255)&#39;, 1, None, 0)
+(2, &#39;_uid&#39;, &#39;VARCHAR(255)&#39;, 1, None, 0)
+(3, &#39;_password&#39;, &#39;VARCHAR(255)&#39;, 1, None, 0)
+(4, &#39;_dob&#39;, &#39;DATE&#39;, 0, None, 0)
+</pre>
 </div>
 </div>
 
@@ -223,6 +212,28 @@ window.onload = wrap_img;
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>(1, &#39;Thomas Edison&#39;, &#39;toby&#39;, &#39;sha256$bzOJDplPLbbnGPB3$55f5767ffe126119e2e06e4e8519b2a5dfda28d36c11e500a29d6e5af94e569d&#39;, &#39;1847-02-11&#39;)
+(2, &#39;Nikola Tesla&#39;, &#39;niko&#39;, &#39;sha256$T7SgDCtZIRow6Wzp$379184ff6a828e6b991777c43283ada9fc89f6a6223460b24363a92e0c83891f&#39;, &#39;2023-03-20&#39;)
+(3, &#39;Alexander Graham Bell&#39;, &#39;lex&#39;, &#39;sha256$n8JEHHdT6ekPnp3h$c3c7103ceeec4422e40a16ba833790aad08e564934b87d1628d237174ee472b8&#39;, &#39;2023-03-20&#39;)
+(4, &#39;Eli Whitney&#39;, &#39;whit&#39;, &#39;sha256$7yNBclzSm6s7hP0w$7cdf6b2ee83d5713df14f928176e8d7a5934b27d8da8d3ffb872467cc456178a&#39;, &#39;2023-03-20&#39;)
+(5, &#39;Indiana Jones&#39;, &#39;indi&#39;, &#39;sha256$cd7Elk31boLcNrBk$3533cb2c5c06571883ae01986811805ed56532016100da2366ebbd5d7fda8198&#39;, &#39;1920-10-21&#39;)
+(6, &#39;Marion Ravenwood&#39;, &#39;raven&#39;, &#39;sha256$a2faQU75Vy3ws9mh$4d2cd69e110bde578d07c39897b23babd62cd080fb6ca2808a30ad24ab05ac47&#39;, &#39;1921-10-21&#39;)
+(7, &#39;Test&#39;, &#39;123&#39;, &#39;sha256$iTOUNZs1N9pL1xYv$32fddf918445d50eac902efe65eede374d6db90c2b2b237c73c73f1dea05354f&#39;, &#39;2008-03-23&#39;)
+(8, &#39;&#39;, &#39;&#39;, &#39;sha256$JbMJq9cirwfRrqIm$943600629c4f5b19cdb9174098a9797181ae46d3187ff3fafe94a13c03db65fd&#39;, &#39;2023-03-20&#39;)
+(9, &#39;colin&#39;, &#39;1341&#39;, &#39;098&#39;, &#39;2007-02-15&#39;)
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -341,7 +352,7 @@ window.onload = wrap_img;
     <span class="c1"># Close the cursor and connection objects</span>
     <span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
     <span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-    
+
 <span class="c1">#update()</span>
 </pre></div>
 
@@ -452,6 +463,20 @@ window.onload = wrap_img;
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>A new user record 1341 has been created
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
