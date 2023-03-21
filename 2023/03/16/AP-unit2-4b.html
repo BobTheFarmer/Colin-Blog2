@@ -97,11 +97,15 @@ window.onload = wrap_img;
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Schema-of-Users-table-in-Sqlite.db">Schema of Users table in Sqlite.db<a class="anchor-link" href="#Schema-of-Users-table-in-Sqlite.db"> </a></h2><blockquote><p>Uses PRAGMA statement to read schema.</p>
 </blockquote>
-<p>Describe Schema, here is resource <a href="https://www.sqlite.org/index.html">Resource</a>- What is a database schema?</p>
+<p>Describe Schema, here is resource <a href="https://www.sqlite.org/index.html">Resource</a>- What is a database schema?
+A database schema is a way to orginie the database</p>
 <ul>
-<li>What is the purpose of identity Column in SQL database?</li>
-<li>What is the purpose of a primary key in SQL database?</li>
-<li>What are the Data Types in SQL table?</li>
+<li>What is the purpose of identity Column in SQL database?
+To show what each object contains and be able to identify</li>
+<li>What is the purpose of a primary key in SQL database?
+It is unique and allows user to choose a data</li>
+<li>What are the Data Types in SQL table?
+Boolean, String, Int, float, etc.</li>
 </ul>
 
 </div>
@@ -169,10 +173,14 @@ window.onload = wrap_img;
 <h2 id="Reading-Users-table-in-Sqlite.db">Reading Users table in Sqlite.db<a class="anchor-link" href="#Reading-Users-table-in-Sqlite.db"> </a></h2><blockquote><p>Uses SQL SELECT statement to read data</p>
 </blockquote>
 <ul>
-<li>What is a connection object?  After you google it, what do you think it does?</li>
-<li>Same for cursor object?</li>
-<li>Look at conn object and cursor object in VSCode debugger.  What attributes are in the object?</li>
-<li>Is "results" an object?  How do you know?</li>
+<li>What is a connection object?  After you google it, what do you think it does?
+It allows you to have multiple working environment</li>
+<li>Same for cursor object?
+It allows you to select a certain object by iterating over table</li>
+<li>Look at conn object and cursor object in VSCode debugger.  What attributes are in the object?
+Table</li>
+<li>Is "results" an object?  How do you know?
+Yes b/c it is schema</li>
 </ul>
 
 </div>
@@ -303,9 +311,12 @@ window.onload = wrap_img;
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Updating-a-User-in-table-in-Sqlite.db">Updating a User in table in Sqlite.db<a class="anchor-link" href="#Updating-a-User-in-table-in-Sqlite.db"> </a></h2><blockquote><p>Uses SQL UPDATE to modify password</p>
 <ul>
-<li>What does the hacked part do?</li>
-<li>Explain try/except, when would except occur?</li>
-<li>What code seems to be repeated in each of these examples to point, why is it repeated?</li>
+<li>What does the hacked part do?
+Prevent too short password</li>
+<li>Explain try/except, when would except occur?
+Try tries to run but if it falls except goes</li>
+<li>What code seems to be repeated in each of these examples to point, why is it repeated?
+Because some attributes are needed</li>
 </ul>
 </blockquote>
 
@@ -367,8 +378,10 @@ window.onload = wrap_img;
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Delete-a-User-in-table-in-Sqlite.db">Delete a User in table in Sqlite.db<a class="anchor-link" href="#Delete-a-User-in-table-in-Sqlite.db"> </a></h2><blockquote><p>Uses a delete function to remove a user based on a user input of the id.</p>
 <ul>
-<li>Is DELETE a dangerous operation?  Why?</li>
-<li>In the print statemements, what is the "f" and what does {uid} do?</li>
+<li>Is DELETE a dangerous operation?  Why?
+Yes it is permentant</li>
+<li>In the print statemements, what is the "f" and what does {uid} do?
+It adds variable to print</li>
 </ul>
 </blockquote>
 
@@ -423,8 +436,10 @@ window.onload = wrap_img;
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Menu-Interface-to-CRUD-operations">Menu Interface to CRUD operations<a class="anchor-link" href="#Menu-Interface-to-CRUD-operations"> </a></h1><blockquote><p>CRUD and Schema interactions from one location by running menu. Observe input at the top of VSCode, observe output underneath code cell.</p>
 <ul>
-<li>Why does the menu repeat?</li>
-<li>Could you refactor this menu?  Make it work with a List?</li>
+<li>Why does the menu repeat?
+For the UI can be reset when things change</li>
+<li>Could you refactor this menu?  Make it work with a List?
+Yes that would be data structure and it's already table</li>
 </ul>
 </blockquote>
 
