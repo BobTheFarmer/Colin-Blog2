@@ -192,7 +192,7 @@ window.onload = wrap_img;
     <span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s2">&quot;utf-8&quot;</span><span class="p">))</span>
 
 <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
-    <span class="n">query</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;What would you like to know about the album?&quot;</span><span class="p">)</span>
+    <span class="n">query</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;What song from Folklore would you like to know about?&quot;</span><span class="p">)</span>
     <span class="c1"># print(folklore_album[&quot;tracks&quot;].get(int(query)))</span>
     <span class="n">queryFetched</span> <span class="o">=</span> <span class="n">folklore_album</span><span class="p">[</span><span class="s2">&quot;tracks&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">searchbyvalue</span><span class="p">(</span><span class="n">folklore_album</span><span class="p">[</span><span class="s2">&quot;tracks&quot;</span><span class="p">],</span> <span class="n">query</span><span class="p">))</span>
     <span class="k">if</span> <span class="n">queryFetched</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>

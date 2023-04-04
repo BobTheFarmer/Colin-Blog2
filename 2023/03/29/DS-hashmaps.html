@@ -86,13 +86,13 @@ window.onload = wrap_img;
 <h2 id="What-is-a-Hashtable/Hashmap?">What is a Hashtable/Hashmap?<a class="anchor-link" href="#What-is-a-Hashtable/Hashmap?"> </a></h2><blockquote><p>A hashtable is a data structure that with a collection of key-value pairs, where each key maps to a value, and the keys must be unique and hashable.</p>
 </blockquote>
 <ul>
-<li>In Python there is a built in hashtable known as a <strong><strong><strong>___</strong></strong></strong>.</li>
+<li>In Python there is a built in hashtable known as a dictionary.</li>
 </ul>
 <blockquote><p>The primary purpose of a hashtable is to provide efficient lookup, insertion, and deletion operations. When an element is to be inserted into the hashtable, a hash function is used to map the key to a specific index in the underlying array that is used to store the key-value pairs. The value is then stored at that index. When searching for a value, the hash function is used again to find the index where the value is stored.</p>
 <p>The key advantage of a hashtable over other data structures like arrays and linked lists is its average-case time complexity for lookup, insertion, and deletion operations.</p>
 </blockquote>
 <ul>
-<li>The typical time complexity of a hashtable is <strong><strong><strong>___</strong></strong></strong>. </li>
+<li>The typical time complexity of a hashtable is linear. </li>
 </ul>
 
 </div>
@@ -311,7 +311,7 @@ The Man
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>{&#39;title&#39;: &#39;Lover&#39;, &#39;artist&#39;: &#39;Taylor Swift&#39;, &#39;year&#39;: 2019, &#39;genre&#39;: [&#39;Pop&#39;, &#39;Synth-pop&#39;], &#39;tracks&#39;: {1: &#39;I Forgot That You Existed&#39;, 2: &#39;Cruel Summer&#39;, 3: &#39;Lover&#39;, 4: &#39;The Man&#39;, 5: &#39;The Archer&#39;, 6: &#39;I Think He Knows&#39;, 7: &#39;Miss Americana &amp; The Heartbreak Prince&#39;, 8: &#39;Paper Rings&#39;, 9: &#39;Cornelia Street&#39;, 10: &#39;Death By A Thousand Cuts&#39;, 11: &#39;London Boy&#39;, 12: &#34;Soon You&#39;ll Get Better (feat. Dixie Chicks)&#34;, 13: &#39;False God&#39;, 14: &#39;You Need To Calm Down&#39;, 15: &#39;Afterglow&#39;, 16: &#39;Me! (feat. Brendon Urie of Panic! At The Disco)&#39;, 17: &#34;It&#39;s Nice To Have A Friend&#34;, 18: &#39;Daylight&#39;, 19: &#39;All Of The Girls You Loved Before&#39;}, &#39;producer&#39;: {&#39;Frank Dukes&#39;, &#39;Joel Little&#39;, &#39;Jack Antonoff&#39;, &#39;Taylor Swift&#39;, &#39;Louis Bell&#39;}}
+<pre>{&#39;title&#39;: &#39;Lover&#39;, &#39;artist&#39;: &#39;Taylor Swift&#39;, &#39;year&#39;: 2019, &#39;genre&#39;: [&#39;Pop&#39;, &#39;Synth-pop&#39;], &#39;tracks&#39;: {1: &#39;I Forgot That You Existed&#39;, 2: &#39;Cruel Summer&#39;, 3: &#39;Lover&#39;, 4: &#39;The Man&#39;, 5: &#39;The Archer&#39;, 6: &#39;I Think He Knows&#39;, 7: &#39;Miss Americana &amp; The Heartbreak Prince&#39;, 8: &#39;Paper Rings&#39;, 9: &#39;Cornelia Street&#39;, 10: &#39;Death By A Thousand Cuts&#39;, 11: &#39;London Boy&#39;, 12: &#34;Soon You&#39;ll Get Better (feat. Dixie Chicks)&#34;, 13: &#39;False God&#39;, 14: &#39;You Need To Calm Down&#39;, 15: &#39;Afterglow&#39;, 16: &#39;Me! (feat. Brendon Urie of Panic! At The Disco)&#39;, 17: &#34;It&#39;s Nice To Have A Friend&#34;, 18: &#39;Daylight&#39;}, &#39;producer&#39;: {&#39;Louis Bell&#39;, &#39;Taylor Swift&#39;, &#39;Frank Dukes&#39;, &#39;Jack Antonoff&#39;, &#39;Joel Little&#39;}}
 </pre>
 </div>
 </div>
@@ -350,8 +350,8 @@ The Man
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[&#39;Pop&#39;, &#39;Synth-pop&#39;, &#39;electropop&#39;, &#39;electropop&#39;]
-{&#39;title&#39;: &#39;Lover&#39;, &#39;artist&#39;: &#39;Taylor Swift&#39;, &#39;year&#39;: 2019, &#39;genre&#39;: [&#39;Pop&#39;, &#39;Synth-pop&#39;, &#39;electropop&#39;, &#39;electropop&#39;], &#39;tracks&#39;: {1: &#39;I Forgot That You Existed&#39;, 2: &#39;Cruel Summer&#39;, 3: &#39;Lover&#39;, 4: &#39;The Man&#39;, 5: &#39;The Archer&#39;, 6: &#39;I Think He Knows&#39;, 7: &#39;Miss Americana &amp; The Heartbreak Prince&#39;, 8: &#39;Paper Rings&#39;, 9: &#39;Cornelia Street&#39;, 10: &#39;Death By A Thousand Cuts&#39;, 11: &#39;London Boy&#39;, 12: &#34;Soon You&#39;ll Get Better (feat. Dixie Chicks)&#34;, 13: &#39;False God&#39;, 14: &#39;You Need To Calm Down&#39;, 15: &#39;Afterglow&#39;, 16: &#39;Me! (feat. Brendon Urie of Panic! At The Disco)&#39;, 17: &#34;It&#39;s Nice To Have A Friend&#34;, 18: &#39;Daylight&#39;, 19: &#39;All Of The Girls You Loved Before&#39;}, &#39;producer&#39;: {&#39;Frank Dukes&#39;, &#39;Joel Little&#39;, &#39;Jack Antonoff&#39;, &#39;Taylor Swift&#39;, &#39;Louis Bell&#39;}}
+<pre>[&#39;Pop&#39;, &#39;Synth-pop&#39;, &#39;electropop&#39;]
+{&#39;title&#39;: &#39;Lover&#39;, &#39;artist&#39;: &#39;Taylor Swift&#39;, &#39;year&#39;: 2019, &#39;genre&#39;: [&#39;Pop&#39;, &#39;Synth-pop&#39;, &#39;electropop&#39;], &#39;tracks&#39;: {1: &#39;I Forgot That You Existed&#39;, 2: &#39;Cruel Summer&#39;, 3: &#39;Lover&#39;, 4: &#39;The Man&#39;, 5: &#39;The Archer&#39;, 6: &#39;I Think He Knows&#39;, 7: &#39;Miss Americana &amp; The Heartbreak Prince&#39;, 8: &#39;Paper Rings&#39;, 9: &#39;Cornelia Street&#39;, 10: &#39;Death By A Thousand Cuts&#39;, 11: &#39;London Boy&#39;, 12: &#34;Soon You&#39;ll Get Better (feat. Dixie Chicks)&#34;, 13: &#39;False God&#39;, 14: &#39;You Need To Calm Down&#39;, 15: &#39;Afterglow&#39;, 16: &#39;Me! (feat. Brendon Urie of Panic! At The Disco)&#39;, 17: &#34;It&#39;s Nice To Have A Friend&#34;, 18: &#39;Daylight&#39;, 19: &#39;All Of The Girls You Loved Before&#39;}, &#39;producer&#39;: {&#39;Louis Bell&#39;, &#39;Taylor Swift&#39;, &#39;Frank Dukes&#39;, &#39;Jack Antonoff&#39;, &#39;Joel Little&#39;}}
 </pre>
 </div>
 </div>
@@ -430,14 +430,15 @@ The Man
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Invalid Search. Try searching one of the following: &quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
         <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">lover_album</span><span class="p">:</span>
             <span class="nb">print</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;, &quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">()</span>
         <span class="n">search</span><span class="p">()</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">lover_album</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">search</span><span class="o">.</span><span class="n">lower</span><span class="p">()))</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">lover_album</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">query</span><span class="o">.</span><span class="n">lower</span><span class="p">()))</span>
 
 <span class="n">search</span><span class="p">()</span>
 
 <span class="c1"># This is a very basic code segment, how can you improve upon this code?</span>
-<span class="c1"># Make it show you a song </span>
+<span class="c1"># Make it tell you what to do and reset if it fails</span>
 <span class="c1">#</span>
 </pre></div>
 
@@ -451,50 +452,9 @@ The Man
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Invalid Search. Try searching one of the following: title, artist, year, genre, tracks, producer, Invalid Search. Try searching one of the following: title, artist, year, genre, tracks, producer, Invalid Search. Try searching one of the following: title, artist, year, genre, tracks, producer, </pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">AttributeError</span>                            Traceback (most recent call last)
-<span class="ansi-green-intense-fg ansi-bold">/Users/colin/vscode/Colin-Blog2/_notebooks/2023-03-29-DS-hashmaps.ipynb Cell 12</span> in <span class="ansi-cyan-fg">&lt;cell line: 14&gt;</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell:/Users/colin/vscode/Colin-Blog2/_notebooks/2023-03-29-DS-hashmaps.ipynb#X14sZmlsZQ%3D%3D?line=10&#39;&gt;11&lt;/a&gt;</span>         print(&#34;Song song from album &#34;)
-<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell:/Users/colin/vscode/Colin-Blog2/_notebooks/2023-03-29-DS-hashmaps.ipynb#X14sZmlsZQ%3D%3D?line=11&#39;&gt;12&lt;/a&gt;</span>         return
-<span class="ansi-green-fg">---&gt; &lt;a href=&#39;vscode-notebook-cell:/Users/colin/vscode/Colin-Blog2/_notebooks/2023-03-29-DS-hashmaps.ipynb#X14sZmlsZQ%3D%3D?line=13&#39;&gt;14&lt;/a&gt;</span> search()
-
-<span class="ansi-green-intense-fg ansi-bold">/Users/colin/vscode/Colin-Blog2/_notebooks/2023-03-29-DS-hashmaps.ipynb Cell 12</span> in <span class="ansi-cyan-fg">search</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-intense-fg ansi-bold">      &lt;a href=&#39;vscode-notebook-cell:/Users/colin/vscode/Colin-Blog2/_notebooks/2023-03-29-DS-hashmaps.ipynb#X14sZmlsZQ%3D%3D?line=5&#39;&gt;6&lt;/a&gt;</span>     for key in lover_album:
-<span class="ansi-green-intense-fg ansi-bold">      &lt;a href=&#39;vscode-notebook-cell:/Users/colin/vscode/Colin-Blog2/_notebooks/2023-03-29-DS-hashmaps.ipynb#X14sZmlsZQ%3D%3D?line=6&#39;&gt;7&lt;/a&gt;</span>         print(key, end=&#34;, &#34;)
-<span class="ansi-green-fg">----&gt; &lt;a href=&#39;vscode-notebook-cell:/Users/colin/vscode/Colin-Blog2/_notebooks/2023-03-29-DS-hashmaps.ipynb#X14sZmlsZQ%3D%3D?line=7&#39;&gt;8&lt;/a&gt;</span>     search()
-<span class="ansi-green-intense-fg ansi-bold">      &lt;a href=&#39;vscode-notebook-cell:/Users/colin/vscode/Colin-Blog2/_notebooks/2023-03-29-DS-hashmaps.ipynb#X14sZmlsZQ%3D%3D?line=8&#39;&gt;9&lt;/a&gt;</span> else:
-<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell:/Users/colin/vscode/Colin-Blog2/_notebooks/2023-03-29-DS-hashmaps.ipynb#X14sZmlsZQ%3D%3D?line=9&#39;&gt;10&lt;/a&gt;</span>     print(lover_album.get(search.lower()))
-
-<span class="ansi-green-intense-fg ansi-bold">/Users/colin/vscode/Colin-Blog2/_notebooks/2023-03-29-DS-hashmaps.ipynb Cell 12</span> in <span class="ansi-cyan-fg">search</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-intense-fg ansi-bold">      &lt;a href=&#39;vscode-notebook-cell:/Users/colin/vscode/Colin-Blog2/_notebooks/2023-03-29-DS-hashmaps.ipynb#X14sZmlsZQ%3D%3D?line=5&#39;&gt;6&lt;/a&gt;</span>     for key in lover_album:
-<span class="ansi-green-intense-fg ansi-bold">      &lt;a href=&#39;vscode-notebook-cell:/Users/colin/vscode/Colin-Blog2/_notebooks/2023-03-29-DS-hashmaps.ipynb#X14sZmlsZQ%3D%3D?line=6&#39;&gt;7&lt;/a&gt;</span>         print(key, end=&#34;, &#34;)
-<span class="ansi-green-fg">----&gt; &lt;a href=&#39;vscode-notebook-cell:/Users/colin/vscode/Colin-Blog2/_notebooks/2023-03-29-DS-hashmaps.ipynb#X14sZmlsZQ%3D%3D?line=7&#39;&gt;8&lt;/a&gt;</span>     search()
-<span class="ansi-green-intense-fg ansi-bold">      &lt;a href=&#39;vscode-notebook-cell:/Users/colin/vscode/Colin-Blog2/_notebooks/2023-03-29-DS-hashmaps.ipynb#X14sZmlsZQ%3D%3D?line=8&#39;&gt;9&lt;/a&gt;</span> else:
-<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell:/Users/colin/vscode/Colin-Blog2/_notebooks/2023-03-29-DS-hashmaps.ipynb#X14sZmlsZQ%3D%3D?line=9&#39;&gt;10&lt;/a&gt;</span>     print(lover_album.get(search.lower()))
-
-<span class="ansi-green-intense-fg ansi-bold">/Users/colin/vscode/Colin-Blog2/_notebooks/2023-03-29-DS-hashmaps.ipynb Cell 12</span> in <span class="ansi-cyan-fg">search</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-intense-fg ansi-bold">      &lt;a href=&#39;vscode-notebook-cell:/Users/colin/vscode/Colin-Blog2/_notebooks/2023-03-29-DS-hashmaps.ipynb#X14sZmlsZQ%3D%3D?line=5&#39;&gt;6&lt;/a&gt;</span>     for key in lover_album:
-<span class="ansi-green-intense-fg ansi-bold">      &lt;a href=&#39;vscode-notebook-cell:/Users/colin/vscode/Colin-Blog2/_notebooks/2023-03-29-DS-hashmaps.ipynb#X14sZmlsZQ%3D%3D?line=6&#39;&gt;7&lt;/a&gt;</span>         print(key, end=&#34;, &#34;)
-<span class="ansi-green-fg">----&gt; &lt;a href=&#39;vscode-notebook-cell:/Users/colin/vscode/Colin-Blog2/_notebooks/2023-03-29-DS-hashmaps.ipynb#X14sZmlsZQ%3D%3D?line=7&#39;&gt;8&lt;/a&gt;</span>     search()
-<span class="ansi-green-intense-fg ansi-bold">      &lt;a href=&#39;vscode-notebook-cell:/Users/colin/vscode/Colin-Blog2/_notebooks/2023-03-29-DS-hashmaps.ipynb#X14sZmlsZQ%3D%3D?line=8&#39;&gt;9&lt;/a&gt;</span> else:
-<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell:/Users/colin/vscode/Colin-Blog2/_notebooks/2023-03-29-DS-hashmaps.ipynb#X14sZmlsZQ%3D%3D?line=9&#39;&gt;10&lt;/a&gt;</span>     print(lover_album.get(search.lower()))
-
-<span class="ansi-green-intense-fg ansi-bold">/Users/colin/vscode/Colin-Blog2/_notebooks/2023-03-29-DS-hashmaps.ipynb Cell 12</span> in <span class="ansi-cyan-fg">search</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-intense-fg ansi-bold">      &lt;a href=&#39;vscode-notebook-cell:/Users/colin/vscode/Colin-Blog2/_notebooks/2023-03-29-DS-hashmaps.ipynb#X14sZmlsZQ%3D%3D?line=7&#39;&gt;8&lt;/a&gt;</span>     search()
-<span class="ansi-green-intense-fg ansi-bold">      &lt;a href=&#39;vscode-notebook-cell:/Users/colin/vscode/Colin-Blog2/_notebooks/2023-03-29-DS-hashmaps.ipynb#X14sZmlsZQ%3D%3D?line=8&#39;&gt;9&lt;/a&gt;</span> else:
-<span class="ansi-green-fg">---&gt; &lt;a href=&#39;vscode-notebook-cell:/Users/colin/vscode/Colin-Blog2/_notebooks/2023-03-29-DS-hashmaps.ipynb#X14sZmlsZQ%3D%3D?line=9&#39;&gt;10&lt;/a&gt;</span>     print(lover_album.get(search.lower()))
-<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell:/Users/colin/vscode/Colin-Blog2/_notebooks/2023-03-29-DS-hashmaps.ipynb#X14sZmlsZQ%3D%3D?line=10&#39;&gt;11&lt;/a&gt;</span>     print(&#34;Song song from album &#34;)
-<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell:/Users/colin/vscode/Colin-Blog2/_notebooks/2023-03-29-DS-hashmaps.ipynb#X14sZmlsZQ%3D%3D?line=11&#39;&gt;12&lt;/a&gt;</span>     return
-
-<span class="ansi-red-fg">AttributeError</span>: &#39;function&#39; object has no attribute &#39;lower&#39;</pre>
+<pre>Invalid Search. Try searching one of the following: title, artist, year, genre, tracks, producer, 
+{1: &#39;I Forgot That You Existed&#39;, 2: &#39;Cruel Summer&#39;, 3: &#39;Lover&#39;, 4: &#39;The Man&#39;, 5: &#39;The Archer&#39;, 6: &#39;I Think He Knows&#39;, 7: &#39;Miss Americana &amp; The Heartbreak Prince&#39;, 8: &#39;Paper Rings&#39;, 9: &#39;Cornelia Street&#39;, 10: &#39;Death By A Thousand Cuts&#39;, 11: &#39;London Boy&#39;, 12: &#34;Soon You&#39;ll Get Better (feat. Dixie Chicks)&#34;, 13: &#39;False God&#39;, 14: &#39;You Need To Calm Down&#39;, 15: &#39;Afterglow&#39;, 16: &#39;Me! (feat. Brendon Urie of Panic! At The Disco)&#39;, 17: &#34;It&#39;s Nice To Have A Friend&#34;, 18: &#39;Daylight&#39;, 19: &#39;All Of The Girls You Loved Before&#39;}
+</pre>
 </div>
 </div>
 
@@ -519,6 +479,7 @@ The Man
 <li><p>For Mr. Yeung's class: Justify your favorite Taylor Swift song, answer may effect seed</p>
 </li>
 </ul>
+<p><img src="/Colin-Blog2/images/copied_from_nb/my_icons/dictproscons.png" alt="" /></p>
 
 </div>
 </div>
