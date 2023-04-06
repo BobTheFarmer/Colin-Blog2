@@ -92,66 +92,17 @@ window.onload = wrap_img;
 <span class="n">joke_id</span> <span class="o">=</span> <span class="s2">&quot;1&quot;</span>
 
 <span class="k">def</span> <span class="nf">like_joke</span><span class="p">(</span><span class="n">joke_id</span><span class="p">):</span>
-    <span class="n">requests</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="n">url</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">joke_id</span><span class="o">=</span><span class="n">joke_id</span><span class="p">))</span>
+    <span class="k">with</span> <span class="n">requests</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="n">url</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">joke_id</span><span class="o">=</span><span class="n">joke_id</span><span class="p">),</span> <span class="n">stream</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="k">as</span> <span class="n">response</span><span class="p">:</span>
+        <span class="k">pass</span>
 
 <span class="n">max_workers</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">cpu_count</span><span class="p">()</span><span class="o">*</span><span class="mi">2</span> <span class="o">/</span> <span class="mi">3</span><span class="p">))</span>
 
-<span class="k">with</span> <span class="n">ThreadPoolExecutor</span><span class="p">(</span><span class="n">max_workers</span><span class="o">=</span><span class="n">max_workers</span><span class="p">)</span> <span class="k">as</span> <span class="n">executor</span><span class="p">:</span>
-    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1000</span><span class="p">):</span>
+<span class="k">with</span> <span class="n">ThreadPoolExecutor</span><span class="p">()</span> <span class="k">as</span> <span class="n">executor</span><span class="p">:</span>
+    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
         <span class="n">executor</span><span class="o">.</span><span class="n">submit</span><span class="p">(</span><span class="n">like_joke</span><span class="p">,</span> <span class="n">joke_id</span><span class="p">)</span>
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Successfully liked joke 1 (like count: 4200)
-Successfully liked joke 1 (like count: 4201)
-Successfully liked joke 1 (like count: 4202)
-Successfully liked joke 1 (like count: 4203)
-Successfully liked joke 1 (like count: 4204)
-Successfully liked joke 1 (like count: 4205)
-Successfully liked joke 1 (like count: 4206)
-Successfully liked joke 1 (like count: 4207)
-Successfully liked joke 1 (like count: 4213)
-Successfully liked joke 1 (like count: 4214)
-Successfully liked joke 1 (like count: 4215)
-Successfully liked joke 1 (like count: 4216)
-Successfully liked joke 1 (like count: 4222)
-Successfully liked joke 1 (like count: 4223)
-Successfully liked joke 1 (like count: 4224)
-Successfully liked joke 1 (like count: 4225)
-Successfully liked joke 1 (like count: 4231)
-Successfully liked joke 1 (like count: 4232)
-Successfully liked joke 1 (like count: 4233)
-Successfully liked joke 1 (like count: 4234)
-Successfully liked joke 1 (like count: 4240)
-Successfully liked joke 1 (like count: 4241)
-Successfully liked joke 1 (like count: 4242)
-Successfully liked joke 1 (like count: 4244)
-Successfully liked joke 1 (like count: 4249)
-Successfully liked joke 1 (like count: 4250)
-Successfully liked joke 1 (like count: 4251)
-Successfully liked joke 1 (like count: 4253)
-Successfully liked joke 1 (like count: 4258)
-Successfully liked joke 1 (like count: 4259)
-Successfully liked joke 1 (like count: 4260)
-Successfully liked joke 1 (like count: 4264)Successfully liked joke 1 (like count: 4265)
-
-Successfully liked joke 1 (like count: 4268)
-Successfully liked joke 1 (like count: 4269)
-Successfully liked joke 1 (like count: 4276)Successfully liked joke 1 (like count: 4274)
-
-</pre>
-</div>
-</div>
-
 </div>
 </div>
 
