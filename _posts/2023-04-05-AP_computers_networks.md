@@ -18,21 +18,31 @@ week: 29
 > As we have learned, a computer needs aa program to do something smart.  The sequence of a program initiates a series of actions with the computers Central Processing Unit (CPU). This component is essentially a binary machine focussing on program instructions provided.  The CPU retrieives and stores the data it acts upon in Random Access Memory (RAM). Between the CPU, RAM, and Storage Devices a computer can work with many programs and large amounts of data.
 
 List specification of your Computer, or Computers if working as Pair/Trio
-- Processor GHz:
-- Memory in GB:
-- Storage in GB:
-- OS:
+- Processor GHz: 1.1GHz dual-core Intel Core i3, Turbo Boost up to 3.2GHz, with 4MB L3 cache
+- Memory in GB: 8GB of 3733MHz LPDDR4X onboard memory
+- Storage in GB: 512GB PCIe-based SSD
+- OS: MacOS Monterey
 
 Define or describe usage of Computer using Computer Programs. Pictures are preferred over a lot of text.  Use your experience.
-- Input devices
-- Output devices
-- Program File
-- Program Code
-- Processes
-- Ports
-- Data File
-- Inspect Running Code
-- Inspect Variables
+- Input devices: Preferials, like a mouse or keyboard
+- Output devices: Monitor or lights
+![Computer Hardware 2]({{site.baseurl}}/images/monitor.jpeg)
+
+- Program File: 
+File to contain program
+- Program Code:
+Code which lets programs run
+- Processes:
+What runs on computers
+- Ports:
+Where processes execute 
+- Data File:
+File containing data
+- Inspect Running Code:
+Allows you to determine what in general is happing
+- Inspect Variables:
+Lets you hone in on individual variables when debugging
+![Inspect]({{site.baseurl}}/images/inspect.png)
 
 
 ![Computer Hardware]({{site.baseurl}}/images/cpu.jpeg)
@@ -63,6 +73,35 @@ Define or describe usage of Computer using Computer Programs. Pictures are prefe
 
 - Complete True of False Questions
 
+![Problem 1]({{site.baseurl}}/images/problem1.png)
+
+A simple way to decide if it is fault tolerant is by counting the connections on each 'node.' Because there is >1 on each, we can guarantee at least one failure can happen before it breaks.
+
+![Problem 2]({{site.baseurl}}/images/problem2.png)
+
+The same principal applies. Node 'F' can be disconnected
+
+![Problem 3]({{site.baseurl}}/images/problem3.png)
+
+Computer A can be disconnected.
+
+![Problem 4]({{site.baseurl}}/images/problem4.png)
+
+C is the answer, because it is a statment but not a benifit because it does not help anything
+
+![Problem 5]({{site.baseurl}}/images/problem5.png)
+
+A, a connection to A would mean A can not be immedatly disconnected
+
+![Problem 6]({{site.baseurl}}/images/problem6.png)
+
+T, It helps make devices communicate 
+F, They help give addresses and ensure connectlvity
+F, They are very flexible
+T, Made by IETF for internet
+F, Does not guarentee a transfer
+F, They are diffrent
+T, It means not secure
 - Essential Knowledge
     - The internet is a computer network consisting of interconnected networks that use standardized, open (nonproprierary) communication protocols.
     - Access to the internet depends on the ability to connect a computing device to an internet connected device.
@@ -79,7 +118,10 @@ Define or describe usage of Computer using Computer Programs. Pictures are prefe
     - HTTP is a protocol used by the world wide web
     - The world wide web uses the internet
 
-- Go over AP videos, vocabulary, and essential knowledge.  Draw a diagram showing the internet and its many levels. A preferred diagram would using your knowledge of frontend, backend, deployment, etc.  Picture would highligh vocabulary by illustration. The below illustration have some ideas
+- Go over AP videos, vocabulary, and essential knowledge.  Draw a diagram showing the internet and its many levels. A preferred diagram would using your knowledge of frontend, backend, deployment, etc.  Picture would highlight vocabulary by illustration. The below illustration have some ideas
+
+![Internet]({{site.baseurl}}/images/internet.png)
+
 
 ![Full Stack]({{site.baseurl}}/images/fullstack.png)
 
@@ -115,11 +157,14 @@ The "network" layer is responsible for ***routing data packets between networks*
 
 - Complete the network activity, summarize your understanding of fault tolerance.
 
+Fault tolerance is what allows the internet to never fail. It is also a design principal meant to bring stability to programs. On the internet, connections are highly flexible and have many routes which means you requests can always make it to where they need to go
 
 ### Parallel and Distributed Computing
 > Review previous lecture on Parallel Computing and watch Daily vidoe 4.3.  Think of ways to make something in you team project to utilize Cores more effectively.  Here are some thoughts to add to your story of Computers and Networks...
 
 - What is naturally Distributed in Frontend/Backend archeticture?  
+
+Open source programs that can recive additonal support from the community
 
 - Analyze this command in Docker: ```ENV GUNICORN_CMD_ARGS="--workers=1 --bind=0.0.0.0:8086"```.   Determine if there is options are options in this command for parallel computing within the server that runs python/gunicorn.  Here is an [article](https://medium.com/building-the-system/gunicorn-3-means-of-concurrency-efbb547674b7)
 
