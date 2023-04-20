@@ -81,7 +81,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      1205 words
+      1456 words
     
 </span></p>
 
@@ -113,23 +113,35 @@ window.onload = wrap_img;
 
 <p>List specification of your Computer, or Computers if working as Pair/Trio</p>
 <ul>
-  <li>Processor GHz:</li>
-  <li>Memory in GB:</li>
-  <li>Storage in GB:</li>
-  <li>OS:</li>
+  <li>Processor GHz: 1.1GHz dual-core Intel Core i3, Turbo Boost up to 3.2GHz, with 4MB L3 cache</li>
+  <li>Memory in GB: 8GB of 3733MHz LPDDR4X onboard memory</li>
+  <li>Storage in GB: 512GB PCIe-based SSD</li>
+  <li>OS: MacOS Monterey</li>
 </ul>
 
 <p>Define or describe usage of Computer using Computer Programs. Pictures are preferred over a lot of text.  Use your experience.</p>
 <ul>
-  <li>Input devices</li>
-  <li>Output devices</li>
-  <li>Program File</li>
-  <li>Program Code</li>
-  <li>Processes</li>
-  <li>Ports</li>
-  <li>Data File</li>
-  <li>Inspect Running Code</li>
-  <li>Inspect Variables</li>
+  <li>Input devices: Preferials, like a mouse or keyboard</li>
+  <li>
+    <p>Output devices: Monitor or lights
+<img src="/Colin-Blog2/images/monitor.jpeg" alt="Computer Hardware 2"></p>
+  </li>
+  <li>Program File: 
+File to contain program</li>
+  <li>Program Code:
+Code which lets programs run</li>
+  <li>Processes:
+What runs on computers</li>
+  <li>Ports:
+Where processes execute</li>
+  <li>Data File:
+File containing data</li>
+  <li>Inspect Running Code:
+Allows you to determine what in general is happing</li>
+  <li>Inspect Variables:
+Lets you hone in on individual variables when debugging
+<img src="/Colin-Blog2/images/inspect.png" alt="Inspect">
+</li>
 </ul>
 
 <p><img src="/Colin-Blog2/images/cpu.jpeg" alt="Computer Hardware"></p>
@@ -170,9 +182,39 @@ window.onload = wrap_img;
 </blockquote>
 
 <ul>
-  <li>
-    <p>Complete True of False Questions</p>
-  </li>
+  <li>Complete True of False Questions</li>
+</ul>
+
+<p><img src="/Colin-Blog2/images/problem1.png" alt="Problem 1"></p>
+
+<p>A simple way to decide if it is fault tolerant is by counting the connections on each ‘node.’ Because there is &gt;1 on each, we can guarantee at least one failure can happen before it breaks.</p>
+
+<p><img src="/Colin-Blog2/images/problem2.png" alt="Problem 2"></p>
+
+<p>The same principal applies. Node ‘F’ can be disconnected</p>
+
+<p><img src="/Colin-Blog2/images/problem3.png" alt="Problem 3"></p>
+
+<p>Computer A can be disconnected.</p>
+
+<p><img src="/Colin-Blog2/images/problem4.png" alt="Problem 4"></p>
+
+<p>C is the answer, because it is a statment but not a benifit because it does not help anything</p>
+
+<p><img src="/Colin-Blog2/images/problem5.png" alt="Problem 5"></p>
+
+<p>A, a connection to A would mean A can not be immedatly disconnected</p>
+
+<p><img src="/Colin-Blog2/images/problem6.png" alt="Problem 6"></p>
+
+<p>T, It helps make devices communicate 
+F, They help give addresses and ensure connectlvity
+F, They are very flexible
+T, Made by IETF for internet
+F, Does not guarentee a transfer
+F, They are diffrent
+T, It means not secure</p>
+<ul>
   <li>Essential Knowledge
     <ul>
       <li>The internet is a computer network consisting of interconnected networks that use standardized, open (nonproprierary) communication protocols.</li>
@@ -191,8 +233,10 @@ window.onload = wrap_img;
       <li>The world wide web uses the internet</li>
     </ul>
   </li>
-  <li>Go over AP videos, vocabulary, and essential knowledge.  Draw a diagram showing the internet and its many levels. A preferred diagram would using your knowledge of frontend, backend, deployment, etc.  Picture would highligh vocabulary by illustration. The below illustration have some ideas</li>
+  <li>Go over AP videos, vocabulary, and essential knowledge.  Draw a diagram showing the internet and its many levels. A preferred diagram would using your knowledge of frontend, backend, deployment, etc.  Picture would highlight vocabulary by illustration. The below illustration have some ideas</li>
 </ul>
+
+<p><img src="/Colin-Blog2/images/internet.png" alt="Internet"></p>
 
 <p><img src="/Colin-Blog2/images/fullstack.png" alt="Full Stack"></p>
 
@@ -232,6 +276,8 @@ window.onload = wrap_img;
   <li>Complete the network activity, summarize your understanding of fault tolerance.</li>
 </ul>
 
+<p>Fault tolerance is what allows the internet to never fail. It is also a design principal meant to bring stability to programs. On the internet, connections are highly flexible and have many routes which means you requests can always make it to where they need to go</p>
+
 <h3 id="parallel-and-distributed-computing">
 <a class="anchor" href="#parallel-and-distributed-computing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Parallel and Distributed Computing</h3>
 <blockquote>
@@ -239,12 +285,14 @@ window.onload = wrap_img;
 </blockquote>
 
 <ul>
-  <li>
-    <p>What is naturally Distributed in Frontend/Backend archeticture?</p>
-  </li>
-  <li>
-    <p>Analyze this command in Docker: <code class="language-plaintext highlighter-rouge">ENV GUNICORN_CMD_ARGS="--workers=1 --bind=0.0.0.0:8086"</code>.   Determine if there is options are options in this command for parallel computing within the server that runs python/gunicorn.  Here is an <a href="https://medium.com/building-the-system/gunicorn-3-means-of-concurrency-efbb547674b7">article</a></p>
-  </li>
+  <li>What is naturally Distributed in Frontend/Backend archeticture?</li>
+</ul>
+
+<p>Open source programs that can recive additonal support from the community</p>
+
+<ul>
+  <li>Analyze this command in Docker: <code class="language-plaintext highlighter-rouge">ENV GUNICORN_CMD_ARGS="--workers=1 --bind=0.0.0.0:8086"</code>.   Determine if there is options are options in this command for parallel computing within the server that runs python/gunicorn.  Here is an <a href="https://medium.com/building-the-system/gunicorn-3-means-of-concurrency-efbb547674b7">article</a>
+</li>
 </ul>
 
 <blockquote>
