@@ -81,13 +81,12 @@ window.onload = wrap_img;
         
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Predictive-Analysis">Predictive Analysis<a class="anchor-link" href="#Predictive-Analysis"> </a></h1><p>Predictive analysis is the use of <strong><strong>_</strong></strong>, data mining, and machine learning techniques to analyze current and historical data in order to make predictions about future events or behaviors. It involves identifying <strong><em>__</em></strong> and trends in data, and then using that information to forecast what is likely to happen in the future.</p>
+<h1 id="Predictive-Analysis">Predictive Analysis<a class="anchor-link" href="#Predictive-Analysis"> </a></h1><p>Predictive analysis is the use of statistics, data mining, and machine learning techniques to analyze current and historical data in order to make predictions about future events or behaviors. It involves identifying patterns and trends in data, and then using that information to forecast what is likely to happen in the future.</p>
 <p>Predictive analysis is used in a wide range of applications, from forecasting sales and demand, to predicting customer behavior, to detecting fraudulent transactions. It involves collecting and analyzing data from a variety of sources, including historical data, customer data, financial data, and social media data, among others.</p>
 <p>The process of predictive analysis typically involves the following steps:</p>
 <ol>
 <li>Defining the problem and identifying the relevant data sources</li>
-<li><hr />
-</li>
+<li>Collect and prepare data</li>
 <li>Exploring and analyzing the data to identify patterns and trends</li>
 <li>Selecting an appropriate model or algorithm to use for predictions</li>
 <li>Training and validating the model using historical data</li>
@@ -95,14 +94,14 @@ window.onload = wrap_img;
 <li>Monitoring and evaluating the performance of the model over time</li>
 </ol>
 <p>Predictive analysis can help organizations make more informed decisions, improve efficiency, and gain a competitive advantage by leveraging insights from data.</p>
-<p>It is most commonly used in <strong><strong>__</strong></strong>, where workers try to predict which products would be most popular and try to advertise those products as much as possible, and also <strong><strong>___</strong></strong>, where algorithms analyze patterns and reveal prerequisites for diseases and suggest preventive treatment, predict the results of various treatments and choose the best option for each patient individually, and predict disease outbreaks and epidemics.</p>
+<p>It is most commonly used in marketing, where workers try to predict which products would be most popular and try to advertise those products as much as possible, and also healthcare, where algorithms analyze patterns and reveal prerequisites for diseases and suggest preventive treatment, predict the results of various treatments and choose the best option for each patient individually, and predict disease outbreaks and epidemics1.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="1.-Intro-to-NumPy-and-the-features-it-consists">1. Intro to NumPy and the features it consists<a class="anchor-link" href="#1.-Intro-to-NumPy-and-the-features-it-consists"> </a></h1><p>Numpy, by definition, is the fundamental package for <strong><strong><em>__</em></strong></strong> in Python which can be used to perform <strong><strong><strong><strong>__</strong></strong></strong></strong>, provide <strong><strong><strong>__</strong></strong></strong>, and makes <strong><strong><em>__</em></strong></strong> much <strong><em>__</em></strong>. Numpy is very important and useful when it comes to data analysis, as it can easily use its features to complete and perform any mathematical operation, as well as analyze data files.</p>
+<h1 id="1.-Intro-to-NumPy-and-the-features-it-consists">1. Intro to NumPy and the features it consists<a class="anchor-link" href="#1.-Intro-to-NumPy-and-the-features-it-consists"> </a></h1><p>Numpy, by definition, is the fundamental package for scientific computing in Python which can be used to perform fast operations on arrays, provide various derived objects, and makes mathematical and other types of operations much more efficient. Numpy is very important and useful when it comes to data analysis, as it can easily use its features to complete and perform any mathematical operation, as well as analyze data files1.</p>
 <p>If you don't already have numpy installed, you can do so using <code>conda install numpy</code> or <code>pip install numpy</code></p>
 <p>Once that is complete, to import numpy in your code, all you must do is:</p>
 
@@ -488,13 +487,25 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">datasetSum</span><span class="p">(</span><span class="n">set1</span><span class="p">):</span>
-    <span class="nb">sum</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="k">for</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">set1</span><span class="p">:</span>
-        <span class="nb">sum</span> <span class="o">+=</span> <span class="n">value</span>
-    <span class="k">return</span> <span class="nb">sum</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 
-<span class="n">datasetSum</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">])</span>
+<span class="k">def</span> <span class="nf">df_sum</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">df</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="n">axis</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">df_product</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">df</span><span class="o">.</span><span class="n">product</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="n">axis</span><span class="p">)</span>
+
+<span class="c1"># Examples</span>
+<span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;A&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="s1">&#39;B&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]}</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Sum:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df_sum</span><span class="p">(</span><span class="n">df</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df_sum</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Product:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df_product</span><span class="p">(</span><span class="n">df</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df_product</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span>
 </pre></div>
 
     </div>
@@ -506,12 +517,25 @@ window.onload = wrap_img;
 
 <div class="output_area">
 
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>8</pre>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Sum:
+A     6
+B    15
+dtype: int64
+0    5
+1    7
+2    9
+dtype: int64
+Product:
+A      6
+B    120
+dtype: int64
+0     4
+1    10
+2    18
+dtype: int64
+</pre>
 </div>
-
 </div>
 
 </div>
@@ -1115,6 +1139,7 @@ Categories (3, object): [&#39;yellow&#39;, &#39;orange&#39;, &#39;blue&#39;]
 <li>Jose Azocar, OF, .257, 0, 10, .630, 28</li>
 </ul>
 <p>QUESTION: WHAT DO YOU GUYS THINK THE INDEX FOR THIS WOULD BE?</p>
+<p>I think the index should be Jerseynumber because it is unique to each player. However, if adding enough data over a large period of time this could be a problem so it would make more sense to make a new index value</p>
 
 </div>
 </div>
@@ -1122,6 +1147,7 @@ Categories (3, object): [&#39;yellow&#39;, &#39;orange&#39;, &#39;blue&#39;]
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Can you explain what is going on in this code segment below. (hint: define what ascending= false means, and df. head means)</p>
+<p>It is sorting the data, decending because acending=false. It then takes the head/start and tail/end of the data to print top 10 and bottom 10</p>
 
 </div>
 </div>
