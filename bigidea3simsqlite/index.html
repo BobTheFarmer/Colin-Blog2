@@ -196,7 +196,11 @@ person {&#39;name&#39;: &#39;Sri Kotturi&#39;, &#39;age&#39;: 16, &#39;score&#39
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Mathematical-Expressions">Mathematical Expressions<a class="anchor-link" href="#Mathematical-Expressions"> </a></h2><p>What is the output of the cell below? What Mathematical Expressions do you see being used? (List them below.)</p>
-<h2 id="--">- <a class="anchor-link" href="#--"> </a></h2>
+<ul>
+<li>10</li>
+<li>I see adition and floor divison</li>
+</ul>
+
 </div>
 </div>
 </div>
@@ -292,7 +296,7 @@ person {&#39;name&#39;: &#39;Sri Kotturi&#39;, &#39;age&#39;: 16, &#39;score&#39
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Selection">Selection<a class="anchor-link" href="#Selection"> </a></h1><p>Selection refers to the process of <strong>__</strong> in a program based on certain conditions. It is normally done with conditional statements.</p>
+<h1 id="Selection">Selection<a class="anchor-link" href="#Selection"> </a></h1><p>Selection refers to the process of choosing to do somthing based on somthing else in a program based on certain conditions. It is normally done with conditional statements.</p>
 <h2 id="Conditionals">Conditionals<a class="anchor-link" href="#Conditionals"> </a></h2><p>What is a conditional?:</p>
 <ul>
 <li>Statement that allows code to execute different instructions if a certain condition is true</li>
@@ -307,7 +311,8 @@ person {&#39;name&#39;: &#39;Sri Kotturi&#39;, &#39;age&#39;: 16, &#39;score&#39
 <h3 id="If-statements">If statements<a class="anchor-link" href="#If-statements"> </a></h3><ul>
 <li>The if statement is used to check if a certain condition is true. The condition can be any expression that evaulates to a boolean value, True or False. If the condition is True, then it executes a code block. </li>
 <li>If (condition) then (consequence)</li>
-<li>Example:</li>
+<li>Example: If(input("What is your favorite food") == "pizza"):
+print("That is very cool")</li>
 </ul>
 
 </div>
@@ -326,6 +331,20 @@ person {&#39;name&#39;: &#39;Sri Kotturi&#39;, &#39;age&#39;: 16, &#39;score&#39
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>x is positive
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -390,7 +409,7 @@ person {&#39;name&#39;: &#39;Sri Kotturi&#39;, &#39;age&#39;: 16, &#39;score&#39
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Nested-Conditionals">Nested Conditionals<a class="anchor-link" href="#Nested-Conditionals"> </a></h2><p>What is a nested conditional?:</p>
 <ul>
-<li>Conditional statement inside another <strong>___</strong> statement</li>
+<li>Conditional statement inside another if statement</li>
 <li>Allows to check for more complex condition where one condition depends on another</li>
 </ul>
 <h3 id="Nested-Conditional-Statements">Nested Conditional Statements<a class="anchor-link" href="#Nested-Conditional-Statements"> </a></h3><ul>
@@ -457,7 +476,7 @@ x is not divisible by 3
 </ul>
 <p>How does binary search work?:</p>
 <ul>
-<li>Repeatedly divides the search interval in half to find the middle element and <strong>__</strong> the middle value to the target value, if not the same then it continues on to either the lower or upper half</li>
+<li>Repeatedly divides the search interval in half to find the middle element and check the middle value to the target value, if not the same then it continues on to either the lower or upper half</li>
 <li>Eliminate half of the remaining search interval elements each time</li>
 <li>Efficient way to search for element in large dataset</li>
 </ul>
@@ -518,10 +537,7 @@ x is not divisible by 3
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Is your number 50?
-Is your number 25?
-Is your number 12?
-Is your number 18?
-I guessed your number 18!
+I guessed your number 50!
 </pre>
 </div>
 </div>
@@ -550,11 +566,52 @@ I guessed your number 18!
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Rock, paper or scissors?&quot;</span><span class="p">)</span>
-<span class="n">player</span>
+
+<span class="n">choices</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;rock&quot;</span><span class="p">,</span> <span class="s2">&quot;paper&quot;</span><span class="p">,</span> <span class="s2">&quot;scissors&quot;</span><span class="p">]</span>
+
+<span class="n">player_choice</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Choose rock, paper or scissors: &quot;</span><span class="p">)</span>
+<span class="n">computer_choice</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">choices</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Player chose: </span><span class="si">{</span><span class="n">player_choice</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Computer chose: </span><span class="si">{</span><span class="n">computer_choice</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">player_choice</span> <span class="o">==</span> <span class="n">computer_choice</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;It&#39;s a tie!&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">player_choice</span> <span class="o">==</span> <span class="s2">&quot;rock&quot;</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">computer_choice</span> <span class="o">==</span> <span class="s2">&quot;paper&quot;</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Computer wins!&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Player wins!&quot;</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">player_choice</span> <span class="o">==</span> <span class="s2">&quot;paper&quot;</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">computer_choice</span> <span class="o">==</span> <span class="s2">&quot;scissors&quot;</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Computer wins!&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Player wins!&quot;</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">player_choice</span> <span class="o">==</span> <span class="s2">&quot;scissors&quot;</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">computer_choice</span> <span class="o">==</span> <span class="s2">&quot;rock&quot;</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Computer wins!&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Player wins!&quot;</span><span class="p">)</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Player chose: rock
+Computer chose: scissors
+Player wins!
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -570,7 +627,7 @@ I guessed your number 18!
 <h2 id="How-do-Algorithms-relate-to-data-structures?">How do Algorithms relate to data structures?<a class="anchor-link" href="#How-do-Algorithms-relate-to-data-structures?"> </a></h2><ul>
 <li>Algorithms often rely on specific data structures to solve problems efficently. </li>
 <li>Sorting algorithms require a data structure such as an array or a linked list to store and manipulate data.</li>
-<li>Searching algorithms such as binary search require data structures like <strong><strong>___</strong></strong> to organize and search through data.</li>
+<li>Searching algorithms such as binary search require data structures like lists to organize and search through data.</li>
 </ul>
 <h2 id="Important-Terms">Important Terms<a class="anchor-link" href="#Important-Terms"> </a></h2><p><strong>What is an algorithm?</strong></p>
 <ul>
@@ -582,7 +639,7 @@ I guessed your number 18!
 </ul>
 <p><strong>Selection</strong></p>
 <ul>
-<li>Helps to choose <strong><strong><strong>_</strong></strong></strong> based off of a decision that the programmer wants to make</li>
+<li>Helps to choose indexes and values based off of a decision that the programmer wants to make</li>
 </ul>
 <p><strong>Iteration</strong></p>
 <ul>
@@ -856,7 +913,7 @@ I guessed your number 18!
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="For-Loops">For Loops<a class="anchor-link" href="#For-Loops"> </a></h3><p>For loops are probably the most well-known type of iterative loop used in code. Most of us know about the <code>for variable in list</code> format.</p>
-<p>One helpful tool not a lot of people know about is the <code>enumerate()</code> function. When used in conjunction with a for loop, you can always have <strong><strong>_</strong></strong> and value of each selected list entry.</p>
+<p>One helpful tool not a lot of people know about is the <code>enumerate()</code> function. When used in conjunction with a for loop, you can always have index and value of each selected list entry.</p>
 
 </div>
 </div>
@@ -1041,9 +1098,16 @@ The difference between the value and the index is 200.
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">build</span><span class="p">(</span><span class="n">deck</span><span class="p">):</span>
-        <span class="k">for</span> <span class="n">suit</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;Spades&quot;</span><span class="p">,</span> <span class="s2">&quot;Clubs&quot;</span><span class="p">,</span> <span class="s2">&quot;Diamonds&quot;</span><span class="p">,</span> <span class="s2">&quot;Hearts&quot;</span><span class="p">]:</span>
-            <span class="k">for</span> <span class="n">val</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">15</span><span class="p">):</span>
-                <span class="n">deck</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Card</span><span class="p">(</span><span class="n">suit</span><span class="p">,</span> <span class="n">val</span><span class="p">))</span>
+    <span class="n">suits</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Spades&quot;</span><span class="p">,</span> <span class="s2">&quot;Clubs&quot;</span><span class="p">,</span> <span class="s2">&quot;Diamonds&quot;</span><span class="p">,</span> <span class="s2">&quot;Hearts&quot;</span><span class="p">]</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">suits</span><span class="p">):</span>
+        <span class="n">suit</span> <span class="o">=</span> <span class="n">suits</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="n">val</span> <span class="o">=</span> <span class="mi">2</span>
+        <span class="k">while</span> <span class="n">val</span> <span class="o">&lt;</span> <span class="mi">15</span><span class="p">:</span>
+            <span class="n">deck</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Card</span><span class="p">(</span><span class="n">suit</span><span class="p">,</span> <span class="n">val</span><span class="p">))</span>
+            <span class="n">val</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+
 
 <span class="c1">#HINT: you may want to make an incrementing i variable</span>
 </pre></div>
@@ -1130,8 +1194,12 @@ The difference between the value and the index is 200.
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Often, random selection methods use functions like <code>______</code> or <code>________</code> as ways to select certain indexes in lists, or might use the random numbers in some other way.</p>
-<h2 id="QUESTION:-Without-shuffling-the-card-order-of-the-deck,-can-you-think-of-a-way-that-the-aforementioned-random-module-functions-could-be-used-to-get-a-random-card-from-the-deck?-Do-so-in-the-code-cell-below."><strong>QUESTION:</strong> Without shuffling the card order of the deck, can you think of a way that the aforementioned <code>random</code> module functions could be used to get a random card from the deck? Do so in the code cell below.<a class="anchor-link" href="#QUESTION:-Without-shuffling-the-card-order-of-the-deck,-can-you-think-of-a-way-that-the-aforementioned-random-module-functions-could-be-used-to-get-a-random-card-from-the-deck?-Do-so-in-the-code-cell-below."> </a></h2>
+<p>Often, random selection methods use functions like <code>random.choice()</code> or <code>random.sample()</code> as ways to select certain indexes in lists, or might use the random numbers in some other way.</p>
+<p><strong>QUESTION:</strong> Without shuffling the card order of the deck, can you think of a way that the aforementioned <code>random</code> module functions could be used to get a random card from the deck? Do so in the code cell below.</p>
+<ul>
+<li>Get a random index from cards</li>
+</ul>
+
 </div>
 </div>
 </div>
@@ -1143,6 +1211,13 @@ The difference between the value and the index is 200.
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+<span class="n">deck</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">suit</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;Spades&quot;</span><span class="p">,</span> <span class="s2">&quot;Clubs&quot;</span><span class="p">,</span> <span class="s2">&quot;Diamonds&quot;</span><span class="p">,</span> <span class="s2">&quot;Hearts&quot;</span><span class="p">]:</span>
+    <span class="k">for</span> <span class="n">val</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">15</span><span class="p">):</span>
+        <span class="n">deck</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Card</span><span class="p">(</span><span class="n">suit</span><span class="p">,</span> <span class="n">val</span><span class="p">))</span>
+<span class="n">hand</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">hand</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">deck</span><span class="o">.</span><span class="n">pop</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">([</span><span class="n">card</span><span class="o">.</span><span class="n">show</span><span class="p">()</span> <span class="k">for</span> <span class="n">card</span> <span class="ow">in</span> <span class="n">hand</span><span class="p">])</span>
 
 <span class="c1">#find another random function that could pull a random card from a deck of UNSORTED cards</span>
 </pre></div>
@@ -1169,30 +1244,14 @@ The difference between the value and the index is 200.
 </div>
 </div>
 </div>
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># (Concert attendance? Wind speeds? Interactions between subjects in large environments?)</span>
-
-<span class="c1"># Think about the sort of things that could be saved in lists, dictionaries, etc.</span>
-<span class="c1"># (Even better if you can take advantage of the specific features of multiple types of data sets!)</span>
-
-<span class="c1"># What kind of iteration happens in the real world?</span>
-<span class="c1"># What occurs repeatedly, even over a long period of time?</span>
-<span class="c1"># You could model the results of a disease spreading through a population without it taking IRL years.</span>
-</pre></div>
-
-    </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Cancer-cells-simulation">Cancer cells simulation<a class="anchor-link" href="#Cancer-cells-simulation"> </a></h1><blockquote><p>Shows the growth of cancer cells</p>
+</blockquote>
+<h3 id="Hacks-here:https://bobthefarmer.github.io/Colin-Blog2/_includes/simulation.html">Hacks here:<a href="https://bobthefarmer.github.io/Colin-Blog2/_includes/simulation.html">https://bobthefarmer.github.io/Colin-Blog2/_includes/simulation.html</a><a class="anchor-link" href="#Hacks-here:https://bobthefarmer.github.io/Colin-Blog2/_includes/simulation.html"> </a></h3>
 </div>
 </div>
-
 </div>
-    
-
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Databases">Databases<a class="anchor-link" href="#Databases"> </a></h1><p>We have already gone over databases in this class, but here is a refresher. A database contains data that's stored in rows and colums. The information in this database can then be pulled from the database and can be used in a program.</p>
@@ -1606,11 +1665,105 @@ Created user with username &#34;Un Bea Table&#34;.
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># If you&#39;ve already run the db.init_app(app) function while in this notebook,</span>
-<span class="c1"># don&#39;t do it again until you&#39;ve closed it!</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="kn">import</span> <span class="n">create_engine</span>
+<span class="kn">from</span> <span class="nn">sqlalchemy.orm</span> <span class="kn">import</span> <span class="n">sessionmaker</span>
+<span class="kn">from</span> <span class="nn">sqlalchemy.ext.declarative</span> <span class="kn">import</span> <span class="n">declarative_base</span>
+<span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="kn">import</span> <span class="n">Column</span><span class="p">,</span> <span class="n">Integer</span><span class="p">,</span> <span class="n">String</span><span class="p">,</span> <span class="n">JSON</span>
+
+<span class="n">engine</span> <span class="o">=</span> <span class="n">create_engine</span><span class="p">(</span><span class="s1">&#39;sqlite:///example.db&#39;</span><span class="p">)</span>
+<span class="n">Session</span> <span class="o">=</span> <span class="n">sessionmaker</span><span class="p">(</span><span class="n">bind</span><span class="o">=</span><span class="n">engine</span><span class="p">)</span>
+<span class="n">session</span> <span class="o">=</span> <span class="n">Session</span><span class="p">()</span>
+<span class="n">Base</span> <span class="o">=</span> <span class="n">declarative_base</span><span class="p">()</span>
+
+<span class="k">class</span> <span class="nc">Player</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
+    <span class="n">__tablename__</span> <span class="o">=</span> <span class="s1">&#39;players&#39;</span>
+
+    <span class="nb">id</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">_name</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">String</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span> <span class="n">unique</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">_team</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">String</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span> <span class="n">unique</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">_position</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">String</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span> <span class="n">unique</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">_stats</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">JSON</span><span class="p">,</span> <span class="n">unique</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">team</span><span class="p">,</span> <span class="n">position</span><span class="p">,</span> <span class="n">stats</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_team</span> <span class="o">=</span> <span class="n">team</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_position</span> <span class="o">=</span> <span class="n">position</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_stats</span> <span class="o">=</span> <span class="n">stats</span> <span class="k">if</span> <span class="n">stats</span> <span class="k">else</span> <span class="p">{}</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_name</span>
+
+    <span class="nd">@name</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">name</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_name</span> <span class="o">=</span> <span class="n">name</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">team</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_team</span>
+
+    <span class="nd">@team</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">team</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">team</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_team</span> <span class="o">=</span> <span class="n">team</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">position</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_position</span>
+
+    <span class="nd">@position</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">position</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">position</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_position</span> <span class="o">=</span> <span class="n">position</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">stats</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_stats</span>
+
+    <span class="nd">@stats</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">stats</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">stats</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_stats</span> <span class="o">=</span> <span class="n">stats</span>
+
+<span class="n">Base</span><span class="o">.</span><span class="n">metadata</span><span class="o">.</span><span class="n">create_all</span><span class="p">(</span><span class="n">engine</span><span class="p">)</span>
+
+<span class="n">player1</span> <span class="o">=</span> <span class="n">Player</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;LeBron James&#39;</span><span class="p">,</span> <span class="n">team</span><span class="o">=</span><span class="s1">&#39;Los Angeles Lakers&#39;</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="s1">&#39;Small Forward&#39;</span><span class="p">,</span> <span class="n">stats</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;points_per_game&#39;</span><span class="p">:</span> <span class="mf">25.3</span><span class="p">})</span>
+<span class="n">player2</span> <span class="o">=</span> <span class="n">Player</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;Stephen Curry&#39;</span><span class="p">,</span> <span class="n">team</span><span class="o">=</span><span class="s1">&#39;Golden State Warriors&#39;</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="s1">&#39;Point Guard&#39;</span><span class="p">,</span> <span class="n">stats</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;points_per_game&#39;</span><span class="p">:</span> <span class="mf">29.5</span><span class="p">})</span>
+<span class="n">player3</span> <span class="o">=</span> <span class="n">Player</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;Kevin Durant&#39;</span><span class="p">,</span> <span class="n">team</span><span class="o">=</span><span class="s1">&#39;Brooklyn Nets&#39;</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="s1">&#39;Small Forward&#39;</span><span class="p">,</span> <span class="n">stats</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;points_per_game&#39;</span><span class="p">:</span> <span class="mf">26.9</span><span class="p">})</span>
+
+<span class="n">session</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">player1</span><span class="p">)</span>
+<span class="n">session</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">player2</span><span class="p">)</span>
+<span class="n">session</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">player3</span><span class="p">)</span>
+<span class="n">session</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+
+<span class="n">players</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">Player</span><span class="p">)</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">player</span> <span class="ow">in</span> <span class="n">players</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">player</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s1"> plays for the </span><span class="si">{</span><span class="n">player</span><span class="o">.</span><span class="n">team</span><span class="si">}</span><span class="s1"> as a </span><span class="si">{</span><span class="n">player</span><span class="o">.</span><span class="n">position</span><span class="si">}</span><span class="s1"> and averages </span><span class="si">{</span><span class="n">player</span><span class="o">.</span><span class="n">stats</span><span class="p">[</span><span class="s2">&quot;points_per_game&quot;</span><span class="p">]</span><span class="si">}</span><span class="s1"> points per game.&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>LeBron James plays for the Los Angeles Lakers as a Small Forward and averages 25.3 points per game.
+Stephen Curry plays for the Golden State Warriors as a Point Guard and averages 29.5 points per game.
+Kevin Durant plays for the Brooklyn Nets as a Small Forward and averages 26.9 points per game.
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>/var/folders/x7/9rjys24n18xd0xc4dkv2vdrm0000gn/T/ipykernel_5640/2359115466.py:9: MovedIn20Warning: The ``declarative_base()`` function is now available as sqlalchemy.orm.declarative_base(). (deprecated since: 2.0) (Background on SQLAlchemy 2.0 at: https://sqlalche.me/e/b8d9)
+  Base = declarative_base()
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
