@@ -1,0 +1,99 @@
+<html>
+<head>
+    <title>Cancer Simulation</title>
+    <style>
+        .cell {
+            width: 20px;
+            height: 20px;
+            border: 1px solid black;
+            display: inline-block;
+        }
+        .cancer {
+            background-color: red;
+        }
+        .healthy {
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div id="grid"></div>
+    <br>
+    <button onclick="cureAll()">Cure All</button>
+
+    <script>
+        const size = 10;
+        let cells = [];
+
+        function init() {
+            for (let i = 0; i < size; i++) {
+                cells[i] = [];
+                for (let j = 0; j < size; j++) {
+                    cells[i][j] = Math.random() < 0.5 ? "healthy" : "cancer";
+                }
+            }
+        }
+
+        function draw() {
+            let grid = document.getElementById("grid");
+            grid.innerHTML = "";
+            for (let i = 0; i < size; i++) {
+                for (let j = 0; j < size; j++) {
+                    let cell = document.createElement("div");
+                    cell.className = "cell " + cells[i][j];
+                    grid.appendChild(cell);
+                }
+                grid.appendChild(document.createElement("br"));
+            }
+        }
+
+        function update() {
+            let newCells = [];
+            for (let i = 0; i < size; i++) {
+                newCells[i] = [];
+                for (let j = 0; j < size; j++) {
+                    if (cells[i][j] === "healthy") {
+                        if (Math.random() < 0.1) {
+                            newCells[i][j] = "cancer";
+                        } else {
+                            newCells[i][j] = "healthy";
+                        }
+                    } else {
+                        let healthyNeighbors = getHealthyNeighbors(i, j);
+                        if (healthyNeighbors.length > 0 && Math.random() < 0.25) {
+                            let index = Math.floor(Math.random() * healthyNeighbors.length);
+                            let [x, y] = healthyNeighbors[index];
+                            newCells[x][y] = "cancer";
+                        }
+                        newCells[i][j] = "cancer";
+                    }
+                }
+            }
+            cells = newCells;
+            draw();
+        }
+
+        function getHealthyNeighbors(i, j) {
+            let neighbors = [];
+            if (i > 0 && cells[i - 1][j] === "healthy") neighbors.push([i - 1, j]);
+            if (i < size - 1 && cells[i + 1][j] === "healthy") neighbors.push([i + 1, j]);
+            if (j > 0 && cells[i][j - 1] === "healthy") neighbors.push([i, j - 1]);
+            if (j < size - 1 && cells[i][j + 1] === "healthy") neighbors.push([i, j + 1]);
+            return neighbors;
+        }
+
+        function cureAll() {
+            for (let i = 0; i < size; i++) {
+                for (let j = 0; j < size; j++) {
+                    cells[i][j] = "healthy";
+                }
+            }
+            draw();
+        }
+
+        init();
+        draw();
+        setInterval(update, 1000);
+    </script>
+</body>
+</html>
