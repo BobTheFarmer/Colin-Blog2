@@ -122,8 +122,11 @@ T, It means not secure
 
 ![Internet]({{site.baseurl}}/images/internet.png)
 
+![Net 2]({{site.baseurl}}/images/computerDiagram.png)
 
-![Full Stack]({{site.baseurl}}/images/fullstack.png)
+![Net 3]({{site.baseurl}}/images/computerDiagram.png)
+
+![Full Stack]({{site.baseurl}}/images/internetDiagram.jpg)
 
 
 - Often we draw pictures of machines communicating over the Internet with arrows.  However, the real communication goes through protocol layers and the machine and then is trasported of the network.   For College Board and future Computer Knowledge you should become familiar with the following ...
