@@ -1,0 +1,192 @@
+%%html
+<head>
+    <script type="text/javascript" language="javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>var define = null;</script>
+    <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+    <style>
+        .fisherman {
+            position: absolute;
+            left: 335px;
+            top: 235px;
+        }
+        .hut {
+            position: absolute;
+            top: 205px;
+            left: 8px;
+        }
+        .water {
+            position: absolute;
+            top: 279px;
+            height: 58px;
+        }
+        .container {
+            position: absolute;
+            height: 500px;
+        }
+        .background {
+            object-fit: cover;
+        }
+        .boat {
+            position: absolute;
+            top: 265px;
+            left: 300px;
+        }
+        .moneyIcon {
+            width: 40px;
+            position: absolute;
+            top: 10px;
+            left: 420px;
+        }
+
+        .money {
+            font-family: "Oxygen", sans-serif;
+            font-size: 26px;
+            position: absolute;
+            top: -10px;
+            left: 460px;
+        }
+        
+
+    </style>
+</head>
+<img class="background" src="images/fishing/background.png"></img>
+<img class="hut" src="images/fishing/hut.png"></img>
+<img class="water" id="water1" src="images/fishing/water.png" style="left: 8px"></img>
+<img class="water" id="water2" src="images/fishing/water.png" style="left: 200px"></img>
+<img class="water" id="water3" src="images/fishing/water.png" style="left: 392px"></img>
+
+<img class="fisherman" id="fisherman" src="images/fishing/hook1.png"></img>
+<img class="boat" id="boat" src="images/fishing/boat.png"></img>
+
+<img class="moneyIcon" id="moneyIcon" src="images/fishing/money.png"></img>
+<p class="money" id="money" data-money = "0">$0</p>
+
+<script>
+    $(document).ready(function() {
+        const fisherman = document.getElementById("fisherman");
+        const water1 = document.getElementById("water1");
+        const water2 = document.getElementById("water2");
+        const water3 = document.getElementById("water3");
+        const boat = document.getElementById("boat");
+        const money = document.getElementById("money");
+
+        let status = 0;
+        let frame = 1;
+        let wavesFrame = 1;
+        
+        let catchRate = 0.05;
+        let luck = 0; //Int 0-10
+
+        const catchMessages = ["You caught a epic treasure!", "You caught an exotic tropical fish!", "You caught a rare salmon!", "You caught a common trout!"]
+        const baseCatchRewards = [5, 15, 40, 100];
+
+
+        //Utility functions
+        function setFishermanStatus(newStatus) {
+            frame = 1;
+            if(newStatus == "idle") {
+                status = 0;
+            } else if(newStatus == "hook") {
+                status = 1;
+            } else {
+                console.log("Error, status set to invalid value");
+            }
+        }
+
+        function updateMoney(moneyUpdate) {
+            moneyAmount = parseInt(money.getAttribute('data-money'))  + moneyUpdate;
+            money.setAttribute('data-money', moneyAmount);
+            money.textContent = "$" + moneyAmount;
+        }
+      
+        //Set up animation timer
+        function animate() {
+            /*switch(status) {
+                case 0: //Idle
+                    switch(frame) {
+                        case 1:
+                            fisherman.src = "images/fishing/hook2.png";
+                            frame = 2;
+                            break;
+                        case 2:
+                            fisherman.src = "images/fishing/hook3.png";
+                            frame = 3;
+                            break;
+                        case 3:
+                            fisherman.src = "images/fishing/hook4.png";
+                            frame = 4;
+                            break;
+                        case 4:
+                            fisherman.src = "images/fishing/hook5.png";
+                            frame = 5;
+                            break;
+                        case 5:
+                            fisherman.src = "images/fishing/hook1.png";
+                            frame = 1;
+                            break;
+                    }
+            }*/
+
+            if(status == 0) { //Idle 
+                if(frame == 1) {
+                    fisherman.src = "images/fishing/idle2.png";
+                    frame = 2;
+                } else {
+                    fisherman.src = "images/fishing/idle1.png";
+                    frame = 1;
+                }
+                checkForCatch();
+            } else if(status == 1) { //Caught fish
+                let source = "images/fishing/";
+                if(frame < 5) {
+                    source += "hook" + (frame+1) + ".png"
+                    frame +=1;
+                } else {
+                    setFishermanStatus("idle")
+                    source += "idle1.png"
+                }
+                fisherman.src = source;
+            }
+        }
+
+        function waves() {
+            waterLevelChange = parseInt(6*Math.sin(wavesFrame/100));
+
+            water1.style.top = (279 + waterLevelChange) + "px";
+            water2.style.top = (279 + waterLevelChange) + "px";
+            water3.style.top = (279 + waterLevelChange) + "px";
+
+            boat.style.top = (272 + waterLevelChange*1.3) + "px";
+            fisherman.style.top = (237 + waterLevelChange*1.3) + "px";
+            wavesFrame += 1;
+        }
+
+        function checkForCatch() {
+            if(Math.random() > catchRate) {
+                return; //Returns if not a catch
+            }
+            
+            setFishermanStatus("hook");
+
+            //Choose what fish to catch
+            let randomNumber = parseInt(Math.random() * 100);
+            let catchThresholds = [100-luck, 95-2*luck, 80-3*luck, 70-6*luck];
+
+            let catchSelected = false;
+            catchThresholds.forEach((threshold) => {
+                if(!catchSelected && randomNumber >= threshold) {
+                    updateMoney(baseCatchRewards[i]);
+                    catchSelected = true;
+                }
+                i += 1;
+            });
+
+        }
+
+        //Start animations
+        setInterval(animate, 200);
+        setInterval(waves, 20);
+
+
+    });
+</script>
