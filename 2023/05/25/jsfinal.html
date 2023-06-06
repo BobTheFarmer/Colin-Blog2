@@ -362,7 +362,7 @@ window.onload = wrap_img;
         <span class="kd">let</span> <span class="nx">currentLuckUpgrade</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
 
 
-        <span class="kr">const</span> <span class="nx">catchMultiplierCosts</span> <span class="o">=</span> <span class="p">[</span><span class="mf">20</span><span class="p">,</span> <span class="mf">50</span><span class="p">,</span> <span class="mf">100</span><span class="p">,</span> <span class="mf">200</span><span class="p">,</span> <span class="mf">500</span><span class="p">];</span>
+        <span class="kr">const</span> <span class="nx">catchMultiplierCosts</span> <span class="o">=</span> <span class="p">[</span><span class="mf">20</span><span class="p">,</span> <span class="mf">50</span><span class="p">,</span> <span class="mf">100</span><span class="p">,</span> <span class="mf">200</span><span class="p">,</span> <span class="mf">1000</span><span class="p">];</span>
         <span class="kr">const</span> <span class="nx">catchMultiplierUpgrades</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1.2</span><span class="p">,</span> <span class="mf">1.3</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">,</span> <span class="mf">1.7</span><span class="p">,</span> <span class="mf">2</span><span class="p">];</span>
         <span class="kd">let</span> <span class="nx">currentCatchMultiplierUpgrade</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
 
@@ -702,7 +702,7 @@ window.onload = wrap_img;
         let currentLuckUpgrade = 0;
 
 
-        const catchMultiplierCosts = [20, 50, 100, 200, 500];
+        const catchMultiplierCosts = [20, 50, 100, 200, 1000];
         const catchMultiplierUpgrades = [1.2, 1.3, 1.5, 1.7, 2];
         let currentCatchMultiplierUpgrade = 0;
 
@@ -788,14 +788,13 @@ window.onload = wrap_img;
 
             //Choose what fish to catch
             let randomNumber = parseInt(Math.random() * 100);
-            let catchThresholds =  [75, 50, 25, 0];//[95-2*luck, 80-4*luck, 60-6*luck, 0];
+            let catchThresholds =  [95-2*luck, 80-4*luck, 60-6*luck, 0];
 
             i=0;
             catchSelected = false;
             catchThresholds.forEach((threshold) => {
                 if(!catchSelected && randomNumber >= threshold) {
                     updateMoney(parseInt(baseCatchRewards[i]*catchMultiplier));
-                   
 
                     //Show message
                     catchIcon.src = "images/fishing/fish" + (i) + ".png";
