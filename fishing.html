@@ -118,6 +118,7 @@
 
 <script>
     $(document).ready(function() {
+        //Define constants from HTML
         const fisherman = document.getElementById("fisherman");
         const water1 = document.getElementById("water1");
         const water2 = document.getElementById("water2");
@@ -129,22 +130,26 @@
         const catchEarnings = document.getElementById("catchEarnings");
         const fishingSpeedUpgrade = document.getElementById("fishingSpeedUpgrade");
         const fishingSpeedUpgradeCost = document.getElementById("fishingSpeedUpgradeCost");
-        const fishingCatchMultiplierUpgrade = document.getElementById("fishingCatchMultiplierUpgrade");
-        const fishingCatchMultiplierUpgradeCost = document.getElementById("fishingCatchMultiplierUpgradeCost");
-        const fishingLuckUpgrade = document.getElementById("fishingLuckUpgrade");
-        const fishingLuckUpgradeCost = document.getElementById("fishingLuckUpgradeCost");
+        const fishingCatchMultiplierUpgrade = document.getElementById("fishingQualityUpgrade");
+        const fishingCatchMultiplierUpgradeCost = document.getElementById("fishingQualityUpgradeCost");
+        const fishingLuckUpgrade = document.getElementById("fishingEarningsUpgrade");
+        const fishingLuckUpgradeCost = document.getElementById("fishingEarningsUpgradeCost");
         
+        //For animation
         let status = 0;
         let frame = 1;
         let wavesFrame = 1;
         
+        //For initial stats
         let catchRate = 0.05;
         let luck = 0; //Int 0-10
         let catchMultiplier = 1;
 
+        //Customizable messages and base rewards
         const catchMessages = ["You caught a epic treasure!", "    You caught an exotic tropical fish!", "      You caught a rare salmon!", "     You caught a common trout!"]
         const baseCatchRewards = [100, 60, 40, 20];
 
+        //For upgrades, customizable
         const fishingSpeedCosts = [20, 50, 100, 200, 500];
         const fishingSpeedUpgrades = [0.05, 0.08, 0.1, 0.15, 0.2];
         let currentFishingSpeedUpgrade = 0;
@@ -195,7 +200,6 @@
       
         //Set up animation timer
         function animate() {
-
             // Was going to do switch statements but energetic programming bad
             if(status == 0) { //Idle 
                 if(frame == 1) {
@@ -226,7 +230,7 @@
             water2.style.top = (279 + waterLevelChange) + "px";
             water3.style.top = (279 + waterLevelChange) + "px";
 
-            boat.style.top = (272 + waterLevelChange*1.3) + "px";
+            boat.style.top = (272 + waterLevelChange*1.3) + "px"; //Boat+Fisherman go 'ride' the waves
             fisherman.style.top = (237 + waterLevelChange*1.3) + "px";
             wavesFrame += 1;
         }
@@ -240,14 +244,13 @@
 
             //Choose what fish to catch
             let randomNumber = parseInt(Math.random() * 100);
-            let catchThresholds =  [75, 50, 25, 0];//[95-2*luck, 80-4*luck, 60-6*luck, 0];
+            let catchThresholds =  [95-2*luck, 80-4*luck, 60-6*luck, 0];
 
             i=0;
-            catchSelected = false;
+            catchSelected = false; //To prevent duplicate catches
             catchThresholds.forEach((threshold) => {
                 if(!catchSelected && randomNumber >= threshold) {
                     updateMoney(parseInt(baseCatchRewards[i]*catchMultiplier));
-                   
 
                     //Show message
                     catchIcon.src = "images/fishing/fish" + (i) + ".png";
@@ -256,7 +259,7 @@
                     setMessageVisibility(true);
 
                     setTimeout(()=> {
-                        setMessageVisibility(false);
+                        setMessageVisibility(false); //Hide message 1200 milliseconds later
                     },1200);
                     catchSelected = true;
                 }
