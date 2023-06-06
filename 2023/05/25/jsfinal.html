@@ -246,7 +246,7 @@ window.onload = wrap_img;
             <span class="k">left</span><span class="p">:</span> <span class="mi">420</span><span class="kt">px</span><span class="p">;</span>
         <span class="p">}</span>
         <span class="p">.</span><span class="nc">money</span> <span class="p">{</span>
-            <span class="k">font-family</span><span class="p">:</span> <span class="s1">&#39;Press+Start+2P&#39;</span><span class="p">;</span>
+            <span class="k">font-family</span><span class="p">:</span> <span class="s2">&quot;Oxygen&quot;</span><span class="p">,</span> <span class="kc">sans-serif</span><span class="p">;</span>
             <span class="k">font-size</span><span class="p">:</span> <span class="mi">26</span><span class="kt">px</span><span class="p">;</span>
             <span class="k">position</span><span class="p">:</span> <span class="kc">absolute</span><span class="p">;</span>
             <span class="k">top</span><span class="p">:</span> <span class="mi">-10</span><span class="kt">px</span><span class="p">;</span>
@@ -274,6 +274,20 @@ window.onload = wrap_img;
             <span class="k">font-family</span><span class="p">:</span> <span class="s2">&quot;Oxygen&quot;</span><span class="p">,</span> <span class="kc">sans-serif</span><span class="p">;</span>
             <span class="k">color</span><span class="p">:</span> <span class="kc">white</span><span class="p">;</span>
         <span class="p">}</span>
+        <span class="p">.</span><span class="nc">upgradeButton</span> <span class="p">{</span>
+            <span class="k">position</span><span class="p">:</span> <span class="kc">absolute</span><span class="p">;</span>
+            <span class="k">left</span><span class="p">:</span> <span class="mi">30</span><span class="kt">px</span><span class="p">;</span>
+            <span class="k">background-color</span><span class="p">:</span> <span class="kc">transparent</span><span class="p">;</span>
+            <span class="k">border</span><span class="p">:</span> <span class="kc">none</span><span class="p">;</span>
+            <span class="k">outline</span><span class="p">:</span> <span class="kc">none</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="p">.</span><span class="nc">upgradeDesc</span> <span class="p">{</span>
+            <span class="k">position</span><span class="p">:</span> <span class="kc">absolute</span><span class="p">;</span>
+            <span class="k">left</span><span class="p">:</span> <span class="mi">30</span><span class="kt">px</span><span class="p">;</span>
+            <span class="k">font-family</span><span class="p">:</span> <span class="s2">&quot;Oxygen&quot;</span><span class="p">,</span> <span class="kc">sans-serif</span><span class="p">;</span>
+            <span class="k">color</span><span class="p">:</span> <span class="kc">white</span><span class="p">;</span>
+        <span class="p">}</span>
+
 
 
     <span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
@@ -297,6 +311,19 @@ window.onload = wrap_img;
 <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;catchText&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;catchText&quot;</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;display: none&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;catchEarnings&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;catchEarnings&quot;</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;display: none&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 
+<span class="p">&lt;</span><span class="nt">button</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;fishingSpeedUpgrade&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;upgradeButton&quot;</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;top: 30px&quot;</span><span class="p">&gt;&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;images/fishing/upgrade1.png&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">img</span><span class="p">&gt;&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;upgradeDesc&quot;</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;top: 55px&quot;</span><span class="p">&gt;</span>Catch Rate<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;fishingSpeedUpgradeCost&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;upgradeDesc&quot;</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;top: 70px&quot;</span><span class="p">&gt;</span>$20<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">button</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;fishingQualityUpgrade&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;upgradeButton&quot;</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;top: 90px&quot;</span><span class="p">&gt;&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;images/fishing/upgrade3.png&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">img</span><span class="p">&gt;&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;upgradeDesc&quot;</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;top: 115px&quot;</span><span class="p">&gt;</span>Catch Quality<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;fishingQualityUpgradeCost&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;upgradeDesc&quot;</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;top: 130px&quot;</span><span class="p">&gt;</span>$20<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">button</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;fishingEarningsUpgrade&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;upgradeButton&quot;</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;top: 150px&quot;</span><span class="p">&gt;&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;images/fishing/upgrade2.png&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">img</span><span class="p">&gt;&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;upgradeDesc&quot;</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;top: 175px&quot;</span><span class="p">&gt;</span>Sell Rate<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;fishingEarningsUpgradeCost&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;upgradeDesc&quot;</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;top: 190px&quot;</span><span class="p">&gt;</span>$20<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+
+
 <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
     <span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
         <span class="kr">const</span> <span class="nx">fisherman</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;fisherman&quot;</span><span class="p">);</span>
@@ -308,7 +335,13 @@ window.onload = wrap_img;
         <span class="kr">const</span> <span class="nx">catchIcon</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;catchIcon&quot;</span><span class="p">);</span>
         <span class="kr">const</span> <span class="nx">catchText</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;catchText&quot;</span><span class="p">);</span>
         <span class="kr">const</span> <span class="nx">catchEarnings</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;catchEarnings&quot;</span><span class="p">);</span>
-
+        <span class="kr">const</span> <span class="nx">fishingSpeedUpgrade</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;fishingSpeedUpgrade&quot;</span><span class="p">);</span>
+        <span class="kr">const</span> <span class="nx">fishingSpeedUpgradeCost</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;fishingSpeedUpgradeCost&quot;</span><span class="p">);</span>
+        <span class="kr">const</span> <span class="nx">fishingCatchMultiplierUpgrade</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;fishingQualityUpgrade&quot;</span><span class="p">);</span>
+        <span class="kr">const</span> <span class="nx">fishingCatchMultiplierUpgradeCost</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;fishingQualityUpgradeCost&quot;</span><span class="p">);</span>
+        <span class="kr">const</span> <span class="nx">fishingLuckUpgrade</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;fishingEarningsUpgrade&quot;</span><span class="p">);</span>
+        <span class="kr">const</span> <span class="nx">fishingLuckUpgradeCost</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;fishingEarningsUpgradeCost&quot;</span><span class="p">);</span>
+        
         <span class="kd">let</span> <span class="nx">status</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
         <span class="kd">let</span> <span class="nx">frame</span> <span class="o">=</span> <span class="mf">1</span><span class="p">;</span>
         <span class="kd">let</span> <span class="nx">wavesFrame</span> <span class="o">=</span> <span class="mf">1</span><span class="p">;</span>
@@ -320,6 +353,18 @@ window.onload = wrap_img;
         <span class="kr">const</span> <span class="nx">catchMessages</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;You caught a epic treasure!&quot;</span><span class="p">,</span> <span class="s2">&quot;    You caught an exotic tropical fish!&quot;</span><span class="p">,</span> <span class="s2">&quot;      You caught a rare salmon!&quot;</span><span class="p">,</span> <span class="s2">&quot;     You caught a common trout!&quot;</span><span class="p">]</span>
         <span class="kr">const</span> <span class="nx">baseCatchRewards</span> <span class="o">=</span> <span class="p">[</span><span class="mf">100</span><span class="p">,</span> <span class="mf">60</span><span class="p">,</span> <span class="mf">40</span><span class="p">,</span> <span class="mf">20</span><span class="p">];</span>
 
+        <span class="kr">const</span> <span class="nx">fishingSpeedCosts</span> <span class="o">=</span> <span class="p">[</span><span class="mf">20</span><span class="p">,</span> <span class="mf">50</span><span class="p">,</span> <span class="mf">100</span><span class="p">,</span> <span class="mf">200</span><span class="p">,</span> <span class="mf">500</span><span class="p">];</span>
+        <span class="kr">const</span> <span class="nx">fishingSpeedUpgrades</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.05</span><span class="p">,</span> <span class="mf">0.08</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.15</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">];</span>
+        <span class="kd">let</span> <span class="nx">currentFishingSpeedUpgrade</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
+
+        <span class="kr">const</span> <span class="nx">luckCosts</span> <span class="o">=</span> <span class="p">[</span><span class="mf">20</span><span class="p">,</span> <span class="mf">50</span><span class="p">,</span> <span class="mf">100</span><span class="p">,</span> <span class="mf">200</span><span class="p">,</span> <span class="mf">500</span><span class="p">];</span>
+        <span class="kr">const</span> <span class="nx">luckUpgrades</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0</span><span class="p">,</span> <span class="mf">2</span><span class="p">,</span> <span class="mf">4</span><span class="p">,</span> <span class="mf">7</span><span class="p">,</span> <span class="mf">10</span><span class="p">];</span>
+        <span class="kd">let</span> <span class="nx">currentLuckUpgrade</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
+
+
+        <span class="kr">const</span> <span class="nx">catchMultiplierCosts</span> <span class="o">=</span> <span class="p">[</span><span class="mf">20</span><span class="p">,</span> <span class="mf">50</span><span class="p">,</span> <span class="mf">100</span><span class="p">,</span> <span class="mf">200</span><span class="p">,</span> <span class="mf">500</span><span class="p">];</span>
+        <span class="kr">const</span> <span class="nx">catchMultiplierUpgrades</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1.2</span><span class="p">,</span> <span class="mf">1.3</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">,</span> <span class="mf">1.7</span><span class="p">,</span> <span class="mf">2</span><span class="p">];</span>
+        <span class="kd">let</span> <span class="nx">currentCatchMultiplierUpgrade</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
 
         <span class="c1">//Utility functions</span>
         <span class="kd">function</span> <span class="nx">setFishermanStatus</span><span class="p">(</span><span class="nx">newStatus</span><span class="p">)</span> <span class="p">{</span>
@@ -339,6 +384,10 @@ window.onload = wrap_img;
             <span class="nx">money</span><span class="p">.</span><span class="nx">textContent</span> <span class="o">=</span> <span class="s2">&quot;$&quot;</span> <span class="o">+</span> <span class="nx">moneyAmount</span><span class="p">;</span>
         <span class="p">}</span>
 
+        <span class="kd">function</span> <span class="nx">getMoney</span><span class="p">()</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">money</span><span class="p">.</span><span class="nx">getAttribute</span><span class="p">(</span><span class="s1">&#39;data-money&#39;</span><span class="p">));</span>
+        <span class="p">}</span>
+
         <span class="kd">function</span> <span class="nx">setMessageVisibility</span><span class="p">(</span><span class="nx">visibility</span><span class="p">)</span> <span class="p">{</span>
             <span class="kd">let</span> <span class="nx">newDisplay</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
             <span class="k">if</span><span class="p">(</span><span class="nx">visibility</span><span class="p">)</span> <span class="p">{</span>
@@ -354,32 +403,8 @@ window.onload = wrap_img;
       
         <span class="c1">//Set up animation timer</span>
         <span class="kd">function</span> <span class="nx">animate</span><span class="p">()</span> <span class="p">{</span>
-            <span class="cm">/*switch(status) {</span>
-<span class="cm">                case 0: //Idle</span>
-<span class="cm">                    switch(frame) {</span>
-<span class="cm">                        case 1:</span>
-<span class="cm">                            fisherman.src = &quot;images/fishing/hook2.png&quot;;</span>
-<span class="cm">                            frame = 2;</span>
-<span class="cm">                            break;</span>
-<span class="cm">                        case 2:</span>
-<span class="cm">                            fisherman.src = &quot;images/fishing/hook3.png&quot;;</span>
-<span class="cm">                            frame = 3;</span>
-<span class="cm">                            break;</span>
-<span class="cm">                        case 3:</span>
-<span class="cm">                            fisherman.src = &quot;images/fishing/hook4.png&quot;;</span>
-<span class="cm">                            frame = 4;</span>
-<span class="cm">                            break;</span>
-<span class="cm">                        case 4:</span>
-<span class="cm">                            fisherman.src = &quot;images/fishing/hook5.png&quot;;</span>
-<span class="cm">                            frame = 5;</span>
-<span class="cm">                            break;</span>
-<span class="cm">                        case 5:</span>
-<span class="cm">                            fisherman.src = &quot;images/fishing/hook1.png&quot;;</span>
-<span class="cm">                            frame = 1;</span>
-<span class="cm">                            break;</span>
-<span class="cm">                    }</span>
-<span class="cm">            }*/</span>
 
+            <span class="c1">// Was going to do switch statements but energetic programming bad</span>
             <span class="k">if</span><span class="p">(</span><span class="nx">status</span> <span class="o">==</span> <span class="mf">0</span><span class="p">)</span> <span class="p">{</span> <span class="c1">//Idle </span>
                 <span class="k">if</span><span class="p">(</span><span class="nx">frame</span> <span class="o">==</span> <span class="mf">1</span><span class="p">)</span> <span class="p">{</span>
                     <span class="nx">fisherman</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="s2">&quot;images/fishing/idle2.png&quot;</span><span class="p">;</span>
@@ -423,19 +448,18 @@ window.onload = wrap_img;
 
             <span class="c1">//Choose what fish to catch</span>
             <span class="kd">let</span> <span class="nx">randomNumber</span> <span class="o">=</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">*</span> <span class="mf">100</span><span class="p">);</span>
-            <span class="kd">let</span> <span class="nx">catchThresholds</span> <span class="o">=</span> <span class="p">[</span><span class="mf">95</span><span class="o">-</span><span class="mf">2</span><span class="o">*</span><span class="nx">luck</span><span class="p">,</span> <span class="mf">80</span><span class="o">-</span><span class="mf">4</span><span class="o">*</span><span class="nx">luck</span><span class="p">,</span> <span class="mf">60</span><span class="o">-</span><span class="mf">6</span><span class="o">*</span><span class="nx">luck</span><span class="p">,</span> <span class="mf">0</span><span class="p">];</span>
+            <span class="kd">let</span> <span class="nx">catchThresholds</span> <span class="o">=</span>  <span class="p">[</span><span class="mf">95</span><span class="o">-</span><span class="mf">2</span><span class="o">*</span><span class="nx">luck</span><span class="p">,</span> <span class="mf">80</span><span class="o">-</span><span class="mf">4</span><span class="o">*</span><span class="nx">luck</span><span class="p">,</span> <span class="mf">60</span><span class="o">-</span><span class="mf">6</span><span class="o">*</span><span class="nx">luck</span><span class="p">,</span> <span class="mf">0</span><span class="p">];</span>
 
             <span class="nx">i</span><span class="o">=</span><span class="mf">0</span><span class="p">;</span>
             <span class="nx">catchSelected</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
             <span class="nx">catchThresholds</span><span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">threshold</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
                 <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nx">catchSelected</span> <span class="o">&amp;&amp;</span> <span class="nx">randomNumber</span> <span class="o">&gt;=</span> <span class="nx">threshold</span><span class="p">)</span> <span class="p">{</span>
-                    <span class="nx">updateMoney</span><span class="p">(</span><span class="nx">baseCatchRewards</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span><span class="o">*</span><span class="nx">catchMultiplier</span><span class="p">);</span>
-                   
+                    <span class="nx">updateMoney</span><span class="p">(</span><span class="nb">parseInt</span><span class="p">(</span><span class="nx">baseCatchRewards</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span><span class="o">*</span><span class="nx">catchMultiplier</span><span class="p">));</span>
 
                     <span class="c1">//Show message</span>
                     <span class="nx">catchIcon</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="s2">&quot;images/fishing/fish&quot;</span> <span class="o">+</span> <span class="p">(</span><span class="nx">i</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;.png&quot;</span><span class="p">;</span>
                     <span class="nx">catchText</span><span class="p">.</span><span class="nx">textContent</span> <span class="o">=</span> <span class="nx">catchMessages</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
-                    <span class="nx">catchEarnings</span><span class="p">.</span><span class="nx">textContent</span> <span class="o">=</span> <span class="s2">&quot;+$&quot;</span> <span class="o">+</span> <span class="nx">baseCatchRewards</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span><span class="o">*</span><span class="nx">catchMultiplier</span><span class="p">;</span>
+                    <span class="nx">catchEarnings</span><span class="p">.</span><span class="nx">textContent</span> <span class="o">=</span> <span class="s2">&quot;+$&quot;</span> <span class="o">+</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">baseCatchRewards</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span><span class="o">*</span><span class="nx">catchMultiplier</span><span class="p">);</span>
                     <span class="nx">setMessageVisibility</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
 
                     <span class="nx">setTimeout</span><span class="p">(()=&gt;</span> <span class="p">{</span>
@@ -446,6 +470,64 @@ window.onload = wrap_img;
                 <span class="nx">i</span> <span class="o">+=</span> <span class="mf">1</span><span class="p">;</span>
             <span class="p">});</span>
         <span class="p">}</span>
+
+        <span class="c1">//Upgrades</span>
+
+        <span class="c1">//Fishing speed</span>
+        <span class="nx">fishingSpeedUpgrade</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&quot;click&quot;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span>
+            <span class="kd">let</span> <span class="nx">cost</span> <span class="o">=</span> <span class="nx">fishingSpeedCosts</span><span class="p">[</span><span class="nx">currentFishingSpeedUpgrade</span><span class="p">];</span>
+            <span class="kd">let</span> <span class="nx">currentMoney</span> <span class="o">=</span> <span class="nx">getMoney</span><span class="p">();</span>
+
+            <span class="c1">//Check if it is ok to upgrade, then change text and variables</span>
+            <span class="k">if</span><span class="p">(</span><span class="nx">currentMoney</span> <span class="o">&gt;=</span> <span class="nx">cost</span> <span class="o">&amp;&amp;</span> <span class="nx">currentFishingSpeedUpgrade</span> <span class="o">&lt;</span> <span class="nx">fishingSpeedCosts</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span> <span class="p">{</span> 
+                <span class="nx">updateMoney</span><span class="p">(</span><span class="o">-</span><span class="nx">cost</span><span class="p">);</span>
+                <span class="nx">currentFishingSpeedUpgrade</span> <span class="o">+=</span> <span class="mf">1</span><span class="p">;</span>
+                <span class="nx">catchRate</span> <span class="o">=</span> <span class="nx">fishingSpeedUpgrades</span><span class="p">[</span><span class="nx">currentFishingSpeedUpgrade</span><span class="p">];</span>
+                
+                <span class="c1">//Check if you have maxed out level now</span>
+                <span class="k">if</span><span class="p">(</span><span class="nx">currentFishingSpeedUpgrade</span> <span class="o">&gt;=</span> <span class="nx">fishingSpeedCosts</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="nx">fishingSpeedUpgradeCost</span><span class="p">.</span><span class="nx">textContent</span> <span class="o">=</span> <span class="s2">&quot;Maxed&quot;</span>
+                <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                    <span class="nx">fishingSpeedUpgradeCost</span><span class="p">.</span><span class="nx">textContent</span> <span class="o">=</span> <span class="s2">&quot;$&quot;</span> <span class="o">+</span>  <span class="nx">fishingSpeedCosts</span><span class="p">[</span><span class="nx">currentFishingSpeedUpgrade</span><span class="p">];</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">});</span>
+
+        <span class="c1">//Luck Upgrade</span>
+        <span class="nx">fishingLuckUpgrade</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&quot;click&quot;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span>
+            <span class="kd">let</span> <span class="nx">cost</span> <span class="o">=</span> <span class="nx">luckCosts</span><span class="p">[</span><span class="nx">currentLuckUpgrade</span><span class="p">];</span>
+            <span class="kd">let</span> <span class="nx">currentMoney</span> <span class="o">=</span> <span class="nx">getMoney</span><span class="p">();</span>
+
+            <span class="k">if</span><span class="p">(</span><span class="nx">currentMoney</span> <span class="o">&gt;=</span> <span class="nx">cost</span> <span class="o">&amp;&amp;</span> <span class="nx">currentLuckUpgrade</span> <span class="o">&lt;</span> <span class="nx">luckCosts</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span> <span class="p">{</span> 
+                <span class="nx">updateMoney</span><span class="p">(</span><span class="o">-</span><span class="nx">cost</span><span class="p">);</span>
+                <span class="nx">currentLuckUpgrade</span> <span class="o">+=</span> <span class="mf">1</span><span class="p">;</span>
+                <span class="nx">luck</span> <span class="o">=</span> <span class="nx">currentLuckUpgrade</span> <span class="o">*</span> <span class="mf">2</span><span class="p">;</span>
+
+                <span class="k">if</span><span class="p">(</span><span class="nx">currentLuckUpgrade</span> <span class="o">&gt;=</span> <span class="nx">luckCosts</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="nx">fishingLuckUpgradeCost</span><span class="p">.</span><span class="nx">textContent</span> <span class="o">=</span> <span class="s2">&quot;Maxed&quot;</span><span class="p">;</span>
+                <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                    <span class="nx">fishingLuckUpgradeCost</span><span class="p">.</span><span class="nx">textContent</span> <span class="o">=</span> <span class="s2">&quot;$&quot;</span> <span class="o">+</span> <span class="nx">luckCosts</span><span class="p">[</span><span class="nx">currentLuckUpgrade</span><span class="p">];</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">});</span>
+
+        <span class="c1">//Catch multiplier</span>
+        <span class="nx">fishingCatchMultiplierUpgrade</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&quot;click&quot;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span>
+            <span class="kd">let</span> <span class="nx">cost</span> <span class="o">=</span> <span class="nx">catchMultiplierCosts</span><span class="p">[</span><span class="nx">currentCatchMultiplierUpgrade</span><span class="p">];</span>
+            <span class="kd">let</span> <span class="nx">currentMoney</span> <span class="o">=</span> <span class="nx">getMoney</span><span class="p">();</span>
+
+            <span class="k">if</span><span class="p">(</span><span class="nx">currentMoney</span> <span class="o">&gt;=</span> <span class="nx">cost</span> <span class="o">&amp;&amp;</span> <span class="nx">currentCatchMultiplierUpgrade</span> <span class="o">&lt;</span> <span class="nx">catchMultiplierCosts</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span> <span class="p">{</span> 
+                <span class="nx">updateMoney</span><span class="p">(</span><span class="o">-</span><span class="nx">cost</span><span class="p">);</span>
+                <span class="nx">currentCatchMultiplierUpgrade</span> <span class="o">+=</span> <span class="mf">1</span><span class="p">;</span>
+                <span class="nx">catchMultiplier</span> <span class="o">=</span> <span class="nx">catchMultiplierUpgrades</span><span class="p">[</span><span class="nx">currentCatchMultiplierUpgrade</span><span class="p">];</span>
+
+                <span class="k">if</span><span class="p">(</span><span class="nx">currentCatchMultiplierUpgrade</span> <span class="o">&gt;=</span> <span class="nx">catchMultiplierCosts</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="nx">fishingCatchMultiplierUpgradeCost</span><span class="p">.</span><span class="nx">textContent</span> <span class="o">=</span> <span class="s2">&quot;Maxed&quot;</span><span class="p">;</span>
+                <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                    <span class="nx">fishingCatchMultiplierUpgradeCost</span><span class="p">.</span><span class="nx">textContent</span> <span class="o">=</span> <span class="s2">&quot;$&quot;</span> <span class="o">+</span> <span class="nx">catchMultiplierCosts</span><span class="p">[</span><span class="nx">currentCatchMultiplierUpgrade</span><span class="p">];</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">});</span>
 
         <span class="c1">//Start animations</span>
         <span class="nx">setInterval</span><span class="p">(</span><span class="nx">animate</span><span class="p">,</span> <span class="mf">200</span><span class="p">);</span>
@@ -504,7 +586,7 @@ window.onload = wrap_img;
             left: 420px;
         }
         .money {
-            font-family: 'Press+Start+2P';
+            font-family: "Oxygen", sans-serif;
             font-size: 26px;
             position: absolute;
             top: -10px;
@@ -532,6 +614,20 @@ window.onload = wrap_img;
             font-family: "Oxygen", sans-serif;
             color: white;
         }
+        .upgradeButton {
+            position: absolute;
+            left: 30px;
+            background-color: transparent;
+            border: none;
+            outline: none;
+        }
+        .upgradeDesc {
+            position: absolute;
+            left: 30px;
+            font-family: "Oxygen", sans-serif;
+            color: white;
+        }
+
 
 
     </style>
@@ -555,6 +651,19 @@ window.onload = wrap_img;
 <p class="catchText" id="catchText" style="display: none"></p>
 <p class="catchEarnings" id="catchEarnings" style="display: none"></p>
 
+<button id="fishingSpeedUpgrade" class="upgradeButton" style="top: 30px"><img src="images/fishing/upgrade1.png" />&lt;/img&gt;</button>
+<p class="upgradeDesc" style="top: 55px">Catch Rate</p>
+<p id="fishingSpeedUpgradeCost" class="upgradeDesc" style="top: 70px">$20</p>
+
+<button id="fishingQualityUpgrade" class="upgradeButton" style="top: 90px"><img src="images/fishing/upgrade3.png" />&lt;/img&gt;</button>
+<p class="upgradeDesc" style="top: 115px">Catch Quality</p>
+<p id="fishingQualityUpgradeCost" class="upgradeDesc" style="top: 130px">$20</p>
+
+<button id="fishingEarningsUpgrade" class="upgradeButton" style="top: 150px"><img src="images/fishing/upgrade2.png" />&lt;/img&gt;</button>
+<p class="upgradeDesc" style="top: 175px">Sell Rate</p>
+<p id="fishingEarningsUpgradeCost" class="upgradeDesc" style="top: 190px">$20</p>
+
+
 <script>
     $(document).ready(function() {
         const fisherman = document.getElementById("fisherman");
@@ -566,7 +675,13 @@ window.onload = wrap_img;
         const catchIcon = document.getElementById("catchIcon");
         const catchText = document.getElementById("catchText");
         const catchEarnings = document.getElementById("catchEarnings");
-
+        const fishingSpeedUpgrade = document.getElementById("fishingSpeedUpgrade");
+        const fishingSpeedUpgradeCost = document.getElementById("fishingSpeedUpgradeCost");
+        const fishingCatchMultiplierUpgrade = document.getElementById("fishingQualityUpgrade");
+        const fishingCatchMultiplierUpgradeCost = document.getElementById("fishingQualityUpgradeCost");
+        const fishingLuckUpgrade = document.getElementById("fishingEarningsUpgrade");
+        const fishingLuckUpgradeCost = document.getElementById("fishingEarningsUpgradeCost");
+        
         let status = 0;
         let frame = 1;
         let wavesFrame = 1;
@@ -578,6 +693,18 @@ window.onload = wrap_img;
         const catchMessages = ["You caught a epic treasure!", "    You caught an exotic tropical fish!", "      You caught a rare salmon!", "     You caught a common trout!"]
         const baseCatchRewards = [100, 60, 40, 20];
 
+        const fishingSpeedCosts = [20, 50, 100, 200, 500];
+        const fishingSpeedUpgrades = [0.05, 0.08, 0.1, 0.15, 0.2];
+        let currentFishingSpeedUpgrade = 0;
+
+        const luckCosts = [20, 50, 100, 200, 500];
+        const luckUpgrades = [0, 2, 4, 7, 10];
+        let currentLuckUpgrade = 0;
+
+
+        const catchMultiplierCosts = [20, 50, 100, 200, 500];
+        const catchMultiplierUpgrades = [1.2, 1.3, 1.5, 1.7, 2];
+        let currentCatchMultiplierUpgrade = 0;
 
         //Utility functions
         function setFishermanStatus(newStatus) {
@@ -597,6 +724,10 @@ window.onload = wrap_img;
             money.textContent = "$" + moneyAmount;
         }
 
+        function getMoney() {
+            return parseInt(money.getAttribute('data-money'));
+        }
+
         function setMessageVisibility(visibility) {
             let newDisplay = "";
             if(visibility) {
@@ -612,32 +743,8 @@ window.onload = wrap_img;
       
         //Set up animation timer
         function animate() {
-            /*switch(status) {
-                case 0: //Idle
-                    switch(frame) {
-                        case 1:
-                            fisherman.src = "images/fishing/hook2.png";
-                            frame = 2;
-                            break;
-                        case 2:
-                            fisherman.src = "images/fishing/hook3.png";
-                            frame = 3;
-                            break;
-                        case 3:
-                            fisherman.src = "images/fishing/hook4.png";
-                            frame = 4;
-                            break;
-                        case 4:
-                            fisherman.src = "images/fishing/hook5.png";
-                            frame = 5;
-                            break;
-                        case 5:
-                            fisherman.src = "images/fishing/hook1.png";
-                            frame = 1;
-                            break;
-                    }
-            }*/
 
+            // Was going to do switch statements but energetic programming bad
             if(status == 0) { //Idle 
                 if(frame == 1) {
                     fisherman.src = "images/fishing/idle2.png";
@@ -681,19 +788,19 @@ window.onload = wrap_img;
 
             //Choose what fish to catch
             let randomNumber = parseInt(Math.random() * 100);
-            let catchThresholds = [95-2*luck, 80-4*luck, 60-6*luck, 0];
+            let catchThresholds =  [75, 50, 25, 0];//[95-2*luck, 80-4*luck, 60-6*luck, 0];
 
             i=0;
             catchSelected = false;
             catchThresholds.forEach((threshold) => {
                 if(!catchSelected && randomNumber >= threshold) {
-                    updateMoney(baseCatchRewards[i]*catchMultiplier);
+                    updateMoney(parseInt(baseCatchRewards[i]*catchMultiplier));
                    
 
                     //Show message
                     catchIcon.src = "images/fishing/fish" + (i) + ".png";
                     catchText.textContent = catchMessages[i];
-                    catchEarnings.textContent = "+$" + baseCatchRewards[i]*catchMultiplier;
+                    catchEarnings.textContent = "+$" + parseInt(baseCatchRewards[i]*catchMultiplier);
                     setMessageVisibility(true);
 
                     setTimeout(()=> {
@@ -704,6 +811,64 @@ window.onload = wrap_img;
                 i += 1;
             });
         }
+
+        //Upgrades
+
+        //Fishing speed
+        fishingSpeedUpgrade.addEventListener("click", function(){
+            let cost = fishingSpeedCosts[currentFishingSpeedUpgrade];
+            let currentMoney = getMoney();
+
+            //Check if it is ok to upgrade, then change text and variables
+            if(currentMoney >= cost && currentFishingSpeedUpgrade < fishingSpeedCosts.length) { 
+                updateMoney(-cost);
+                currentFishingSpeedUpgrade += 1;
+                catchRate = fishingSpeedUpgrades[currentFishingSpeedUpgrade];
+                
+                //Check if you have maxed out level now
+                if(currentFishingSpeedUpgrade >= fishingSpeedCosts.length) {
+                    fishingSpeedUpgradeCost.textContent = "Maxed"
+                } else {
+                    fishingSpeedUpgradeCost.textContent = "$" +  fishingSpeedCosts[currentFishingSpeedUpgrade];
+                }
+            }
+        });
+
+        //Luck Upgrade
+        fishingLuckUpgrade.addEventListener("click", function(){
+            let cost = luckCosts[currentLuckUpgrade];
+            let currentMoney = getMoney();
+
+            if(currentMoney >= cost && currentLuckUpgrade < luckCosts.length) { 
+                updateMoney(-cost);
+                currentLuckUpgrade += 1;
+                luck = currentLuckUpgrade * 2;
+
+                if(currentLuckUpgrade >= luckCosts.length) {
+                    fishingLuckUpgradeCost.textContent = "Maxed";
+                } else {
+                    fishingLuckUpgradeCost.textContent = "$" + luckCosts[currentLuckUpgrade];
+                }
+            }
+        });
+
+        //Catch multiplier
+        fishingCatchMultiplierUpgrade.addEventListener("click", function(){
+            let cost = catchMultiplierCosts[currentCatchMultiplierUpgrade];
+            let currentMoney = getMoney();
+
+            if(currentMoney >= cost && currentCatchMultiplierUpgrade < catchMultiplierCosts.length) { 
+                updateMoney(-cost);
+                currentCatchMultiplierUpgrade += 1;
+                catchMultiplier = catchMultiplierUpgrades[currentCatchMultiplierUpgrade];
+
+                if(currentCatchMultiplierUpgrade >= catchMultiplierCosts.length) {
+                    fishingCatchMultiplierUpgradeCost.textContent = "Maxed";
+                } else {
+                    fishingCatchMultiplierUpgradeCost.textContent = "$" + catchMultiplierCosts[currentCatchMultiplierUpgrade];
+                }
+            }
+        });
 
         //Start animations
         setInterval(animate, 200);
